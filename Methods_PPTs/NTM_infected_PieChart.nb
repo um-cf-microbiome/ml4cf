@@ -1,0 +1,646 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 8.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[     27393,        637]
+NotebookOptionsPosition[     26816,        612]
+NotebookOutlinePosition[     27178,        628]
+CellTagsIndexPosition[     27135,        625]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[
+ RowBox[{"PieChart3D", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"0.29", "*", "360"}], ",", 
+     RowBox[{"0.71", "*", "360"}]}], "}"}], ",", 
+   RowBox[{"ChartLabels", "\[Rule]", 
+    RowBox[{"Placed", "[", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"Style", "[", 
+         RowBox[{"\"\<\!\(\*
+StyleBox[\"NTM\",
+FontFamily->\"Times New Roman\",
+FontWeight->\"Plain\"]\)\!\(\*
+StyleBox[\" \",
+FontFamily->\"Times New Roman\",
+FontWeight->\"Plain\"]\)\!\(\*
+StyleBox[\"therapy\",
+FontFamily->\"Times New Roman\",
+FontWeight->\"Plain\"]\)\>\"", ",", "14"}], "]"}], ",", 
+        RowBox[{"Style", "[", 
+         RowBox[{"\"\<\!\(\*
+StyleBox[\"No\",
+FontFamily->\"Times New Roman\",
+FontWeight->\"Plain\"]\)\!\(\*
+StyleBox[\" \",
+FontFamily->\"Times New Roman\",
+FontWeight->\"Plain\"]\)\!\(\*
+StyleBox[\"NTM\",
+FontFamily->\"Times New Roman\",
+FontWeight->\"Plain\"]\)\!\(\*
+StyleBox[\" \",
+FontFamily->\"Times New Roman\",
+FontWeight->\"Plain\"]\)\!\(\*
+StyleBox[\"therapy\",
+FontFamily->\"Times New Roman\",
+FontWeight->\"Plain\"]\)\>\"", ",", "14"}], "]"}], ",", 
+        RowBox[{"Style", "[", 
+         RowBox[{"\"\<\!\(\*
+StyleBox[\"29\",
+FontFamily->\"Times New Roman\"]\)\!\(\*
+StyleBox[\"%\",
+FontFamily->\"Times New Roman\"]\)\>\"", ",", "12", ",", "Bold"}], "]"}], ",", 
+        RowBox[{"Style", "[", 
+         RowBox[{"\"\<\!\(\*
+StyleBox[\"71\",
+FontFamily->\"Times New Roman\"]\)\!\(\*
+StyleBox[\"%\",
+FontFamily->\"Times New Roman\"]\)\>\"", ",", "12", ",", "Bold"}], "]"}], ",", 
+        RowBox[{"Style", "[", 
+         RowBox[{"\"\<\!\(\*
+StyleBox[\"NTM\",
+FontFamily->\"Times New Roman\"]\)\!\(\*
+StyleBox[\" \",
+FontFamily->\"Times New Roman\"]\)\!\(\*
+StyleBox[\"therapy\",
+FontFamily->\"Times New Roman\"]\)\!\(\*
+StyleBox[\" \",
+FontFamily->\"Times New Roman\"]\)\!\(\*
+StyleBox[\"in\",
+FontFamily->\"Times New Roman\"]\)\!\(\*
+StyleBox[\" \",
+FontFamily->\"Times New Roman\"]\)\!\(\*
+StyleBox[\"study\",
+FontFamily->\"Times New Roman\"]\)\!\(\*
+StyleBox[\" \",
+FontFamily->\"Times New Roman\"]\)\!\(\*
+StyleBox[\"group\",
+FontFamily->\"Times New Roman\"]\)\>\"", ",", "16", ",", "Bold"}], "]"}]}], 
+       "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"-", "1.4"}], ",", 
+          RowBox[{"-", "0.5"}], ",", "1"}], "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"-", "1"}], ",", "1.3", ",", "0.05"}], "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"-", "1.28"}], ",", 
+          RowBox[{"-", "0.7"}], ",", "1"}], "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"-", "1.15"}], ",", "0.95", ",", "0"}], "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"0.4", ",", 
+          RowBox[{"-", "1.7"}], ",", "0.5"}], "}"}]}], "}"}]}], "]"}]}], ",", 
+   RowBox[{"ChartStyle", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"EdgeForm", "[", "Thick", "]"}], ",", "61"}], "}"}]}], ",", 
+   RowBox[{"ViewPoint", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"-", "2"}], ",", "2", ",", "4"}], "}"}]}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.719154107450779*^9, 3.7191541176549225`*^9}, {
+   3.7191541614227395`*^9, 3.7191543601408453`*^9}, {3.719154393844421*^9, 
+   3.719154418693572*^9}, {3.7191662145155716`*^9, 3.7191662768491564`*^9}, {
+   3.719166347604308*^9, 3.719166361858677*^9}, {3.7191663939610815`*^9, 
+   3.719166402786336*^9}, {3.719166435630993*^9, 3.719166536864542*^9}, {
+   3.7191672063657045`*^9, 3.719167221524373*^9}, {3.7191674727324266`*^9, 
+   3.7191675502597113`*^9}, {3.7191676204245996`*^9, 
+   3.7191677049466963`*^9}, {3.719167741353898*^9, 3.7191677493807545`*^9}, {
+   3.719167823519593*^9, 3.719168123479377*^9}, {3.7191681656136017`*^9, 
+   3.719168298545319*^9}, {3.71916833150552*^9, 3.7191684181182237`*^9}, {
+   3.719168530182605*^9, 3.719168853634325*^9}, {3.719168917901247*^9, 
+   3.719168947739724*^9}, {3.7191692180672636`*^9, 3.719169294925747*^9}, {
+   3.7191694457060547`*^9, 3.719169579062947*^9}, 3.719169851367572*^9, {
+   3.7191699509707813`*^9, 3.7191700249303274`*^9}, {3.71917006406673*^9, 
+   3.719170142525953*^9}, {3.7191702026262865`*^9, 3.7191705018879204`*^9}, {
+   3.7191705362943954`*^9, 3.7191705632402663`*^9}, {3.7192251127258005`*^9, 
+   3.7192251991786914`*^9}, {3.7192252328105907`*^9, 3.7192253303858957`*^9}}],
+
+Cell[BoxData[
+ Graphics3DBox[
+  {RGBColor[0.5, 0.5, 1.], EdgeForm[Thickness[Large]], {
+    {RGBColor[0.5, 0.5, 1.], 
+     {RGBColor[0.70135, 0.093019, 0.00140383], EdgeForm[Thickness[Large]], 
+      DynamicModuleBox[{DynamicChart`click$40520 = True}, 
+       GeometricTransformation3DBox[
+        TagBox[
+         TagBox[
+          TooltipBox[
+           TagBox[{{{{{
+                 DynamicBox[{
+                   FEPrivate`If[
+                    CurrentValue["MouseOver"], 
+                    EdgeForm[{
+                    RGBColor[
+                    0.6666666666666666, 0.6666666666666666, 
+                    0.6666666666666666], 
+                    AbsoluteThickness[1.5]}], {}, {}], {
+                    Polygon3DBox[CompressedData["
+1:eJzt1ltIk2EYB/Ch4BxCKpoRzlkX5uEiQoXI1KeDoGBmGoMOmui06CZJkAwr
+UFToZI4kCTU1VkiKLS0JGb6e8phs1aaDHGqWOg/f99ikC5GWXfh+EE/3BXvg
+hY/fd/NdvM///+3NyU/Pc5fJZG5bJ2br/H52jWv+30Emz/CP2ve8KXZbggbW
+NpsFkQVr3qrGn+lh2wVW0d3ZJTJdgebdUF0P9wO5jVXZuSLDu7e8m83D3J2B
+4C5fEZhn+2abscjEvbxYWR6eLjBTbUne1UIz90+Jpybya1ZZ6meF78J5K/eE
+249P6wwrbLBV/+RH6BT3qhLvwNd9y8z/bFNNqWWae3RkmFfbiyV247AmOVE/
+y/3lWkR9b6GdHYtLG2/KmeOeHJlSFxeyyFQP0nZtOL9yv7lo66rsmmeKys6o
+qop57mzIUx5/8BvrjF2YMKwvcFe02o6IdXPMoQ2KcCTZuZeZL/tlrc6yV4NF
+1/tKlrhnCsbI7IgZlntf2z9Zv8xdffFjn6FliinDpsOctSvcd1vDDbo5K9sR
+nXUopHiVu/vYYvFDmYWZtAHBZ2IE7j7njJeYxwdmsYfqhq2SN9je7xHXR9jO
+AY3fmFrkPjqv8orv6WXXzBe+T+olH7c2qBuxnWWYEqrv2SU/6alQi9mlbKBt
+uKzFKXnSSKpbwptWOHGle1TpkHy/x1GtY60bMqMC3IR+ySeOl3+xdQzBnUfK
+lPQCyavlyg1fixFmVD5BT39K308P/uW9y13+bzh9nxHo+49A7wsCvV8I9D4i
+0PuLQO87Ap0PCHSeIND5g0DnFQKdbwh0HiLQ+YlA5y0Cnc8IdJ4j0PmPQPcF
+At0vCHQfIdD9hUD3HQLdjwh0nyLQ/YtA9zUC3e/b9/bP/wGEXwhDPKg=
+                    "]], 
+                    
+                    BSplineSurface3DBox[{{{0.24868988716485474`, 
+                    0.9685831611286311, 0.}, {-0.7198932739637763, 
+                    1.2172730482934857`, 0.}, {-0.9685831611286311, 
+                    0.24868988716485474`, 0.}, {-1., 0.126329378446108, 
+                    0.}, {-1., 8.326672684688674*^-17, 
+                    0.}}, {{
+                    0.24868988716485474`, 0.9685831611286311, 
+                    1}, {-0.7198932739637763, 1.2172730482934857`, 
+                    1}, {-0.9685831611286311, 0.24868988716485474`, 1}, {-1., 
+                    0.126329378446108, 1}, {-1., 8.326672684688674*^-17, 1}}},
+                     SplineDegree -> {1, 2}, 
+                    SplineWeights -> {{1., 0.7071067811865475, 1., 
+                    0.9921147013144777, 1.}, {1., 0.7071067811865475, 1., 
+                    0.9921147013144777, 1.}}, 
+                    SplineKnots -> {{0, 0, 1, 1}, {0, 0, 0, 1, 1, 2, 2, 2}}], 
+                    
+                    Polygon3DBox[{{{0., 0., 0.}, {0., 0., 1.}, {
+                    0.24868988716485474`, 0.9685831611286311, 1.}, {
+                    0.24868988716485474`, 0.9685831611286311, 0.}}}], 
+                    
+                    Polygon3DBox[{{{0., 0., 0.}, {0., 0., 1.}, {-1., 
+                    1.2246467991473532`*^-16, 1.}, {-1., 
+                    1.2246467991473532`*^-16, 0.}}}]}},
+                  
+                  ImageSizeCache->{{75.80433417743453, 
+                   321.6716164315284}, {-26.805534555228576`, 
+                   199.56896724613483`}}], Text3DBox[
+                  StyleBox[
+                   
+                   StyleBox["\<\"\\!\\(\\*\\nStyleBox[\\\"NTM\\\",\\\
+nFontFamily->\\\"Times New \
+Roman\\\",\\nFontWeight->\\\"Plain\\\"]\\)\\!\\(\\*\\nStyleBox[\\\" \
+\\\",\\nFontFamily->\\\"Times New \
+Roman\\\",\\nFontWeight->\\\"Plain\\\"]\\)\\!\\(\\*\\nStyleBox[\\\"therapy\\\"\
+,\\nFontFamily->\\\"Times New Roman\\\",\\nFontWeight->\\\"Plain\\\"]\\)\"\>",
+                    StripOnInput->False,
+                    FontSize->14],
+                   StripOnInput->False,
+                   LineColor->GrayLevel[0],
+                   FrontFaceColor->GrayLevel[0],
+                   BackFaceColor->GrayLevel[0],
+                   GraphicsColor->GrayLevel[0],
+                   FontColor->GrayLevel[0]], {-0.16640977226149345`, 
+                  0.4714952679464322, 1.}, {-0.3328195445229869, 
+                  0.9429905358928644}]}, Text3DBox[
+                 StyleBox[
+                  
+                  StyleBox["\<\"\\!\\(\\*\\nStyleBox[\\\"No\\\",\\nFontFamily-\
+>\\\"Times New \
+Roman\\\",\\nFontWeight->\\\"Plain\\\"]\\)\\!\\(\\*\\nStyleBox[\\\" \
+\\\",\\nFontFamily->\\\"Times New \
+Roman\\\",\\nFontWeight->\\\"Plain\\\"]\\)\\!\\(\\*\\nStyleBox[\\\"NTM\\\",\\\
+nFontFamily->\\\"Times New \
+Roman\\\",\\nFontWeight->\\\"Plain\\\"]\\)\\!\\(\\*\\nStyleBox[\\\" \
+\\\",\\nFontFamily->\\\"Times New \
+Roman\\\",\\nFontWeight->\\\"Plain\\\"]\\)\\!\\(\\*\\nStyleBox[\\\"therapy\\\"\
+,\\nFontFamily->\\\"Times New Roman\\\",\\nFontWeight->\\\"Plain\\\"]\\)\"\>",
+                   StripOnInput->False,
+                   FontSize->14],
+                  StripOnInput->False,
+                  LineColor->GrayLevel[0],
+                  FrontFaceColor->GrayLevel[0],
+                  BackFaceColor->GrayLevel[0],
+                  GraphicsColor->GrayLevel[0],
+                  FontColor->GrayLevel[0]], {
+                 1.1391986840570227`, -0.6262797763322296, 
+                 0.05}, {-0.8763066800438637, 0.4817536741017151}]}, Text3DBox[
+                StyleBox[
+                 
+                 StyleBox["\<\"\\!\\(\\*\\nStyleBox[\\\"29\\\",\\nFontFamily->\
+\\\"Times New \
+Roman\\\"]\\)\\!\\(\\*\\nStyleBox[\\\"%\\\",\\nFontFamily->\\\"Times New \
+Roman\\\"]\\)\"\>",
+                  StripOnInput->False,
+                  FontSize->12,
+                  FontWeight->Bold],
+                 StripOnInput->False,
+                 LineColor->GrayLevel[0],
+                 FrontFaceColor->GrayLevel[0],
+                 BackFaceColor->GrayLevel[0],
+                 GraphicsColor->GrayLevel[0],
+                 FontColor->GrayLevel[0]], {-0.37061187954116, 
+                0.5938407486380238, 1.}, {-0.5294455422016572, 
+                0.8483439266257484}]}, Text3DBox[
+               StyleBox[
+                
+                StyleBox["\<\"\\!\\(\\*\\nStyleBox[\\\"71\\\",\\nFontFamily->\
+\\\"Times New \
+Roman\\\"]\\)\\!\\(\\*\\nStyleBox[\\\"%\\\",\\nFontFamily->\\\"Times New \
+Roman\\\"]\\)\"\>",
+                 StripOnInput->False,
+                 FontSize->12,
+                 FontWeight->Bold],
+                StripOnInput->False,
+                LineColor->GrayLevel[0],
+                FrontFaceColor->GrayLevel[0],
+                BackFaceColor->GrayLevel[0],
+                GraphicsColor->GrayLevel[0],
+                FontColor->GrayLevel[0]], {
+               0.6780526221626004, -0.6653905932446158, 
+               0.}, {-0.7137396022764215, 0.7004111507838061}]}, Text3DBox[
+              StyleBox[
+               
+               StyleBox["\<\"\\!\\(\\*\\nStyleBox[\\\"NTM\\\",\\nFontFamily->\
+\\\"Times New Roman\\\"]\\)\\!\\(\\*\\nStyleBox[\\\" \
+\\\",\\nFontFamily->\\\"Times New \
+Roman\\\"]\\)\\!\\(\\*\\nStyleBox[\\\"therapy\\\",\\nFontFamily->\\\"Times \
+New Roman\\\"]\\)\\!\\(\\*\\nStyleBox[\\\" \\\",\\nFontFamily->\\\"Times New \
+Roman\\\"]\\)\\!\\(\\*\\nStyleBox[\\\"in\\\",\\nFontFamily->\\\"Times New \
+Roman\\\"]\\)\\!\\(\\*\\nStyleBox[\\\" \\\",\\nFontFamily->\\\"Times New \
+Roman\\\"]\\)\\!\\(\\*\\nStyleBox[\\\"study\\\",\\nFontFamily->\\\"Times New \
+Roman\\\"]\\)\\!\\(\\*\\nStyleBox[\\\" \\\",\\nFontFamily->\\\"Times New \
+Roman\\\"]\\)\\!\\(\\*\\nStyleBox[\\\"group\\\",\\nFontFamily->\\\"Times New \
+Roman\\\"]\\)\"\>",
+                StripOnInput->False,
+                FontSize->16,
+                FontWeight->Bold],
+               StripOnInput->False,
+               LineColor->GrayLevel[0],
+               FrontFaceColor->GrayLevel[0],
+               BackFaceColor->GrayLevel[0],
+               GraphicsColor->GrayLevel[0],
+               FontColor->GrayLevel[0]], {
+              0.7812857630565293, -1.5098319629830257`, 0.5}, {
+              0.4595798606214878, -0.8881364488135446}]},
+            StatusArea[#, 104.39999999999999`]& ,
+            TagBoxNote->"104.39999999999999"],
+           StyleBox["104.39999999999999`", {
+             GrayLevel[0]}, StripOnInput -> False]],
+          Annotation[#, 
+           Style[104.39999999999999`, {
+             GrayLevel[0]}], "Tooltip"]& ],
+         EventHandlerTag[{
+          "MouseClicked" :> FEPrivate`Set[DynamicChart`click$40520, 
+             FEPrivate`Not[DynamicChart`click$40520]], PassEventsDown -> True,
+            PassEventsDown -> Automatic, PassEventsUp -> True}]], Dynamic[
+        If[DynamicChart`click$40520, {{{1., 0., 0.}, {0., 1., 0.}, {0., 0., 
+           1.}}, {-0.12258141073059525`, 0.15803100247513813`, 0.}}, {{1, 0, 
+          0}, {0, 1, 0}, {0, 0, 1}}, {{1, 0, 0}, {0, 1, 0}, {0, 0, 1}}]]],
+       DynamicModuleValues:>{}]}, 
+     {RGBColor[0.289647, 0.222614, 0.484169], EdgeForm[Thickness[Large]], 
+      DynamicModuleBox[{DynamicChart`click$40526 = True}, 
+       GeometricTransformation3DBox[
+        TagBox[
+         TagBox[
+          TooltipBox[
+           TagBox[{{{{{
+                 DynamicBox[{
+                   FEPrivate`If[
+                    CurrentValue["MouseOver"], 
+                    EdgeForm[{
+                    RGBColor[
+                    0.6666666666666666, 0.6666666666666666, 
+                    0.6666666666666666], 
+                    AbsoluteThickness[1.5]}], {}, {}], {
+                    Polygon3DBox[CompressedData["
+1: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
+pJ514w==
+                    "]], 
+                    
+                    BSplineSurface3DBox[{{{-1., -1.2246467991473532`*^-16, 
+                    0.}, {-0.9999999999999999, -1.0000000000000002`, 0.}, {
+                    1.2246467991473532`*^-16, -1., 0.}, {
+                    1.0000000000000002`, -0.9999999999999999, 0.}, {1., 
+                    1.2246467991473532`*^-16, 0.}, {0.9999999999999999, 
+                    0.775679511049613, 0.}, {0.24868988716485507`, 
+                    0.9685831611286311, 
+                    0.}}, {{-1., -1.2246467991473532`*^-16, 
+                    1}, {-0.9999999999999999, -1.0000000000000002`, 1}, {
+                    1.2246467991473532`*^-16, -1., 1}, {
+                    1.0000000000000002`, -0.9999999999999999, 1}, {
+                    1., 1.2246467991473532`*^-16, 1}, {
+                    0.9999999999999999, 0.775679511049613, 1}, {
+                    0.24868988716485507`, 0.9685831611286311, 1}}}, 
+                    SplineDegree -> {1, 2}, 
+                    SplineWeights -> {{1., 0.7071067811865475, 1., 
+                    0.7071067811865475, 1., 0.7901550123756904, 1.}, {1., 
+                    0.7071067811865475, 1., 0.7071067811865475, 1., 
+                    0.7901550123756904, 1.}}, 
+                    SplineKnots -> {{0, 0, 1, 1}, {0, 0, 0, 1, 1, 2, 2, 3, 3, 
+                    3}}], 
+                    
+                    Polygon3DBox[{{{0., 0., 0.}, {0., 0., 
+                    1.}, {-1., -1.2246467991473532`*^-16, 
+                    1.}, {-1., -1.2246467991473532`*^-16, 0.}}}], 
+                    
+                    Polygon3DBox[{{{0., 0., 0.}, {0., 0., 1.}, {
+                    0.24868988716485518`, 0.9685831611286311, 1.}, {
+                    0.24868988716485518`, 0.9685831611286311, 0.}}}]}},
+                  
+                  ImageSizeCache->{{43.72735217759136, 
+                   415.9667321835568}, {-190.22592599760696`, 
+                   128.4499761270697}}], Text3DBox[
+                  StyleBox["\<\"\"\>",
+                   StripOnInput->False,
+                   LineColor->GrayLevel[0],
+                   FrontFaceColor->GrayLevel[0],
+                   BackFaceColor->GrayLevel[0],
+                   GraphicsColor->GrayLevel[0],
+                   FontColor->GrayLevel[0]], {0.4996447363202946, 
+                  0.018845091334968055`, 1.}, {0.9992894726405892, 
+                  0.03769018266993611}]}, Text3DBox[
+                 StyleBox["\<\"\"\>",
+                  StripOnInput->False,
+                  LineColor->GrayLevel[0],
+                  FrontFaceColor->GrayLevel[0],
+                  BackFaceColor->GrayLevel[0],
+                  GraphicsColor->GrayLevel[0],
+                  FontColor->GrayLevel[0]], {
+                 0.323296853314312, -1.2591581094672204`, 
+                 0.05}, {-0.2486898871648554, 0.968583161128631}]}, Text3DBox[
+                StyleBox["\<\"\"\>",
+                 StripOnInput->False,
+                 LineColor->GrayLevel[0],
+                 FrontFaceColor->GrayLevel[0],
+                 BackFaceColor->GrayLevel[0],
+                 GraphicsColor->GrayLevel[0],
+                 FontColor->GrayLevel[0]], {0.5881847478316893, 
+                0.37952431070772275`, 1.}, {0.8402639254738419, 
+                0.5421775867253182}]}, Text3DBox[
+               StyleBox["\<\"\"\>",
+                StripOnInput->False,
+                LineColor->GrayLevel[0],
+                FrontFaceColor->GrayLevel[0],
+                BackFaceColor->GrayLevel[0],
+                GraphicsColor->GrayLevel[0],
+                
+                FontColor->GrayLevel[
+                 0]], {-0.3854907697828887, -0.8682723457603586, 0.}, {
+               0.40577975766619867`, 0.9139708902740618}]}, Text3DBox[
+              StyleBox["\<\"\"\>",
+               StripOnInput->False,
+               LineColor->GrayLevel[0],
+               FrontFaceColor->GrayLevel[0],
+               BackFaceColor->GrayLevel[0],
+               GraphicsColor->GrayLevel[0],
+               FontColor->GrayLevel[0]], {-0.36041208686749304`, 
+              1.661355810065929, 0.5}, {-0.21200710992205474`, 
+              0.9772681235681935}]},
+            StatusArea[#, 255.6]& ,
+            TagBoxNote->"255.6"],
+           StyleBox["255.6`", {
+             GrayLevel[0]}, StripOnInput -> False]],
+          Annotation[#, 
+           Style[255.6, {
+             GrayLevel[0]}], "Tooltip"]& ],
+         EventHandlerTag[{
+          "MouseClicked" :> FEPrivate`Set[DynamicChart`click$40526, 
+             FEPrivate`Not[DynamicChart`click$40526]], PassEventsDown -> True,
+            PassEventsDown -> Automatic, PassEventsUp -> True}]], Dynamic[
+        If[DynamicChart`click$40526, {{{1., 0., 0.}, {0., 1., 0.}, {0., 0., 
+           1.}}, {0.12258141073059532`, -0.15803100247513807`, 0.}}, {{1, 0, 
+          0}, {0, 1, 0}, {0, 0, 1}}, {{1, 0, 0}, {0, 1, 0}, {0, 0, 1}}]]],
+       DynamicModuleValues:>{}]}}, {}}, {}},
+  BoxRatios->{1, 1, 0.1},
+  Boxed->False,
+  Lighting->"Neutral",
+  PlotRange->{{1.2, -1.2}, {1.2, -1.2}, {0, 1}},
+  ViewPoint->{-2, 2, 4}]], "Output",
+ CellChangeTimes->{{3.7191679275581975`*^9, 3.7191681246064315`*^9}, {
+   3.7191681664078674`*^9, 3.719168198902873*^9}, {3.7191682837494593`*^9, 
+   3.7191682998415976`*^9}, {3.719168339445595*^9, 3.719168419158639*^9}, {
+   3.7191685310334964`*^9, 3.7191685787197075`*^9}, {3.7191686146053576`*^9, 
+   3.7191688541983347`*^9}, {3.7191689315388365`*^9, 
+   3.7191689495573425`*^9}, {3.719169245016979*^9, 3.7191692759846163`*^9}, {
+   3.7191694515196557`*^9, 3.7191695799133787`*^9}, 3.7191698520798855`*^9, {
+   3.719169968766794*^9, 3.719169988861086*^9}, 3.719170046745745*^9, 
+   3.719170080132942*^9, 3.7191701292503843`*^9, 3.7191701605891275`*^9, {
+   3.71917020310252*^9, 3.719170321705826*^9}, {3.719170368226798*^9, 
+   3.719170502419783*^9}, {3.719170536812683*^9, 3.7191705726060247`*^9}, 
+   3.719170699501108*^9, {3.7192251138907204`*^9, 3.71922519989797*^9}, {
+   3.719225233346697*^9, 3.7192253308292775`*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Export", "[", 
+  RowBox[{"\"\<D:\\NTM\\Deliverables\\NTM-infected-piechart.png\>\"", ",", 
+   RowBox[{"PieChart3D", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"0.29", "*", "360"}], ",", 
+       RowBox[{"0.71", "*", "360"}]}], "}"}], ",", 
+     RowBox[{"ChartLabels", "\[Rule]", 
+      RowBox[{"Placed", "[", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"Style", "[", 
+           RowBox[{"\"\<\!\(\*
+StyleBox[\"NTM\",
+FontFamily->\"Times New Roman\",
+FontWeight->\"Plain\"]\)\!\(\*
+StyleBox[\" \",
+FontFamily->\"Times New Roman\",
+FontWeight->\"Plain\"]\)\!\(\*
+StyleBox[\"therapy\",
+FontFamily->\"Times New Roman\",
+FontWeight->\"Plain\"]\)\>\"", ",", "14"}], "]"}], ",", 
+          RowBox[{"Style", "[", 
+           RowBox[{"\"\<\!\(\*
+StyleBox[\"No\",
+FontFamily->\"Times New Roman\",
+FontWeight->\"Plain\"]\)\!\(\*
+StyleBox[\" \",
+FontFamily->\"Times New Roman\",
+FontWeight->\"Plain\"]\)\!\(\*
+StyleBox[\"NTM\",
+FontFamily->\"Times New Roman\",
+FontWeight->\"Plain\"]\)\!\(\*
+StyleBox[\" \",
+FontFamily->\"Times New Roman\",
+FontWeight->\"Plain\"]\)\!\(\*
+StyleBox[\"therapy\",
+FontFamily->\"Times New Roman\",
+FontWeight->\"Plain\"]\)\>\"", ",", "14"}], "]"}], ",", 
+          RowBox[{"Style", "[", 
+           RowBox[{"\"\<\!\(\*
+StyleBox[\"29\",
+FontFamily->\"Times New Roman\"]\)\!\(\*
+StyleBox[\"%\",
+FontFamily->\"Times New Roman\"]\)\>\"", ",", "12", ",", "Bold"}], "]"}], ",", 
+          RowBox[{"Style", "[", 
+           RowBox[{"\"\<\!\(\*
+StyleBox[\"71\",
+FontFamily->\"Times New Roman\"]\)\!\(\*
+StyleBox[\"%\",
+FontFamily->\"Times New Roman\"]\)\>\"", ",", "12", ",", "Bold"}], "]"}], ",", 
+          RowBox[{"Style", "[", 
+           RowBox[{"\"\<\!\(\*
+StyleBox[\"NTM\",
+FontFamily->\"Times New Roman\"]\)\!\(\*
+StyleBox[\" \",
+FontFamily->\"Times New Roman\"]\)\!\(\*
+StyleBox[\"therapy\",
+FontFamily->\"Times New Roman\"]\)\!\(\*
+StyleBox[\" \",
+FontFamily->\"Times New Roman\"]\)\!\(\*
+StyleBox[\"in\",
+FontFamily->\"Times New Roman\"]\)\!\(\*
+StyleBox[\" \",
+FontFamily->\"Times New Roman\"]\)\!\(\*
+StyleBox[\"study\",
+FontFamily->\"Times New Roman\"]\)\!\(\*
+StyleBox[\" \",
+FontFamily->\"Times New Roman\"]\)\!\(\*
+StyleBox[\"group\",
+FontFamily->\"Times New Roman\"]\)\>\"", ",", "16", ",", "Bold"}], "]"}]}], 
+         "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"-", "1.4"}], ",", 
+            RowBox[{"-", "0.5"}], ",", "1"}], "}"}], ",", 
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"-", "0.8"}], ",", "0.8", ",", "0.05"}], "}"}], ",", 
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"-", "1.28"}], ",", 
+            RowBox[{"-", "0.7"}], ",", "1"}], "}"}], ",", 
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"-", "1"}], ",", "0.45", ",", "0"}], "}"}], ",", 
+          RowBox[{"{", 
+           RowBox[{"0.4", ",", 
+            RowBox[{"-", "1.5"}], ",", "0.5"}], "}"}]}], "}"}]}], "]"}]}], 
+     ",", 
+     RowBox[{"ChartStyle", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"EdgeForm", "[", "Thick", "]"}], ",", "61"}], "}"}]}], ",", 
+     RowBox[{"ViewPoint", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"-", "2"}], ",", "2", ",", "4"}], "}"}]}]}], "]"}], ",", 
+   RowBox[{"ImageResolution", "\[Rule]", "600"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.7191696453549376`*^9, 3.719169748420127*^9}, 
+   3.719169857893203*^9, {3.719169927626568*^9, 3.719169933601836*^9}, 
+   3.7191705797632904`*^9, {3.7191707071504917`*^9, 3.719170708231433*^9}, {
+   3.7191708459767613`*^9, 3.71917085118184*^9}},
+ EmphasizeSyntaxErrors->True],
+
+Cell[BoxData["\<\"D:\\\\NTM\\\\Deliverables\\\\NTM-infected-piechart.png\"\>"]\
+, "Output",
+ CellChangeTimes->{3.7191707088917356`*^9, 3.7191708542385454`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData["\"\<D:\\\\NTM\\\\Deliverables\\\\NTM-infection-piechart.png\>\"\
+"], "Input",
+ CellChangeTimes->{3.7191706747956705`*^9}],
+
+Cell[BoxData["\<\"D:\\\\NTM\\\\Deliverables\\\\NTM-infection-piechart.png\"\>\
+"], "Output",
+ CellChangeTimes->{3.719170674836912*^9}]
+}, Open  ]]
+},
+WindowSize->{707, 600},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+Magnification->1.25,
+FrontEndVersion->"8.0 for Microsoft Windows (64-bit) (October 6, 2011)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[579, 22, 4400, 116, 190, "Input"],
+Cell[4982, 140, 17604, 341, 403, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[22623, 486, 3706, 108, 234, "Input"],
+Cell[26332, 596, 159, 2, 35, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[26528, 603, 135, 2, 35, InheritFromParent],
+Cell[26666, 607, 134, 2, 35, "Output"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
