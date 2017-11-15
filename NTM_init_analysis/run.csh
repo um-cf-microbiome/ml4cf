@@ -23,7 +23,8 @@ set libsvm = "/mnt/d/software/libsvm-3.22"
 set phraug = "/mnt/d/software/phraug-master"
 set wpisvm = "/mnt/d/software/wpi-svm-master"
 set currentdir = `pwd`
-set data = "$currentdir/ntm-first-positive-dataset-modifiedforpython.csv"
+set datadir = "/mnt/d/NTM/data"
+set data = "$datadir/ntm-first-positive-dataset-modifiedforpython.csv"
 # THESE LOCATIONS ARE COMMENTED OUT IN FAVOR OF VERSIONS MODIFIED FOR LOCAL USE
 # set converttolibsvm = "$phraug/csv2libsvm.py"
 # set fscore = "$wpisvm/fscore.py"
@@ -38,4 +39,4 @@ set data_svm = "$currentdir/data.svm"
 $converttolibsvm $data $data_svm -1 1
 
 # PERFORM LIBSVM ANALYSIS AND CALCULATE F-SCORE OF SELECTED FEATURES
-$fscore $
+$fscore $data_svm 
