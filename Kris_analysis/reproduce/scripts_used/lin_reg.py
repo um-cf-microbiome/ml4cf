@@ -1,49 +1,35 @@
 # This script performs linear regression
-import sys
-import pandas as pandas
-import os
-import numpy as np
+# on a dataset
+import sys, math
+import pandas as pd
+import data_handling, query_data
 from scipy.stats import linregress
-import math
 
-data_to_keep = ['patient_id','sample_age','fev1','shannondiv','shannoneven','invsimpson','anaerobe_abundance','strict_anaerobe_abundance','oral_anaerobe_abundance']
-data_file = sys.argv[1]
-data = pandas.read_csv(data_file,sep=',')
-data_to_fit = []
-# Select features to fit with linear regression
-for i in data_to_keep:
- for j in data.iloc[0,:]:
-  print(i)
-  print(j)
-  if str(i) == str(j):
-   data_to_fit.hstack([data_to_fit,data.iloc[:,j]],1)
-print(data_to_fit)
-quit()
-
-for x in list(set(data['patient_id'].tolist())):
-    samples = []
-    for index, row in data.iterrows():
-        if row['patient_id'] == x:
-            samples.append([row['sample_age'],row['fev1'],row['shannondiv'],row['shannoneven'],row['invsimpson'],row['anaerobe_abundance'],row['strict_anaerobe_abundance'],row['oral_anaerobe_abundance']])
-    #if x == 336:
-    #    print samples    
-    outs=str(x)+','
-
-    for i in range(1,len(samples[0])):
-        ys = []
-        xs = []
-
-        for s in samples:
-            if not math.isnan(s[i]):
-                xs.append(s[0])
-                #print s[i]
-                ys.append(s[i])
-
-        if len(xs)>0:
-
-            outs += str(linregress(xs,ys)[0]) +','+str(linregress(xs,ys)[1])+','
-        else:
-            outs += 'NA,NA,'
-        
-    print(outs)
-
+def lin_reg_patient_specific(data):
+# Group data by patient for linear (longitudinal) regression
+ unique_patients = query_data.get_patient_ids(data)
+ list_of_features = list(data_handling.trim_data(data,[data.columns])) 
+ reg_columns = list()
+ for column in list_of_features:
+  reg_columns.append(column+'_slope')
+  reg_columns.append(column+'_intercept')
+ reg_results = pd.DataFrame(data=None,index=data.index,columns=reg_columns)
+# Iterate over patients
+ for patient in unique_patients.unique_patient_id:
+  
+  patient_data = data_handling.trim_data(query_data.get_patient_df(data,patient),query_data.get_patient_df(data,patient).columns)
+# Iterate over features:
+  for feature in patient_data.columns:
+   if feature != 'sample_age':
+# Check data quality before performing regression
+    if data_handling.good_data(patient_data[feature]):
+#  perform linear regression
+     print(linregress(patient_data.sample_age,patient_data[feature]))
+    if not data_handling.good_data(patient_data[feature]):
+     print('Patient '+patient+' has insufficient '+feature+' values for linear regression')
+#   slope,intercept = linregress(patient_data.sample_age,patient_data[feature])[0,1]
+#   reg_results[feature+'_slope'].loc[patient] = slope
+#   reg_results[feature+'_intercept'].loc[patient] = intercept
+#   print(reg_results[feature+'_intercept'].loc[patient])
+ new_data = pd.concat([data,reg_results],axis=1)
+ return(new_data)
