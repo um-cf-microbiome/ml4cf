@@ -16,7 +16,6 @@ def lin_reg_patient_specific(data):
  reg_results = pd.DataFrame(data=None,index=data.index,columns=reg_columns)
 # Iterate over patients
  for patient in unique_patients.unique_patient_id:
-  
   patient_data = data_handling.trim_data(query_data.get_patient_df(data,patient),query_data.get_patient_df(data,patient).columns)
 # Iterate over features:
   for feature in patient_data.columns:
