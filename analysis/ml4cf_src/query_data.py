@@ -37,8 +37,8 @@ def get_patient_ids(data):
     stored=True
     break
   if not stored: 
-   print(data)
-   quit()
+#   print(data)
+#   quit()
    current_patient = data.patient_id.iloc[index]
    concatframe = pd.DataFrame(data=[current_patient],index=[len(old_patient_ids)+1],columns=patient_ids.columns)
 #   print(concatframe)

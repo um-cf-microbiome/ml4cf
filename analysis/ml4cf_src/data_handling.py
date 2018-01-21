@@ -19,17 +19,19 @@ def good_data(feature):
 # Evaluate quality of single-column dataframe
 # Return logical argument
  total_good = 0
- good = [True for index in feature.index]
+ good = pd.DataFrame(data=True,index=feature.index,columns=['good_data'])
 # Search for NaN entries
- for index in feature:
-  print(index)
-  if type(feature.iloc[index]) is not str:
-   if math.isnan(feature.iloc[index]): good[index]=False
+ for index in feature.index:
+  if type(feature.iloc[index-1]) is str:
+   if math.isnan(feature.iloc[index-1]): good['good_data'].iloc[index]=False 
+#   if good[index] == 'NaN': good[index]=False
 # Count numerical entries
- for index in good:
-  if not good[index]:
+ for index in good.index:
+  if not good.iloc[index]:
    total_good = total_good + 1
 # Mark the feature as good if 'total_good' >= 2 
+ print(good)
+ quit()
  return(good)
 
 def contains_nonnumerical_data(column):
@@ -43,9 +45,9 @@ def trim_data(data,features_to_keep):
 # Trim dataframe to contain only 'features_to_keep'
  old_data = pd.DataFrame(data=None,index=data.index)
  final_data = pd.DataFrame(data=None)
- for want in features_to_keep.iloc[0]:
+ for want in features_to_keep:
   for check in data.columns:
-   if (str(want) == str(check)):
+   if (want == check):
     final_data = pd.concat([old_data,data[check]],axis=1)
     old_data = final_data
  return(final_data)
