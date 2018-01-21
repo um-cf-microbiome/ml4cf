@@ -1,6 +1,6 @@
 # This script contains the protocol used
 # for support vector machine (SVM) analysis of
-# the first positive Caverly NTM dataset.
+# the first positive NTM dataset of Dr. Lindsay Caverly..
 # The basic structure of this file is shown below:
 # 
 # (1) Read and process data
@@ -17,19 +17,22 @@
 
 # Import Python packages
 import pandas as pd
-import csv
+import sys, os, csv
 from collections import defaultdict
-# Import local subroutines
+# Import local subroutines (from ML4CF)
+sys.path.insert(0, str(os.getcwd()+'/analysis/ml4cf_src'))
 import data_handling, query_data, lin_reg
-# Provide path to data
-data_file = '/mnt/d/NTM/data/ntm-first-positive-dataset-full.csv'
-# Provide file with features for regression
-regression_features_file = 'regression_features.csv'
+# Path to data file (CSV-format)
+data_file = str(os.getcwd()+'/data/ntm-first-positive-dataset-full.csv')
+# Path to file with list of features for regression
+reg_feat_file = open(str(os.getcwd()+'/analysis/regression_features.csv'),'r')
 # Read data
 data = pd.read_csv(data_file)
-# Read features for regression
-features_for_regression = pd.read_csv(regression_features_file)
-regression_input = data_handling.trim_data(data,features_for_regression)
+# Read regression features
+reg_feat = reg_feat_file.read().splitlines()
+regression_input = data_handling.trim_data(data,reg_feat)
+
+## Done reading user input files and processing data
 
 ##
 #
@@ -38,8 +41,8 @@ regression_input = data_handling.trim_data(data,features_for_regression)
 ##
 
 # regression_results contains slope and intercept data for features listed in 'regression_features_file'
-
-#regression_results = lin_reg.lin_reg_patient_specific(regression_input)
+regression_results = lin_reg.lin_reg_patient(regression_input)
+#print(regression_results.iloc[1])
 quit()
 
 ##
