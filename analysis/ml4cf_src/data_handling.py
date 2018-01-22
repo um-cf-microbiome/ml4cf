@@ -23,22 +23,48 @@ def good_data(feature):
 # Search for NaN entries
  for index in feature.index:
   if type(feature.iloc[index-1]) is str:
-   if math.isnan(feature.iloc[index-1]): good['good_data'].iloc[index]=False 
-#   if good[index] == 'NaN': good[index]=False
+   if math.isnan(feature.iloc[index-1]): good['good_data'].iloc[index-1]=False 
+  if str(feature.iloc[index-1]) == 'nan': good['good_data'].iloc[index-1]=False
 # Count numerical entries
  for index in good.index:
-  if not good.iloc[index]:
+  if good['good_data'].iloc[index-1]:
    total_good = total_good + 1
 # Mark the feature as good if 'total_good' >= 2 
- print(good)
- quit()
- return(good)
+ if total_good >= 2:
+  good_set = True
+ else:
+  good_set = False
+ return(good_set)
 
-def contains_nonnumerical_data(column):
+def replace_nan_with_avg(feature):
+# Replace NaN entries with the feature average
+ entries = 0
+ total = 0.0
+# Get the sum
+ for index in feature.index:
+  if str(feature.iloc[index-1]) != 'nan':
+   feature_total = sum([float(total),float(feature.iloc[index-1])])
+   entries = entries + 1
+   total = feature_total
+# Calculate average
+ avg = total / entries
+# Replace NaN with avg
+ new_feature = feature
+ for index in feature.index:
+  if str(feature.iloc[index-1]) == 'nan':
+   feature.iloc[index-1] = avg
+ print(new_feature)
+ return(new_feature) 
+
+def replace_nan_with_reg_values(feature,sample_age,slope):
+# Replace NaN entries with feature regression values
+ return(new_feature)
+
+def check_for_nan(column):
 # Logical: searches a column dataframe for non-numerical data
  NaN=False
  for index in column.index:
-  if math.isnan(data[feature].iloc[sample]): NaN=True
+  if math.isnan(column.iloc[index-1]): NaN=True
  return(NaN)
 
 def trim_data(data,features_to_keep):
