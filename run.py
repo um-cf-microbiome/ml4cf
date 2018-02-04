@@ -1,48 +1,107 @@
-# This script contains the protocol used
+# This script contains the protocol
 # for support vector machine (SVM) analysis of
-# the first positive NTM dataset of Dr. Lindsay Caverly..
-# The basic structure of this file is shown below:
+# the first positive NTM dataset of Dr. Lindsay Caverly.
+# University of Michigan, Dept. of Pediatric Pulmonology
+# January, 2018.
+#
+# Authors: Lindsay Caverly, Garrett Meek
 # 
-# (1) Read and process data
-# (2) Add subject-specific regression results as features
-# (3) Train SVM model to classify NTM disease
-# (4) Get NTM-disease prediction F-score for all features
-# (5) Plot results
+# This file is organized as follows:
+# 
+# (1) Load software and data for analysis
+#     (1-A) Load Python packages
+#     (1-B) Read data and build dataframes for ML
+#           (1-B-i) Build microbial datasets:
+#                   'microbial_full': Contains all default microbial
+#                   data from Mothur MiSeq-SOP, where the data was subsequently
+#                   used to calculate individual OTU relative abundances
+#	            'microbial_avium': Contains microbial data for samples that
+#		    tested positive for M. avium
+#	            'microbial_abscessus': Contains microbial data for samples that
+#		    tested positive for M. abscessus
+#           (1-B-ii) Build clinical datasets:
+#	            'clinical_full': Contains all clinical features (described in:
+#	            'data/features_description.txt')
+#	            'clinical_numeric': Contains only the clinical features
+#		    whose values are numeric
+#                   'clinical_no_fev1': Contains all clinical features except 'fev1'
+# (2) Add derived features
+#     (2-A) Add subject-specific regression results as features
+# (4) Train SVM model to classify NTM disease
+#     (A) 
+# (5) Prepare analysis results for plotting
+# (6) Plot results
 
 ##
 #
-# (1) Read and process data
+# (1) Load Python packages and read datasets
 #
 ##
 
-# Import Python packages
+#     (1-A) Load Python packages
+
 import pandas as pd
 import sys, os, csv
 from collections import defaultdict
-# Import local subroutines (from ML4CF)
-sys.path.insert(0, str(os.getcwd()+'/analysis/ml4cf_src'))
-import data_handling, query_data, lin_reg
-# Path to data file (CSV-format)
-data_file = str(os.getcwd()+'/data/ntm-first-positive-dataset-full.csv')
-# Path to file with list of features for regression
+#         Import local subroutines
+sys.path.insert(0, str(os.getcwd()+'/src'))
+import data, model
+from data import edit, get, select
+from model import regression
+#     (1-B) Read data and build dataframes for ML
+
+#           Path to data files (CSV-format)
+data_file = open(str(os.getcwd()+'/data/ntm-first-positive-incomplete.csv'),'r')
+# 	    List of clinical features
+clinical_feat_file = open(str(os.getcwd()+'/analysis/clinical_features.csv'),'r')
+#           List of regression features
 reg_feat_file = open(str(os.getcwd()+'/analysis/regression_features.csv'),'r')
-# Read data
-data = pd.read_csv(data_file)
-# Read regression features
+#	    List of classifiers
+classifiers_file = open(str(os.getcwd()+'/analysis/classifiers.csv'),'r')
+#           Read files
+full_data = pd.read_csv(data_file)
+clinical_features = clinical_feat_file.read().splitlines()
 reg_feat = reg_feat_file.read().splitlines()
-regression_input = data_handling.trim_data(data,reg_feat)
+classifiers = classifiers_file.read().splitlines()
+#	    Determine microbial features by removing clinical features
+microbial_features = data.edit.remove(full_data,clinical_features)
 
-## Done reading user input files and processing data
-
-##
+#           (1-B-i) Define microbial datasets:
+#                   'microbial_full': Contains all default microbial
+#                   data from Mothur MiSeq-SOP, where the data was subsequently
+#                   used to calculate individual OTU relative abundances
+microbial_full = data.edit.keep(full_data,microbial_features)
 #
-# (2) Add subject-specific regression results as features
-#
-##
+#		    Assemble data for samples with M. avium and M. abscessus only
+microbial_avium_absc = data.select.classifier(full_data,'ntm_species',['M. avium complex','M. abscessus complex'])
+#		    Assemble individual datasets for each microbial classifier:
 
-# regression_results contains slope and intercept data for features listed in 'regression_features_file'
-regression_results = lin_reg.lin_reg_patient(regression_input)
-#print(regression_results.iloc[1])
+#                   'microbial_avium': Contains microbial data for samples with M. avium
+microbial_avium = data.select.classifier(full_data,'ntm_species',['M. avium complex'])
+#                   'microbial_abscessus': Contains microbial data for samples with M. acscessus
+microbial_absc = data.select.classifier(full_data,'ntm_species',['M. abscessus complex'])
+#           (1-B-ii) Define clinical datasets:
+#                   'clinical_full': Contains all clinical features (described in:
+#                   'data/features_description.txt')
+clinical_full = data.edit.keep(full_data,clinical_features)
+#                   'clinical_numeric': Contains only the clinical features
+#                   whose values are numeric
+clinical_numeric = data.edit.keep_numeric(clinical_full)
+#                   'clinical_no_fev1': Contains all clinical features except 'fev1'
+clinical_no_fev1 = data.edit.remove(clinical_full,['fev1','index_fev1','baseline_fev1'])
+
+# (2) Append derived features to dataset
+#     (2-A) Append standard diversity measures
+#     (2-B) Append subject-specific regression results
+
+# 'supp_data' contains regression results, with the following structure:
+# 
+# 
+#
+supp_data = model.regression.patient(full_data,model.regression.column_list(reg_feat))
+# 'model_data' contains all features used for F-score and SVM analysis
+model_data = pd.concat([full_data,supp_data],axis=1)
+ 
 quit()
 
 ##
@@ -72,13 +131,13 @@ data = regression_results
 #
 ##
 
-lib_svm = svm.csv_to_libsvm(regression_results)
+#lib_svm = svm.csv_to_libsvm(regression_results)
 
 # Convert CSV data-file to SVM library
 
 # Perform SVM analysis with LIBSVM
 
-y.get_patient_df(data,patient) 
+#y.get_patient_df(data,patient) 
 
 ##
 #
@@ -98,4 +157,4 @@ y.get_patient_df(data,patient)
 
 # Plot F scores for all features
 
-
+#      regression_results = lin_reg.lin_reg_patient(regression_input)
