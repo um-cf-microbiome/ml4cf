@@ -2,17 +2,15 @@
 import pandas as pd
 import math
 
-def remove_nonnumerical_data(data):
+def keep_numeric(data):
+# Remove non-numeric columns from dataframe
  numerical_data = pd.DataFrame(data=None,index=data.index)
  old_data = numerical_data
  for feature in data.columns:
-  skip=False
-  for sample in data.index:
-   if type(data[feature].iloc[sample]) is not str:
-    if math.isnan(data[feature].iloc[sample]): skip=True
-  if not skip:
+  if (isinstance(data[feature].iloc[0],(int, float, complex))):
+#    if math.isnan(data.feature): skip=True
    numerical_data = pd.concat([old_data,data[feature]],axis=1)
-  old_data = numerical_data
+   old_data = numerical_data
  return(numerical_data)
 
 def good_data(feature):
@@ -41,7 +39,7 @@ def contains_nonnumerical_data(column):
   if math.isnan(data[feature].iloc[sample]): NaN=True
  return(NaN)
 
-def trim_data(data,features_to_keep):
+def keep(data,features_to_keep):
 # Trim dataframe to contain only 'features_to_keep'
  old_data = pd.DataFrame(data=None,index=data.index)
  final_data = pd.DataFrame(data=None)
@@ -50,4 +48,14 @@ def trim_data(data,features_to_keep):
    if (want == check):
     final_data = pd.concat([old_data,data[check]],axis=1)
     old_data = final_data
+ return(final_data)
+
+def remove(data,features_to_remove):
+# Given pandas df 'data', remove columns in list 'features_to_remove'
+ old_data = pd.DataFrame(data=None,index=data.index)
+ final_data = pd.DataFrame(data=None)
+ for feature in data.columns:
+  if all(feature != remove for remove in features_to_remove):
+   final_data = pd.concat([old_data,data[feature]],axis=1)
+   old_data = final_data
  return(final_data)
