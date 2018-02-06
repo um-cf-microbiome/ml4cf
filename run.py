@@ -90,18 +90,16 @@ clinical_numeric = data.edit.keep_numeric(clinical_full)
 #                   'clinical_no_fev1': Contains all clinical features except 'fev1'
 clinical_no_fev1 = data.edit.remove(clinical_full,['fev1','index_fev1','baseline_fev1'])
 
-# (2) Append derived features to dataset
-#     (2-A) Append standard diversity measures
-#     (2-B) Append subject-specific regression results
+# (2) Add derived features to dataset
+#     (2-A) Calculate standard diversity measures
+#     (2-B) Perform subject-specific regression
 
-# 'supp_data' contains regression results, with the following structure:
-# 
-# 
-#
-supp_data = model.regression.patient(full_data,model.regression.column_list(reg_feat))
+clinical_supp_data = model.regression.patient(clinical_full)
+microbial_supp_data = model.regression.patient(microbial_full)
+print(clinical_supp_data.columns)
+print(microbial_supp_data.columns)
 # 'model_data' contains all features used for F-score and SVM analysis
 model_data = pd.concat([full_data,supp_data],axis=1)
- 
 quit()
 
 ##

@@ -1,15 +1,14 @@
 # This file contains basic data handling operations
 import pandas as pd
-import math
+import numpy, math
 
-def keep_numeric(data):
+def keep_numeric(full_data):
 # Remove non-numeric columns from dataframe
- numerical_data = pd.DataFrame(data=None,index=data.index)
+ numerical_data = pd.DataFrame(data=None,index=full_data.index)
  old_data = numerical_data
- for feature in data.columns:
-  if (isinstance(data[feature].iloc[0],(int, float, complex))):
-#    if math.isnan(data.feature): skip=True
-   numerical_data = pd.concat([old_data,data[feature]],axis=1)
+ for feature in full_data.columns:
+  if isinstance(full_data[feature].iloc[0],numpy.float64):
+   numerical_data = pd.concat([old_data,full_data[feature]],axis=1)
    old_data = numerical_data
  return(numerical_data)
 
@@ -45,7 +44,7 @@ def keep(data,features_to_keep):
  final_data = pd.DataFrame(data=None)
  for want in features_to_keep:
   for check in data.columns:
-   if (want == check):
+   if (want == check or 'patient_id'):
     final_data = pd.concat([old_data,data[check]],axis=1)
     old_data = final_data
  return(final_data)

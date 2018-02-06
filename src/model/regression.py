@@ -11,41 +11,37 @@ import data
 from data import edit, get, select
 
 def column_list(reg_feat):
+ reg_columns = list()
  for feature in reg_feat:
-  reg_columns.append(column+'_slope')
-  reg_columns.append(column+'_intercept')
- reg_results = pd.DataFrame(data=None,index=data.index,columns=reg_columns) 
- return(reg_column_list)
+  reg_columns.append(feature+'_slope')
+  reg_columns.append(feature+'_intercept')
+ return(reg_columns)
 
-def patient(full_data,reg_columns):
+def patient(full_data):
 # Performs patient-specific linear (longitudinal) regression
- unneeded_features = ['sample','sample_age','patient_id']
- reg_columns = 
-# Create an empty array for regression results
+ numeric_data = data.edit.keep_numeric(full_data)
+ reg_columns = numeric_data.columns
+ unneeded_features = ['sample','sample_age','patient_id','relative_age','index_age']
+# Create empty array for regression results
+ reg_results = pd.DataFrame(data=None,index=full_data.index,columns=reg_columns)
  for patient in data.get.patient_ids(full_data):
-#  for column in reg_columns:
-#  if column not in unneeded_features:
-   reg_columns.append(column+'_slope')
-   reg_columns.append(column+'_intercept')
- reg_results = pd.DataFrame(data=None,index=data.index,columns=reg_columns)
-# Iterate over patients
- for patient in unique_patients.unique_patient_id:
-  patient_data = query_data.get_patient_df(data,patient)
-# Iterate over all non-temporal features:
+  patient_data = data.edit.keep_numeric(data.get.patient_df(full_data,patient))
+# Iterate over non-temporal features:
   for feature in patient_data.columns:
    if feature not in unneeded_features:
-# Check data quality before performing regression
-    print(patient_data[feature])
-    if data_handling.good_data(patient_data[feature]):
-     print("performing regression")
-#  perform linear regression
-     quit()
-     print(linregress(patient_data.sample_age,patient_data[feature]))
-    if not data_handling.good_data(patient_data[feature]):
-     print('Patient '+patient+' has insufficient '+feature+' values for linear regression')
-#   slope,intercept = linregress(patient_data.sample_age,patient_data[feature])[0,1]
-#   reg_results[feature+'_slope'].loc[patient] = slope
-#   reg_results[feature+'_intercept'].loc[patient] = intercept
-#   print(reg_results[feature+'_intercept'].loc[patient])
- new_data = pd.concat([data,reg_results],axis=1)
- return(new_data)
+# Check data for errors
+    x_data = pd.DataFrame(data=None,index=None,columns=['relative_age'])
+    y_data = pd.DataFrame(data=None,index=None,columns=[feature])
+    for row in patient_data.index:
+     time = patient_data['relative_age'].iloc[row-1]
+     y = patient_data[feature].iloc[row-1]
+     if math.isfinite(time) and math.isfinite(y):
+      concatframe_x = pd.DataFrame(data=[time],index=[len(x_data.index)],columns=['relative_age'])
+      concatframe_y = pd.DataFrame(data=y,index=[len(y_data.index)],columns=[feature])
+      x_data = pd.concat([x_data,concatframe_x],axis=0)
+      y_data = pd.concat([y_data,concatframe_y],axis=0)
+    slope,intercept,rvalue,pvalue,stderr = linregress(x_data['relative_age'],y_data[feature])
+    reg_results[feature+'_slope'].loc[patient] = slope
+    reg_results[feature+'_intercept'].loc[patient] = intercept
+    print(rvalue,pvalue,stderr)
+ return(reg_results)
