@@ -1,0 +1,294 @@
+Sputum Number,Patient ID#,relative age,NTM species,Disease?
+SP170,0076,-2.395,M. abscessus complex,TRUE
+SP304,0076,-1.858,M. abscessus complex,TRUE
+SP416,0076,-1.247,M. abscessus complex,TRUE
+SP436,0076,-1.134,M. abscessus complex,TRUE
+SP517,0076,-0.764,M. abscessus complex,TRUE
+SP572,0076,-0.51,M. abscessus complex,TRUE
+SP692,0076,0.159,M. abscessus complex,TRUE
+SP747,0076,0.46,M. abscessus complex,TRUE
+SP229,0117,-2.129,M. abscessus complex,FALSE
+SP288,0117,-1.86,M. abscessus complex,FALSE
+SP431,0117,-1.055,M. abscessus complex,FALSE
+SP481,0117,-0.805,M. abscessus complex,FALSE
+SP539,0117,-0.553,M. abscessus complex,FALSE
+SP1575,0132,-4.107,M. avium complex,FALSE
+SP1605,0132,-3.932,M. avium complex,FALSE
+SP1704,0132,-3.184,M. avium complex,FALSE
+SP1795,0132,-2.915,M. avium complex,FALSE
+SP2026,0132,-2.57,M. avium complex,FALSE
+SP2081,0132,-2.455,M. avium complex,FALSE
+SP2583,0132,-1.496,M. avium complex,FALSE
+SP2803,0132,-1.112,M. avium complex,FALSE
+SP2973,0132,-0.767,M. avium complex,FALSE
+SP3057,0132,-0.556,M. avium complex,FALSE
+SP3151,0132,-0.288,M. avium complex,FALSE
+SP3292,0132,0,M. avium complex,FALSE
+SP3433,0132,0.249,M. avium complex,FALSE
+SP3574,0132,0.499,M. avium complex,FALSE
+SP923,0160,-4.833,M. avium complex,TRUE
+SP968,0160,-4.625,M. avium complex,TRUE
+SP1012,0160,-4.468,M. avium complex,TRUE
+SP1161,0160,-3.836,M. avium complex,TRUE
+SP1249,0160,-3.43,M. avium complex,TRUE
+SP1353,0160,-2.992,M. avium complex,TRUE
+SP1528,0160,-2.512,M. avium complex,TRUE
+SP1665,0160,-1.759,M. avium complex,TRUE
+SP1672,0160,-1.707,M. avium complex,TRUE
+SP1983,0160,-0.901,M. avium complex,TRUE
+SP2594,0160,0.268,M. avium complex,TRUE
+SP1318,0172,-4.696,M. terrae,FALSE
+SP1552,0172,-4.03,M. terrae,FALSE
+SP1745,0172,-2.844,M. terrae,FALSE
+SP1835,0172,-2.666,M. terrae,FALSE
+SP2027,0172,-2.403,M. terrae,FALSE
+SP2434,0172,-1.677,M. terrae,FALSE
+SP2470,0172,-1.611,M. terrae,FALSE
+SP2646,0172,-1.195,M. terrae,FALSE
+SP2707,0172,-1.093,M. terrae,FALSE
+SP2828,0172,-0.868,M. terrae,FALSE
+SP2830,0172,-0.866,M. terrae,FALSE
+SP2861,0172,-0.822,M. terrae,FALSE
+SP2963,0172,-0.6,M. terrae,FALSE
+SP3194,0172,0,M. terrae,FALSE
+SP3283,0172,0.153,M. terrae,FALSE
+SP5788,0191,0,M. abscessus complex,FALSE
+SP5976,0191,0.173,M. abscessus complex,FALSE
+SP1790,0199,-3.852,M. avium complex,TRUE
+SP1969,0199,-3.603,M. avium complex,TRUE
+SP2281,0199,-3.148,M. avium complex,TRUE
+SP2420,0199,-2.816,M. avium complex,TRUE
+SP2529,0199,-2.548,M. avium complex,TRUE
+SP2661,0199,-2.279,M. avium complex,TRUE
+SP2801,0199,-2.049,M. avium complex,TRUE
+SP3010,0199,-1.627,M. avium complex,TRUE
+SP3086,0199,-1.386,M. avium complex,TRUE
+SP3142,0199,-1.244,M. avium complex,TRUE
+SP3226,0199,-1.058,M. avium complex,TRUE
+SP3307,0199,-0.915,M. avium complex,TRUE
+SP3529,0199,-0.515,M. avium complex,TRUE
+SP3746,0199,-0.11,M. avium complex,TRUE
+SP3763,0199,-0.074,M. avium complex,TRUE
+SP3793,0199,0,M. avium complex,TRUE
+SP904,0204,-4.584,M. avium complex,TRUE
+SP978,0204,-4.238,M. avium complex,TRUE
+SP1162,0204,-3.471,M. avium complex,TRUE
+SP1798,0204,-0.803,M. avium complex,TRUE
+SP2442,0204,0.268,M. avium complex,TRUE
+SP2494,0204,0.397,M. avium complex,TRUE
+SP533,0208,-0.882,M. avium complex,FALSE
+SP574,0208,-0.688,M. avium complex,FALSE
+SP790,0208,0.46,M. avium complex,FALSE
+SP740,0229,-3.833,M. avium complex,TRUE
+SP798,0229,-3.545,M. avium complex,TRUE
+SP997,0229,-2.318,M. avium complex,TRUE
+SP1003,0229,-2.274,M. avium complex,TRUE
+SP1133,0229,-1.762,M. avium complex,TRUE
+SP1251,0229,-1.208,M. avium complex,TRUE
+SP1398,0229,-0.663,M. avium complex,TRUE
+SP1519,0229,-0.356,M. avium complex,TRUE
+SP1583,0229,-0.126,M. avium complex,TRUE
+SP1653,0229,0.373,M. avium complex,TRUE
+SP1530,0233,-4.978,M. avium complex,TRUE
+SP1780,0233,-3.655,M. avium complex,TRUE
+SP2087,0233,-3.159,M. avium complex,TRUE
+SP2091,0233,-3.159,M. avium complex,TRUE
+SP2228,0233,-3.06,M. avium complex,TRUE
+SP2328,0233,-2.83,M. avium complex,TRUE
+SP2410,0233,-2.627,M. avium complex,TRUE
+SP2468,0233,-2.512,M. avium complex,TRUE
+SP2532,0233,-2.312,M. avium complex,TRUE
+SP2660,0233,-2.063,M. avium complex,TRUE
+SP2953,0233,-1.526,M. avium complex,TRUE
+SP2960,0233,-1.51,M. avium complex,TRUE
+SP3248,0233,-0.808,M. avium complex,TRUE
+SP3487,0233,-0.367,M. avium complex,TRUE
+SP3541,0233,-0.266,M. avium complex,TRUE
+SP3733,0233,0.099,M. avium complex,TRUE
+SP3779,0233,0.17,M. avium complex,TRUE
+SP3826,0233,0.296,M. avium complex,TRUE
+SP4134,0234,-2.493,M. abscessus complex,FALSE
+SP1341,0244,-4.836,M. avium complex,FALSE
+SP1499,0244,-4.395,M. avium complex,FALSE
+SP1592,0244,-4.047,M. avium complex,FALSE
+SP1802,0244,-2.956,M. avium complex,FALSE
+SP1804,0244,-2.953,M. avium complex,FALSE
+SP1895,0244,-2.8,M. avium complex,FALSE
+SP2000,0244,-2.682,M. avium complex,FALSE
+SP2113,0244,-2.436,M. avium complex,FALSE
+SP2415,0244,-1.956,M. avium complex,FALSE
+SP2480,0244,-1.805,M. avium complex,FALSE
+SP2490,0244,-1.764,M. avium complex,FALSE
+SP2621,0244,-1.493,M. avium complex,FALSE
+SP2693,0244,-1.351,M. avium complex,FALSE
+SP2766,0244,-1.236,M. avium complex,FALSE
+SP2827,0244,-1.104,M. avium complex,FALSE
+SP2911,0244,-0.967,M. avium complex,FALSE
+SP2985,0244,-0.805,M. avium complex,FALSE
+SP3059,0244,-0.614,M. avium complex,FALSE
+SP3060,0244,-0.597,M. avium complex,FALSE
+SP3211,0244,-0.192,M. avium complex,FALSE
+SP3259,0244,-0.118,M. avium complex,FALSE
+SP3368,0244,0.09,M. avium complex,FALSE
+SP3420,0244,0.173,M. avium complex,FALSE
+SP3501,0244,0.326,M. avium complex,FALSE
+SP4582,0260,-0.249,M. terrae,FALSE
+SP4717,0260,0.285,M. terrae,FALSE
+SP1247,0310,-4.518,M. abscessus complex,FALSE
+SP1412,0310,-3.904,M. abscessus complex,FALSE
+SP1588,0310,-3.348,M. abscessus complex,FALSE
+SP1623,0310,-3.099,M. abscessus complex,FALSE
+SP1797,0310,-2.255,M. abscessus complex,FALSE
+SP2588,0310,-0.836,M. abscessus complex,FALSE
+SP2884,0310,-0.299,M. abscessus complex,FALSE
+SP3026,0310,0,M. abscessus complex,FALSE
+SP1317,0320,-0.745,M. avium complex,TRUE
+SP1319,0320,-0.742,M. avium complex,TRUE
+SP1326,0320,-0.707,M. avium complex,TRUE
+SP1369,0320,-0.573,M. avium complex,TRUE
+SP1462,0320,-0.247,M. avium complex,TRUE
+SP1633,0320,0.403,M. avium complex,TRUE
+SP1636,0320,0.411,M. avium complex,TRUE
+SP1442,0324,-3.282,M. avium complex,FALSE
+SP1712,0324,-1.937,M. avium complex,FALSE
+SP1989,0324,-1.444,M. avium complex,FALSE
+SP2234,0324,-1.151,M. avium complex,FALSE
+SP2291,0324,-1.022,M. avium complex,FALSE
+SP2356,0324,-0.805,M. avium complex,FALSE
+SP2527,0324,-0.422,M. avium complex,FALSE
+SP2756,0324,0,M. avium complex,FALSE
+SP1643,0328,-4.205,M. abscessus complex,TRUE
+SP1980,0328,-3.208,M. abscessus complex,TRUE
+SP2045,0328,-3.093,M. abscessus complex,TRUE
+SP3490,0328,-0.2,M. abscessus complex,TRUE
+SP3734,0328,0.258,M. abscessus complex,TRUE
+SP3805,0328,0.395,M. abscessus complex,TRUE
+SP1439,0336,-3.852,M. avium complex,FALSE
+SP1741,0336,-2.375,M. avium complex,FALSE
+SP1844,0336,-2.164,M. avium complex,FALSE
+SP2061,0336,-1.838,M. avium complex,FALSE
+SP2246,0336,-1.647,M. avium complex,FALSE
+SP2342,0336,-1.378,M. avium complex,FALSE
+SP2565,0336,-0.871,M. avium complex,FALSE
+SP2816,0336,-0.438,M. avium complex,FALSE
+SP2899,0336,-0.285,M. avium complex,FALSE
+SP2979,0336,-0.112,M. avium complex,FALSE
+SP3074,0336,0.175,M. avium complex,FALSE
+SP3771,0362,-2.858,M. avium complex,FALSE
+SP4029,0362,-2.068,M. avium complex,FALSE
+SP4766,0362,-0.268,M. avium complex,FALSE
+SP1685,0367,-2.134,M. abscessus complex,FALSE
+SP1733,0367,-1.838,M. abscessus complex,FALSE
+SP1912,0367,-1.512,M. abscessus complex,FALSE
+SP2082,0367,-1.244,M. abscessus complex,FALSE
+SP2285,0367,-0.995,M. abscessus complex,FALSE
+SP2389,0367,-0.726,M. abscessus complex,FALSE
+SP2733,0367,-0.016,M. abscessus complex,FALSE
+SP2539,0389,-4.334,M. terrae,FALSE
+SP2682,0389,-4.066,M. terrae,FALSE
+SP2974,0389,-3.529,M. terrae,FALSE
+SP4048,0389,-1.016,M. terrae,FALSE
+SP2098,0487,-1.189,M. fortuitum species group,FALSE
+SP2097,0487,-1.189,M. fortuitum species group,FALSE
+SP2255,0487,-1.033,M. fortuitum species group,FALSE
+SP2416,0487,-0.652,M. fortuitum species group,FALSE
+SP2500,0487,-0.441,M. fortuitum species group,FALSE
+SP2606,0487,-0.211,M. fortuitum species group,FALSE
+SP2630,0487,-0.153,M. fortuitum species group,FALSE
+SP2635,0487,-0.142,M. fortuitum species group,FALSE
+SP2679,0487,-0.074,M. fortuitum species group,FALSE
+SP2711,0487,-0.008,M. fortuitum species group,FALSE
+SP2810,0487,0.142,M. fortuitum species group,FALSE
+SP2959,0487,0.447,M. fortuitum species group,FALSE
+SP2991,0487,0.496,M. fortuitum species group,FALSE
+SP2265,0491,-3.353,M. avium complex,FALSE
+SP2714,0491,-2.337,M. avium complex,FALSE
+SP3024,0491,-1.762,M. avium complex,FALSE
+SP3273,0491,-1.129,M. avium complex,FALSE
+SP3276,0491,-1.115,M. avium complex,FALSE
+SP3407,0491,-0.899,M. avium complex,FALSE
+SP3536,0491,-0.649,M. avium complex,FALSE
+SP3686,0491,-0.362,M. avium complex,FALSE
+SP4533,0541,-1.597,M. avium complex,FALSE
+SP4541,0541,-1.592,M. avium complex,FALSE
+SP4573,0541,-1.501,M. avium complex,FALSE
+SP4630,0541,-1.384,M. avium complex,FALSE
+SP4751,0541,-0.888,M. avium complex,FALSE
+SP4782,0541,-0.753,M. avium complex,FALSE
+SP4843,0541,-0.378,M. avium complex,FALSE
+SP5051,0541,0.121,M. avium complex,FALSE
+SP5070,0541,0.151,M. avium complex,FALSE
+SP5194,0541,0.395,M. avium complex,FALSE
+SP3252,0543,-4.967,M. avium complex,FALSE
+SP3400,0543,-4.699,M. avium complex,FALSE
+SP3769,0543,-4.025,M. avium complex,FALSE
+SP3844,0543,-3.833,M. avium complex,FALSE
+SP4222,0543,-2.8,M. avium complex,FALSE
+SP4358,0543,-2.551,M. avium complex,FALSE
+SP4485,0543,-2.282,M. avium complex,FALSE
+SP4614,0543,-2.014,M. avium complex,FALSE
+SP4991,0543,-0.534,M. avium complex,FALSE
+SP5127,0543,-0.345,M. avium complex,FALSE
+SP5315,0543,0,M. avium complex,FALSE
+SP2784,0554,-0.003,M. gordonae,FALSE
+SP2796,0554,0.008,M. gordonae,FALSE
+SP3160,0557,-3.359,M. gordonae,FALSE
+SP3262,0557,-3.14,M. gordonae,FALSE
+SP3338,0557,-3.014,M. gordonae,FALSE
+SP3403,0557,-2.904,M. gordonae,FALSE
+SP3434,0557,-2.841,M. gordonae,FALSE
+SP3459,0557,-2.784,M. gordonae,FALSE
+SP3584,0557,-2.573,M. gordonae,FALSE
+SP4211,0557,-1.022,M. gordonae,FALSE
+SP4235,0557,-0.962,M. gordonae,FALSE
+SP4370,0557,-0.71,M. gordonae,FALSE
+SP4409,0557,-0.625,M. gordonae,FALSE
+SP4669,0557,0.058,M. gordonae,FALSE
+SP4721,0557,0.263,M. gordonae,FALSE
+SP4757,0557,0.342,M. gordonae,FALSE
+SP2831,0558,-2.09,M. chelonae,FALSE
+SP3095,0558,-1.477,M. chelonae,FALSE
+SP3296,0558,-1.055,M. chelonae,FALSE
+SP3438,0558,-0.786,M. chelonae,FALSE
+SP3523,0558,-0.638,M. chelonae,FALSE
+SP3586,0558,-0.523,M. chelonae,FALSE
+SP3660,0558,-0.345,M. chelonae,FALSE
+SP3306,0561,-4.638,M. abscessus complex,FALSE
+SP3472,0561,-4.332,M. abscessus complex,FALSE
+SP4141,0561,-2.74,M. abscessus complex,FALSE
+SP4560,0561,-1.893,M. abscessus complex,FALSE
+SP4608,0561,-1.819,M. abscessus complex,FALSE
+SP4620,0561,-1.781,M. abscessus complex,FALSE
+SP4871,0561,-0.564,M. abscessus complex,FALSE
+SP4872,0561,-0.562,M. abscessus complex,FALSE
+SP5066,0561,-0.222,M. abscessus complex,FALSE
+SP5121,0561,-0.118,M. abscessus complex,FALSE
+SP5244,0561,0.118,M. abscessus complex,FALSE
+SP5483,0561,0.46,M. abscessus complex,FALSE
+SP2904,0568,-2.085,M. avium complex,TRUE
+SP3050,0568,-1.745,M. avium complex,TRUE
+SP3047,0577,0.208,M. chelonae,FALSE
+SP3139,0577,0.493,M. chelonae,FALSE
+SP3109,0585,-0.112,M. abscessus complex,FALSE
+SP3191,0585,0.107,M. abscessus complex,FALSE
+SP3312,0585,0.326,M. abscessus complex,FALSE
+SP3199,0595,-3.085,M. avium complex,FALSE
+SP3727,0595,-2.11,M. avium complex,FALSE
+SP3597,0643,-0.658,M. gordonae,FALSE
+SP3835,0643,-0.178,M. gordonae,FALSE
+SP3863,0643,-0.121,M. gordonae,FALSE
+SP3976,0643,0.301,M. gordonae,FALSE
+SP3987,0676,-1.592,M. abscessus complex,FALSE
+SP4398,0676,-0.71,M. abscessus complex,FALSE
+SP4056,0683,-0.304,M. gordonae,FALSE
+SP4090,0683,-0.227,M. gordonae,FALSE
+SP4205,0683,0,M. gordonae,FALSE
+SP4240,0683,0.077,M. gordonae,FALSE
+SP4367,0683,0.326,M. gordonae,FALSE
+SP4403,0683,0.405,M. gordonae,FALSE
+SP4100,0686,0,M. gordonae,FALSE
+SP6064,0688,0.419,M. immunogenum,FALSE
+SP4438,0713,0.296,M. avium complex,FALSE
+SP5270,0891,-0.34,M. avium complex,FALSE
+SP5335,0940,-0.219,M. gordonae,FALSE
+SP6082,0940,0.488,M. gordonae,FALSE
