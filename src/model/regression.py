@@ -6,6 +6,7 @@ import sys, math, os
 import pandas as pd
 from scipy.stats import linregress
 # Import local subroutines
+os.chdir('../../')
 sys.path.insert(0, str(os.getcwd()+'/src/'))
 import data
 from data import edit, get, select
@@ -41,6 +42,8 @@ def patient(full_data):
       x_data = pd.concat([x_data,concatframe_x],axis=0)
       y_data = pd.concat([y_data,concatframe_y],axis=0)
     slope,intercept,rvalue,pvalue,stderr = linregress(x_data['relative_age'],y_data[feature])
+    print(rvalue,pvalue,stderr)
+    quit()
     reg_results[feature+'_slope'].loc[patient] = slope
     reg_results[feature+'_intercept'].loc[patient] = intercept
     print(rvalue,pvalue,stderr)
