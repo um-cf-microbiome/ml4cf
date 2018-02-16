@@ -1,7 +1,7 @@
-pcr.seqs(fasta=silva.bacteria.fasta, start=11894, end=25319, keepdots=F)
+pcr.seqs(fasta=F:\NTM\analysis\mothur\silva.bacteria.fasta, start=11894, end=25319, keepdots=F)
 
 #change the name of the file from stability.files to whatever suits your study
-make.contigs(file=stability.files, processors=4)
+make.contigs(file=F:\NTM\analysis\mothur\stability.files, processors=4)
 screen.seqs(fasta=current, group=current, maxambig=0, maxlength=275)
 unique.seqs()
 count.seqs(name=current, group=current)
