@@ -42,8 +42,8 @@ def keep(data,features_to_keep):
 # Trim dataframe to contain only 'features_to_keep'
  old_data = pd.DataFrame(data=None,index=data.index)
  final_data = pd.DataFrame(data=None)
- for want in features_to_keep:
-  for check in data.columns:
+ for check in data.columns:
+  for want in features_to_keep:
    if (want == check or 'patient_id'):
     final_data = pd.concat([old_data,data[check]],axis=1)
     old_data = final_data
