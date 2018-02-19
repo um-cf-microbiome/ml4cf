@@ -1,0 +1,5346 @@
+#1.39.5
+1336
+6
+0	3
+Root
+1	Bacteria
+562	unclassified
+556	unknown
+
+1	20
+Bacteria
+376	"Acidobacteria"
+34	"Actinobacteria"
+489	"Armatimonadetes"
+2	"Bacteroidetes"
+547	"Chlamydiae"
+349	"Deferribacteres"
+330	"Deinococcus-Thermus"
+71	"Fusobacteria"
+246	"Planctomycetes"
+18	"Proteobacteria"
+25	"Spirochaetes"
+309	"Synergistetes"
+52	"Tenericutes"
+452	"Thermotogae"
+180	"Verrucomicrobia"
+39	Bacteria_unclassified
+7	Firmicutes
+318	SR1
+185	TM7
+563	unclassified
+
+2	5
+"Bacteroidetes"
+149	"Bacteroidetes"_unclassified
+3	"Bacteroidia"
+287	"Sphingobacteria"
+78	Flavobacteria
+648	unclassified
+
+3	2
+"Bacteroidia"
+4	"Bacteroidales"
+653	unclassified
+
+4	7
+"Bacteroidales"
+427	"Bacteroidales"_incertae_sedis
+177	"Bacteroidales"_unclassified
+123	"Porphyromonadaceae"
+23	"Prevotellaceae"
+5	"Rikenellaceae"
+127	Bacteroidaceae
+654	unclassified
+
+5	2
+"Rikenellaceae"
+6	Alistipes
+672	unclassified
+
+6	1
+Alistipes
+673	unclassified
+
+2	6
+Firmicutes
+8	Bacilli
+30	Clostridia
+117	Erysipelotrichia
+132	Firmicutes_unclassified
+12	Negativicutes
+959	unclassified
+
+3	4
+Bacilli
+62	Bacillales
+90	Bacilli_unclassified
+9	Lactobacillales
+960	unclassified
+
+4	8
+Lactobacillales
+139	Aerococcaceae
+44	Carnobacteriaceae
+157	Enterococcaceae
+86	Lactobacillaceae
+10	Lactobacillales_unclassified
+223	Leuconostocaceae
+16	Streptococcaceae
+991	unclassified
+
+5	2
+Lactobacillales_unclassified
+11	Lactobacillales_unclassified
+1007	unclassified
+
+6	1
+Lactobacillales_unclassified
+1008	unclassified
+
+3	2
+Negativicutes
+13	Selenomonadales
+1089	unclassified
+
+4	3
+Selenomonadales
+285	Acidaminococcaceae
+14	Veillonellaceae
+1090	unclassified
+
+5	12
+Veillonellaceae
+370	Allisonella
+236	Anaeroglobus
+199	Centipeda
+116	Dialister
+355	Megamonas
+145	Megasphaera
+209	Schwartzia
+100	Selenomonas
+524	Sporomusa
+15	Veillonella
+46	Veillonellaceae_unclassified
+1096	unclassified
+
+6	1
+Veillonella
+1106	unclassified
+
+5	4
+Streptococcaceae
+211	Lactococcus
+375	Streptococcaceae_unclassified
+17	Streptococcus
+1012	unclassified
+
+6	1
+Streptococcus
+1015	unclassified
+
+2	7
+"Proteobacteria"
+324	"Proteobacteria"_unclassified
+229	Alphaproteobacteria
+93	Betaproteobacteria
+300	Deltaproteobacteria
+101	Epsilonproteobacteria
+19	Gammaproteobacteria
+737	unclassified
+
+3	12
+Gammaproteobacteria
+163	"Enterobacteriales"
+468	"Vibrionales"
+345	Aeromonadales
+475	Alteromonadales
+218	Cardiobacteriales
+233	Gammaproteobacteria_unclassified
+541	Legionellales
+400	Oceanospirillales
+68	Pasteurellales
+59	Pseudomonadales
+20	Xanthomonadales
+855	unclassified
+
+4	2
+Xanthomonadales
+21	Xanthomonadaceae
+905	unclassified
+
+5	7
+Xanthomonadaceae
+544	Dyella
+338	Lysobacter
+212	Rudaea
+22	Stenotrophomonas
+304	Xanthomonadaceae_unclassified
+538	Xanthomonas
+906	unclassified
+
+6	1
+Stenotrophomonas
+910	unclassified
+
+5	5
+"Prevotellaceae"
+115	"Prevotellaceae"_unclassified
+540	Hallella
+266	Paraprevotella
+24	Prevotella
+667	unclassified
+
+6	1
+Prevotella
+671	unclassified
+
+2	2
+"Spirochaetes"
+26	Spirochaetes
+913	unclassified
+
+3	2
+Spirochaetes
+27	Spirochaetales
+914	unclassified
+
+4	3
+Spirochaetales
+422	Leptospiraceae
+28	Spirochaetaceae
+915	unclassified
+
+5	2
+Spirochaetaceae
+29	Treponema
+918	unclassified
+
+6	1
+Treponema
+919	unclassified
+
+3	4
+Clostridia
+168	Clostridia_unclassified
+31	Clostridiales
+481	Thermoanaerobacterales
+1016	unclassified
+
+4	10
+Clostridiales
+173	Clostridiaceae_1
+136	Clostridiales_Incertae_Sedis_XI
+82	Clostridiales_Incertae_Sedis_XIII
+32	Clostridiales_unclassified
+129	Eubacteriaceae
+110	Lachnospiraceae
+88	Peptococcaceae_1
+125	Peptostreptococcaceae
+121	Ruminococcaceae
+1020	unclassified
+
+5	2
+Clostridiales_unclassified
+33	Clostridiales_unclassified
+1030	unclassified
+
+6	1
+Clostridiales_unclassified
+1031	unclassified
+
+2	2
+"Actinobacteria"
+35	Actinobacteria
+573	unclassified
+
+3	7
+Actinobacteria
+440	Actinobacteria_unclassified
+36	Actinomycetales
+65	Bifidobacteriales
+47	Coriobacteriales
+521	Rubrobacterales
+382	Solirubrobacterales
+574	unclassified
+
+4	15
+Actinomycetales
+57	Actinomycetaceae
+98	Actinomycetales_unclassified
+142	Brevibacteriaceae
+479	Cellulomonadaceae
+84	Corynebacteriaceae
+227	Dermacoccaceae
+525	Dietziaceae
+515	Intrasporangiaceae
+487	Microbacteriaceae
+37	Micrococcaceae
+362	Mycobacteriaceae
+50	Nocardiaceae
+244	Nocardioidaceae
+196	Pseudonocardiaceae
+578	unclassified
+
+5	6
+Micrococcaceae
+443	Arthrobacter
+500	Kocuria
+141	Micrococcaceae_unclassified
+464	Micrococcus
+38	Rothia
+603	unclassified
+
+6	1
+Rothia
+608	unclassified
+
+2	2
+Bacteria_unclassified
+40	Bacteria_unclassified
+954	unclassified
+
+3	2
+Bacteria_unclassified
+41	Bacteria_unclassified
+955	unclassified
+
+4	2
+Bacteria_unclassified
+42	Bacteria_unclassified
+956	unclassified
+
+5	2
+Bacteria_unclassified
+43	Bacteria_unclassified
+957	unclassified
+
+6	1
+Bacteria_unclassified
+958	unclassified
+
+5	5
+Carnobacteriaceae
+45	Carnobacteriaceae_unclassified
+501	Carnobacterium
+299	Dolosigranulum
+97	Granulicatella
+994	unclassified
+
+6	1
+Carnobacteriaceae_unclassified
+995	unclassified
+
+6	1
+Veillonellaceae_unclassified
+1107	unclassified
+
+4	2
+Coriobacteriales
+48	Coriobacteriaceae
+627	unclassified
+
+5	9
+Coriobacteriaceae
+357	Asaccharobacter
+49	Atopobium
+273	Collinsella
+138	Coriobacteriaceae_unclassified
+389	Cryptobacterium
+546	Enterorhabdus
+113	Olsenella
+193	Slackia
+628	unclassified
+
+6	1
+Atopobium
+630	unclassified
+
+5	2
+Nocardiaceae
+51	Nocardia
+611	unclassified
+
+6	1
+Nocardia
+612	unclassified
+
+2	2
+"Tenericutes"
+53	Mollicutes
+926	unclassified
+
+3	3
+Mollicutes
+275	Anaeroplasmatales
+54	Mycoplasmatales
+927	unclassified
+
+4	2
+Mycoplasmatales
+55	Mycoplasmataceae
+931	unclassified
+
+5	3
+Mycoplasmataceae
+56	Mycoplasma
+424	Ureaplasma
+932	unclassified
+
+6	1
+Mycoplasma
+933	unclassified
+
+5	6
+Actinomycetaceae
+466	Actinobaculum
+58	Actinomyces
+144	Actinomycetaceae_unclassified
+253	Mobiluncus
+225	Varibaculum
+579	unclassified
+
+6	1
+Actinomyces
+581	unclassified
+
+4	3
+Pseudomonadales
+207	Moraxellaceae
+60	Pseudomonadaceae
+897	unclassified
+
+5	3
+Pseudomonadaceae
+61	Pseudomonadaceae_unclassified
+190	Pseudomonas
+902	unclassified
+
+6	1
+Pseudomonadaceae_unclassified
+903	unclassified
+
+4	11
+Bacillales
+496	Alicyclobacillaceae
+335	Bacillaceae_1
+107	Bacillales_Incertae_Sedis_XI
+431	Bacillales_Incertae_Sedis_XII
+154	Bacillales_unclassified
+513	Listeriaceae
+397	Paenibacillaceae_1
+450	Paenibacillaceae_2
+394	Planococcaceae
+63	Staphylococcaceae
+961	unclassified
+
+5	3
+Staphylococcaceae
+202	Staphylococcaceae_unclassified
+64	Staphylococcus
+985	unclassified
+
+6	1
+Staphylococcus
+987	unclassified
+
+4	2
+Bifidobacteriales
+66	Bifidobacteriaceae
+618	unclassified
+
+5	8
+Bifidobacteriaceae
+200	Alloscardovia
+105	Bifidobacteriaceae_unclassified
+167	Bifidobacterium
+457	Gardnerella
+499	Metascardovia
+502	Parascardovia
+67	Scardovia
+619	unclassified
+
+6	1
+Scardovia
+626	unclassified
+
+4	2
+Pasteurellales
+69	Pasteurellaceae
+889	unclassified
+
+5	7
+Pasteurellaceae
+198	Actinobacillus
+433	Gallibacterium
+114	Haemophilus
+426	Mannheimia
+162	Pasteurella
+70	Pasteurellaceae_unclassified
+890	unclassified
+
+6	1
+Pasteurellaceae_unclassified
+896	unclassified
+
+2	2
+"Fusobacteria"
+72	"Fusobacteria"
+721	unclassified
+
+3	2
+"Fusobacteria"
+73	"Fusobacteriales"
+722	unclassified
+
+4	3
+"Fusobacteriales"
+76	"Fusobacteriaceae"
+74	"Leptotrichiaceae"
+723	unclassified
+
+5	4
+"Leptotrichiaceae"
+201	"Leptotrichiaceae"_unclassified
+75	Leptotrichia
+279	Sneathia
+726	unclassified
+
+6	1
+Leptotrichia
+728	unclassified
+
+5	2
+"Fusobacteriaceae"
+77	Fusobacterium
+724	unclassified
+
+6	1
+Fusobacterium
+725	unclassified
+
+3	2
+Flavobacteria
+79	"Flavobacteriales"
+691	unclassified
+
+4	3
+"Flavobacteriales"
+417	Cryomorphaceae
+80	Flavobacteriaceae
+692	unclassified
+
+5	8
+Flavobacteriaceae
+81	Capnocytophaga
+434	Chryseobacterium
+393	Cloacibacterium
+106	Flavobacteriaceae_unclassified
+268	Flavobacterium
+465	Planobacterium
+425	Wautersiella
+695	unclassified
+
+6	1
+Capnocytophaga
+696	unclassified
+
+5	2
+Clostridiales_Incertae_Sedis_XIII
+83	Mogibacterium
+1028	unclassified
+
+6	1
+Mogibacterium
+1029	unclassified
+
+5	4
+Corynebacteriaceae
+280	Corynebacteriaceae_unclassified
+85	Corynebacterium
+545	Turicella
+591	unclassified
+
+6	1
+Corynebacterium
+593	unclassified
+
+5	4
+Lactobacillaceae
+109	Lactobacillaceae_unclassified
+87	Lactobacillus
+323	Pediococcus
+1003	unclassified
+
+6	1
+Lactobacillus
+1005	unclassified
+
+5	2
+Peptococcaceae_1
+89	Peptococcus
+1053	unclassified
+
+6	1
+Peptococcus
+1054	unclassified
+
+4	2
+Bacilli_unclassified
+91	Bacilli_unclassified
+988	unclassified
+
+5	2
+Bacilli_unclassified
+92	Bacilli_unclassified
+989	unclassified
+
+6	1
+Bacilli_unclassified
+990	unclassified
+
+3	6
+Betaproteobacteria
+203	Betaproteobacteria_unclassified
+146	Burkholderiales
+447	Methylophilales
+94	Neisseriales
+386	Rhodocyclales
+784	unclassified
+
+4	2
+Neisseriales
+95	Neisseriaceae
+822	unclassified
+
+5	4
+Neisseriaceae
+226	Kingella
+96	Neisseria
+191	Neisseriaceae_unclassified
+823	unclassified
+
+6	1
+Neisseria
+825	unclassified
+
+6	1
+Granulicatella
+998	unclassified
+
+5	2
+Actinomycetales_unclassified
+99	Actinomycetales_unclassified
+585	unclassified
+
+6	1
+Actinomycetales_unclassified
+586	unclassified
+
+6	1
+Selenomonas
+1104	unclassified
+
+3	2
+Epsilonproteobacteria
+102	Campylobacterales
+848	unclassified
+
+4	3
+Campylobacterales
+103	Campylobacteraceae
+175	Helicobacteraceae
+849	unclassified
+
+5	2
+Campylobacteraceae
+104	Campylobacter
+850	unclassified
+
+6	1
+Campylobacter
+851	unclassified
+
+6	1
+Bifidobacteriaceae_unclassified
+621	unclassified
+
+6	1
+Flavobacteriaceae_unclassified
+699	unclassified
+
+5	2
+Bacillales_Incertae_Sedis_XI
+108	Gemella
+969	unclassified
+
+6	1
+Gemella
+970	unclassified
+
+6	1
+Lactobacillaceae_unclassified
+1004	unclassified
+
+5	18
+Lachnospiraceae
+315	Anaerostipes
+252	Blautia
+293	Butyrivibrio
+153	Catonella
+256	Clostridium_XlVa
+348	Clostridium_XlVb
+251	Coprococcus
+366	Dorea
+269	Howardella
+215	Johnsonella
+283	Lachnospiracea_incertae_sedis
+111	Lachnospiraceae_unclassified
+507	Moryella
+112	Oribacterium
+254	Roseburia
+159	Shuttleworthia
+498	Syntrophococcus
+1035	unclassified
+
+6	1
+Lachnospiraceae_unclassified
+1047	unclassified
+
+6	1
+Oribacterium
+1049	unclassified
+
+6	1
+Olsenella
+635	unclassified
+
+6	1
+Haemophilus
+893	unclassified
+
+6	1
+"Prevotellaceae"_unclassified
+668	unclassified
+
+6	1
+Dialister
+1100	unclassified
+
+3	2
+Erysipelotrichia
+118	Erysipelotrichales
+1074	unclassified
+
+4	2
+Erysipelotrichales
+119	Erysipelotrichaceae
+1075	unclassified
+
+5	9
+Erysipelotrichaceae
+156	Bulleidia
+264	Catenibacterium
+356	Clostridium_XVIII
+360	Coprobacillus
+120	Erysipelotrichaceae_incertae_sedis
+371	Erysipelotrichaceae_unclassified
+179	Solobacterium
+210	Turicibacter
+1076	unclassified
+
+6	1
+Erysipelotrichaceae_incertae_sedis
+1081	unclassified
+
+5	10
+Ruminococcaceae
+194	Clostridium_IV
+255	Faecalibacterium
+314	Flavonifractor
+368	Oscillibacter
+122	Ruminococcaceae_unclassified
+278	Ruminococcus
+527	Saccharofermentans
+358	Sporobacter
+291	Subdoligranulum
+1061	unclassified
+
+6	1
+Ruminococcaceae_unclassified
+1066	unclassified
+
+5	8
+"Porphyromonadaceae"
+166	"Porphyromonadaceae"_unclassified
+259	Barnesiella
+421	Butyricimonas
+399	Odoribacter
+329	Parabacteroides
+131	Porphyromonas
+124	Tannerella
+659	unclassified
+
+6	1
+Tannerella
+666	unclassified
+
+5	6
+Peptostreptococcaceae
+241	Clostridium_XI
+339	Filifactor
+206	Peptostreptococcaceae_incertae_sedis
+354	Peptostreptococcaceae_unclassified
+126	Peptostreptococcus
+1055	unclassified
+
+6	1
+Peptostreptococcus
+1060	unclassified
+
+5	2
+Bacteroidaceae
+128	Bacteroides
+674	unclassified
+
+6	1
+Bacteroides
+675	unclassified
+
+5	3
+Eubacteriaceae
+130	Eubacterium
+430	Pseudoramibacter
+1032	unclassified
+
+6	1
+Eubacterium
+1033	unclassified
+
+6	1
+Porphyromonas
+665	unclassified
+
+3	2
+Firmicutes_unclassified
+133	Firmicutes_unclassified
+1085	unclassified
+
+4	2
+Firmicutes_unclassified
+134	Firmicutes_unclassified
+1086	unclassified
+
+5	2
+Firmicutes_unclassified
+135	Firmicutes_unclassified
+1087	unclassified
+
+6	1
+Firmicutes_unclassified
+1088	unclassified
+
+5	5
+Clostridiales_Incertae_Sedis_XI
+364	Anaerococcus
+171	Finegoldia
+137	Parvimonas
+172	Peptoniphilus
+1023	unclassified
+
+6	1
+Parvimonas
+1026	unclassified
+
+6	1
+Coriobacteriaceae_unclassified
+632	unclassified
+
+5	2
+Aerococcaceae
+140	Abiotrophia
+992	unclassified
+
+6	1
+Abiotrophia
+993	unclassified
+
+6	1
+Micrococcaceae_unclassified
+606	unclassified
+
+5	2
+Brevibacteriaceae
+143	Brevibacterium
+587	unclassified
+
+6	1
+Brevibacterium
+588	unclassified
+
+6	1
+Actinomycetaceae_unclassified
+582	unclassified
+
+6	1
+Megasphaera
+1102	unclassified
+
+4	8
+Burkholderiales
+160	Alcaligenaceae
+213	Burkholderiaceae
+257	Burkholderiales_incertae_sedis
+147	Burkholderiales_unclassified
+221	Comamonadaceae
+316	Oxalobacteraceae
+294	Sutterellaceae
+788	unclassified
+
+5	2
+Burkholderiales_unclassified
+148	Burkholderiales_unclassified
+802	unclassified
+
+6	1
+Burkholderiales_unclassified
+803	unclassified
+
+3	2
+"Bacteroidetes"_unclassified
+150	"Bacteroidetes"_unclassified
+649	unclassified
+
+4	2
+"Bacteroidetes"_unclassified
+151	"Bacteroidetes"_unclassified
+650	unclassified
+
+5	2
+"Bacteroidetes"_unclassified
+152	"Bacteroidetes"_unclassified
+651	unclassified
+
+6	1
+"Bacteroidetes"_unclassified
+652	unclassified
+
+6	1
+Catonella
+1039	unclassified
+
+5	2
+Bacillales_unclassified
+155	Bacillales_unclassified
+973	unclassified
+
+6	1
+Bacillales_unclassified
+974	unclassified
+
+6	1
+Bulleidia
+1077	unclassified
+
+5	4
+Enterococcaceae
+282	Enterococcaceae_unclassified
+158	Enterococcus
+242	Vagococcus
+999	unclassified
+
+6	1
+Enterococcus
+1001	unclassified
+
+6	1
+Shuttleworthia
+1051	unclassified
+
+5	5
+Alcaligenaceae
+192	Achromobacter
+161	Alcaligenaceae_unclassified
+436	Alcaligenes
+243	Bordetella
+789	unclassified
+
+6	1
+Alcaligenaceae_unclassified
+791	unclassified
+
+6	1
+Pasteurella
+895	unclassified
+
+4	2
+"Enterobacteriales"
+164	Enterobacteriaceae
+856	unclassified
+
+5	8
+Enterobacteriaceae
+444	Dickeya
+195	Enterobacteriaceae_unclassified
+165	Escherichia_Shigella
+263	Morganella
+365	Proteus
+473	Salmonella
+396	Yersinia
+857	unclassified
+
+6	1
+Escherichia_Shigella
+860	unclassified
+
+6	1
+"Porphyromonadaceae"_unclassified
+660	unclassified
+
+6	1
+Bifidobacterium
+622	unclassified
+
+4	2
+Clostridia_unclassified
+169	Clostridia_unclassified
+1017	unclassified
+
+5	2
+Clostridia_unclassified
+170	Clostridia_unclassified
+1018	unclassified
+
+6	1
+Clostridia_unclassified
+1019	unclassified
+
+6	1
+Finegoldia
+1025	unclassified
+
+6	1
+Peptoniphilus
+1027	unclassified
+
+5	2
+Clostridiaceae_1
+174	Clostridium_sensu_stricto
+1021	unclassified
+
+6	1
+Clostridium_sensu_stricto
+1022	unclassified
+
+5	3
+Helicobacteraceae
+176	Helicobacter
+471	Wolinella
+852	unclassified
+
+6	1
+Helicobacter
+853	unclassified
+
+5	2
+"Bacteroidales"_unclassified
+178	"Bacteroidales"_unclassified
+657	unclassified
+
+6	1
+"Bacteroidales"_unclassified
+658	unclassified
+
+6	1
+Solobacterium
+1083	unclassified
+
+2	4
+"Verrucomicrobia"
+517	"Verrucomicrobia"_unclassified
+508	Spartobacteria
+181	Verrucomicrobiae
+940	unclassified
+
+3	2
+Verrucomicrobiae
+182	Verrucomicrobiales
+950	unclassified
+
+4	2
+Verrucomicrobiales
+183	Verrucomicrobiaceae
+951	unclassified
+
+5	2
+Verrucomicrobiaceae
+184	Akkermansia
+952	unclassified
+
+6	1
+Akkermansia
+953	unclassified
+
+2	2
+TM7
+186	TM7_class_incertae_sedis
+1113	unclassified
+
+3	2
+TM7_class_incertae_sedis
+187	TM7_order_incertae_sedis
+1114	unclassified
+
+4	2
+TM7_order_incertae_sedis
+188	TM7_family_incertae_sedis
+1115	unclassified
+
+5	2
+TM7_family_incertae_sedis
+189	TM7_genus_incertae_sedis
+1116	unclassified
+
+6	1
+TM7_genus_incertae_sedis
+1117	unclassified
+
+6	1
+Pseudomonas
+904	unclassified
+
+6	1
+Neisseriaceae_unclassified
+826	unclassified
+
+6	1
+Achromobacter
+790	unclassified
+
+6	1
+Slackia
+636	unclassified
+
+6	1
+Clostridium_IV
+1062	unclassified
+
+6	1
+Enterobacteriaceae_unclassified
+859	unclassified
+
+5	3
+Pseudonocardiaceae
+240	Lechevalieria
+197	Pseudonocardia
+615	unclassified
+
+6	1
+Pseudonocardia
+617	unclassified
+
+6	1
+Actinobacillus
+891	unclassified
+
+6	1
+Centipeda
+1099	unclassified
+
+6	1
+Alloscardovia
+620	unclassified
+
+6	1
+"Leptotrichiaceae"_unclassified
+727	unclassified
+
+6	1
+Staphylococcaceae_unclassified
+986	unclassified
+
+4	2
+Betaproteobacteria_unclassified
+204	Betaproteobacteria_unclassified
+785	unclassified
+
+5	2
+Betaproteobacteria_unclassified
+205	Betaproteobacteria_unclassified
+786	unclassified
+
+6	1
+Betaproteobacteria_unclassified
+787	unclassified
+
+6	1
+Peptostreptococcaceae_incertae_sedis
+1058	unclassified
+
+5	4
+Moraxellaceae
+265	Acinetobacter
+208	Enhydrobacter
+385	Moraxella
+898	unclassified
+
+6	1
+Enhydrobacter
+900	unclassified
+
+6	1
+Schwartzia
+1103	unclassified
+
+6	1
+Turicibacter
+1084	unclassified
+
+6	1
+Lactococcus
+1013	unclassified
+
+6	1
+Rudaea
+909	unclassified
+
+5	6
+Burkholderiaceae
+274	Burkholderia
+214	Burkholderiaceae_unclassified
+539	Cupriavidus
+217	Pandoraea
+216	Ralstonia
+794	unclassified
+
+6	1
+Burkholderiaceae_unclassified
+796	unclassified
+
+6	1
+Johnsonella
+1045	unclassified
+
+6	1
+Ralstonia
+799	unclassified
+
+6	1
+Pandoraea
+798	unclassified
+
+4	2
+Cardiobacteriales
+219	Cardiobacteriaceae
+877	unclassified
+
+5	2
+Cardiobacteriaceae
+220	Cardiobacterium
+878	unclassified
+
+6	1
+Cardiobacterium
+879	unclassified
+
+5	7
+Comamonadaceae
+403	Acidovorax
+555	Brachymonas
+284	Comamonadaceae_unclassified
+281	Comamonas
+494	Delftia
+222	Pelomonas
+804	unclassified
+
+6	1
+Pelomonas
+810	unclassified
+
+5	3
+Leuconostocaceae
+224	Leuconostoc
+474	Weissella
+1009	unclassified
+
+6	1
+Leuconostoc
+1010	unclassified
+
+6	1
+Varibaculum
+584	unclassified
+
+6	1
+Kingella
+824	unclassified
+
+5	2
+Dermacoccaceae
+228	Kytococcus
+595	unclassified
+
+6	1
+Kytococcus
+596	unclassified
+
+3	7
+Alphaproteobacteria
+260	Alphaproteobacteria_unclassified
+461	Caulobacterales
+270	Rhizobiales
+230	Rhodobacterales
+458	Rhodospirillales
+237	Sphingomonadales
+742	unclassified
+
+4	2
+Rhodobacterales
+231	Rhodobacteraceae
+766	unclassified
+
+5	4
+Rhodobacteraceae
+435	Paracoccus
+416	Rhodobacter
+232	Rhodobacteraceae_unclassified
+767	unclassified
+
+6	1
+Rhodobacteraceae_unclassified
+770	unclassified
+
+4	2
+Gammaproteobacteria_unclassified
+234	Gammaproteobacteria_unclassified
+880	unclassified
+
+5	2
+Gammaproteobacteria_unclassified
+235	Gammaproteobacteria_unclassified
+881	unclassified
+
+6	1
+Gammaproteobacteria_unclassified
+882	unclassified
+
+6	1
+Anaeroglobus
+1098	unclassified
+
+4	3
+Sphingomonadales
+238	Sphingomonadaceae
+305	Sphingomonadales_unclassified
+775	unclassified
+
+5	6
+Sphingomonadaceae
+344	Novosphingobium
+292	Sphingobium
+267	Sphingomonadaceae_unclassified
+239	Sphingomonas
+532	Sphingopyxis
+776	unclassified
+
+6	1
+Sphingomonas
+780	unclassified
+
+6	1
+Lechevalieria
+616	unclassified
+
+6	1
+Clostridium_XI
+1056	unclassified
+
+6	1
+Vagococcus
+1002	unclassified
+
+6	1
+Bordetella
+793	unclassified
+
+5	2
+Nocardioidaceae
+245	Aeromicrobium
+613	unclassified
+
+6	1
+Aeromicrobium
+614	unclassified
+
+2	2
+"Planctomycetes"
+247	"Planctomycetacia"
+730	unclassified
+
+3	2
+"Planctomycetacia"
+248	Planctomycetales
+731	unclassified
+
+4	2
+Planctomycetales
+249	Planctomycetaceae
+732	unclassified
+
+5	4
+Planctomycetaceae
+250	Planctomyces
+506	Planctomycetaceae_unclassified
+478	Singulisphaera
+733	unclassified
+
+6	1
+Planctomyces
+734	unclassified
+
+6	1
+Coprococcus
+1042	unclassified
+
+6	1
+Blautia
+1037	unclassified
+
+6	1
+Mobiluncus
+583	unclassified
+
+6	1
+Roseburia
+1050	unclassified
+
+6	1
+Faecalibacterium
+1063	unclassified
+
+6	1
+Clostridium_XlVa
+1040	unclassified
+
+5	2
+Burkholderiales_incertae_sedis
+258	Aquabacterium
+800	unclassified
+
+6	1
+Aquabacterium
+801	unclassified
+
+6	1
+Barnesiella
+661	unclassified
+
+4	2
+Alphaproteobacteria_unclassified
+261	Alphaproteobacteria_unclassified
+743	unclassified
+
+5	2
+Alphaproteobacteria_unclassified
+262	Alphaproteobacteria_unclassified
+744	unclassified
+
+6	1
+Alphaproteobacteria_unclassified
+745	unclassified
+
+6	1
+Morganella
+861	unclassified
+
+6	1
+Catenibacterium
+1078	unclassified
+
+6	1
+Acinetobacter
+899	unclassified
+
+6	1
+Paraprevotella
+670	unclassified
+
+6	1
+Sphingomonadaceae_unclassified
+779	unclassified
+
+6	1
+Flavobacterium
+700	unclassified
+
+6	1
+Howardella
+1044	unclassified
+
+4	8
+Rhizobiales
+307	Bradyrhizobiaceae
+504	Brucellaceae
+297	Hyphomicrobiaceae
+419	Methylobacteriaceae
+553	Phyllobacteriaceae
+445	Rhizobiaceae
+271	Rhizobiales_unclassified
+749	unclassified
+
+5	2
+Rhizobiales_unclassified
+272	Rhizobiales_unclassified
+764	unclassified
+
+6	1
+Rhizobiales_unclassified
+765	unclassified
+
+6	1
+Collinsella
+631	unclassified
+
+6	1
+Burkholderia
+795	unclassified
+
+4	2
+Anaeroplasmatales
+276	Anaeroplasmataceae
+928	unclassified
+
+5	2
+Anaeroplasmataceae
+277	Anaeroplasma
+929	unclassified
+
+6	1
+Anaeroplasma
+930	unclassified
+
+6	1
+Ruminococcus
+1067	unclassified
+
+6	1
+Sneathia
+729	unclassified
+
+6	1
+Corynebacteriaceae_unclassified
+592	unclassified
+
+6	1
+Comamonas
+808	unclassified
+
+6	1
+Enterococcaceae_unclassified
+1000	unclassified
+
+6	1
+Lachnospiracea_incertae_sedis
+1046	unclassified
+
+6	1
+Comamonadaceae_unclassified
+807	unclassified
+
+5	5
+Acidaminococcaceae
+340	Acidaminococcaceae_unclassified
+286	Acidaminococcus
+337	Phascolarctobacterium
+359	Succiniclasticum
+1091	unclassified
+
+6	1
+Acidaminococcus
+1093	unclassified
+
+3	2
+"Sphingobacteria"
+288	"Sphingobacteriales"
+676	unclassified
+
+4	6
+"Sphingobacteriales"
+289	"Flammeovirgaceae"
+536	"Saprospiraceae"
+390	Chitinophagaceae
+414	Cytophagaceae
+438	Sphingobacteriaceae
+677	unclassified
+
+5	3
+"Flammeovirgaceae"
+290	"Flammeovirgaceae"_unclassified
+369	Roseivirga
+678	unclassified
+
+6	1
+"Flammeovirgaceae"_unclassified
+679	unclassified
+
+6	1
+Subdoligranulum
+1070	unclassified
+
+6	1
+Sphingobium
+778	unclassified
+
+6	1
+Butyrivibrio
+1038	unclassified
+
+5	3
+Sutterellaceae
+295	Parasutterella
+296	Sutterella
+816	unclassified
+
+6	1
+Parasutterella
+817	unclassified
+
+6	1
+Sutterella
+818	unclassified
+
+5	3
+Hyphomicrobiaceae
+298	Hyphomicrobium
+437	Rhodoplanes
+755	unclassified
+
+6	1
+Hyphomicrobium
+756	unclassified
+
+6	1
+Dolosigranulum
+997	unclassified
+
+3	6
+Deltaproteobacteria
+301	Bdellovibrionales
+405	Deltaproteobacteria_unclassified
+341	Desulfobacterales
+372	Desulfovibrionales
+411	Desulfuromonadales
+830	unclassified
+
+4	2
+Bdellovibrionales
+302	Bdellovibrionaceae
+831	unclassified
+
+5	2
+Bdellovibrionaceae
+303	Bdellovibrio
+832	unclassified
+
+6	1
+Bdellovibrio
+833	unclassified
+
+6	1
+Xanthomonadaceae_unclassified
+911	unclassified
+
+5	2
+Sphingomonadales_unclassified
+306	Sphingomonadales_unclassified
+782	unclassified
+
+6	1
+Sphingomonadales_unclassified
+783	unclassified
+
+5	3
+Bradyrhizobiaceae
+429	Bradyrhizobiaceae_unclassified
+308	Bradyrhizobium
+750	unclassified
+
+6	1
+Bradyrhizobium
+752	unclassified
+
+2	2
+"Synergistetes"
+310	Synergistia
+920	unclassified
+
+3	2
+Synergistia
+311	Synergistales
+921	unclassified
+
+4	2
+Synergistales
+312	Synergistaceae
+922	unclassified
+
+5	3
+Synergistaceae
+404	Cloacibacillus
+313	Pyramidobacter
+923	unclassified
+
+6	1
+Pyramidobacter
+925	unclassified
+
+6	1
+Flavonifractor
+1064	unclassified
+
+6	1
+Anaerostipes
+1036	unclassified
+
+5	5
+Oxalobacteraceae
+328	Herbaspirillum
+512	Janthinobacterium
+484	Oxalobacteraceae_unclassified
+317	Undibacterium
+811	unclassified
+
+6	1
+Undibacterium
+815	unclassified
+
+2	2
+SR1
+319	SR1_class_incertae_sedis
+1108	unclassified
+
+3	2
+SR1_class_incertae_sedis
+320	SR1_order_incertae_sedis
+1109	unclassified
+
+4	2
+SR1_order_incertae_sedis
+321	SR1_family_incertae_sedis
+1110	unclassified
+
+5	2
+SR1_family_incertae_sedis
+322	SR1_genus_incertae_sedis
+1111	unclassified
+
+6	1
+SR1_genus_incertae_sedis
+1112	unclassified
+
+6	1
+Pediococcus
+1006	unclassified
+
+3	2
+"Proteobacteria"_unclassified
+325	"Proteobacteria"_unclassified
+738	unclassified
+
+4	2
+"Proteobacteria"_unclassified
+326	"Proteobacteria"_unclassified
+739	unclassified
+
+5	2
+"Proteobacteria"_unclassified
+327	"Proteobacteria"_unclassified
+740	unclassified
+
+6	1
+"Proteobacteria"_unclassified
+741	unclassified
+
+6	1
+Herbaspirillum
+812	unclassified
+
+6	1
+Parabacteroides
+664	unclassified
+
+2	2
+"Deinococcus-Thermus"
+331	Deinococci
+713	unclassified
+
+3	3
+Deinococci
+332	Deinococcales
+408	Thermales
+714	unclassified
+
+4	2
+Deinococcales
+333	Deinococcaceae
+715	unclassified
+
+5	2
+Deinococcaceae
+334	Deinococcus
+716	unclassified
+
+6	1
+Deinococcus
+717	unclassified
+
+5	5
+Bacillaceae_1
+336	Anoxybacillus
+361	Bacillaceae_1_unclassified
+472	Bacillus
+392	Geobacillus
+964	unclassified
+
+6	1
+Anoxybacillus
+965	unclassified
+
+6	1
+Phascolarctobacterium
+1094	unclassified
+
+6	1
+Lysobacter
+908	unclassified
+
+6	1
+Filifactor
+1057	unclassified
+
+6	1
+Acidaminococcaceae_unclassified
+1092	unclassified
+
+4	2
+Desulfobacterales
+342	Desulfobulbaceae
+837	unclassified
+
+5	3
+Desulfobulbaceae
+367	Desulfobulbaceae_unclassified
+343	Desulforhopalus
+838	unclassified
+
+6	1
+Desulforhopalus
+840	unclassified
+
+6	1
+Novosphingobium
+777	unclassified
+
+4	2
+Aeromonadales
+346	Aeromonadaceae
+869	unclassified
+
+5	2
+Aeromonadaceae
+347	Aeromonas
+870	unclassified
+
+6	1
+Aeromonas
+871	unclassified
+
+6	1
+Clostridium_XlVb
+1041	unclassified
+
+2	2
+"Deferribacteres"
+350	Deferribacteres
+708	unclassified
+
+3	2
+Deferribacteres
+351	Deferribacterales
+709	unclassified
+
+4	2
+Deferribacterales
+352	Deferribacteraceae
+710	unclassified
+
+5	2
+Deferribacteraceae
+353	Mucispirillum
+711	unclassified
+
+6	1
+Mucispirillum
+712	unclassified
+
+6	1
+Peptostreptococcaceae_unclassified
+1059	unclassified
+
+6	1
+Megamonas
+1101	unclassified
+
+6	1
+Clostridium_XVIII
+1079	unclassified
+
+6	1
+Asaccharobacter
+629	unclassified
+
+6	1
+Sporobacter
+1069	unclassified
+
+6	1
+Succiniclasticum
+1095	unclassified
+
+6	1
+Coprobacillus
+1080	unclassified
+
+6	1
+Bacillaceae_1_unclassified
+966	unclassified
+
+5	2
+Mycobacteriaceae
+363	Mycobacterium
+609	unclassified
+
+6	1
+Mycobacterium
+610	unclassified
+
+6	1
+Anaerococcus
+1024	unclassified
+
+6	1
+Proteus
+862	unclassified
+
+6	1
+Dorea
+1043	unclassified
+
+6	1
+Desulfobulbaceae_unclassified
+839	unclassified
+
+6	1
+Oscillibacter
+1065	unclassified
+
+6	1
+Roseivirga
+680	unclassified
+
+6	1
+Allisonella
+1097	unclassified
+
+6	1
+Erysipelotrichaceae_unclassified
+1082	unclassified
+
+4	2
+Desulfovibrionales
+373	Desulfovibrionaceae
+841	unclassified
+
+5	3
+Desulfovibrionaceae
+381	Bilophila
+374	Desulfovibrio
+842	unclassified
+
+6	1
+Desulfovibrio
+844	unclassified
+
+6	1
+Streptococcaceae_unclassified
+1014	unclassified
+
+2	3
+"Acidobacteria"
+528	Acidobacteria_Gp4
+377	Acidobacteria_Gp6
+564	unclassified
+
+3	2
+Acidobacteria_Gp6
+378	Acidobacteria_Gp6_order_incertae_sedis
+569	unclassified
+
+4	2
+Acidobacteria_Gp6_order_incertae_sedis
+379	Acidobacteria_Gp6_family_incertae_sedis
+570	unclassified
+
+5	2
+Acidobacteria_Gp6_family_incertae_sedis
+380	Gp6
+571	unclassified
+
+6	1
+Gp6
+572	unclassified
+
+6	1
+Bilophila
+843	unclassified
+
+4	2
+Solirubrobacterales
+383	Conexibacteraceae
+640	unclassified
+
+5	2
+Conexibacteraceae
+384	Conexibacter
+641	unclassified
+
+6	1
+Conexibacter
+642	unclassified
+
+6	1
+Moraxella
+901	unclassified
+
+4	2
+Rhodocyclales
+387	Rhodocyclaceae
+827	unclassified
+
+5	2
+Rhodocyclaceae
+388	Azonexus
+828	unclassified
+
+6	1
+Azonexus
+829	unclassified
+
+6	1
+Cryptobacterium
+633	unclassified
+
+5	4
+Chitinophagaceae
+533	Chitinophagaceae_unclassified
+391	Sediminibacterium
+534	Terrimonas
+683	unclassified
+
+6	1
+Sediminibacterium
+685	unclassified
+
+6	1
+Geobacillus
+968	unclassified
+
+6	1
+Cloacibacterium
+698	unclassified
+
+5	4
+Planococcaceae
+467	Jeotgalibacillus
+395	Planococcaceae_unclassified
+495	Sporosarcina
+981	unclassified
+
+6	1
+Planococcaceae_unclassified
+983	unclassified
+
+6	1
+Yersinia
+864	unclassified
+
+5	2
+Paenibacillaceae_1
+398	Paenibacillus
+977	unclassified
+
+6	1
+Paenibacillus
+978	unclassified
+
+6	1
+Odoribacter
+663	unclassified
+
+4	2
+Oceanospirillales
+401	Halomonadaceae
+886	unclassified
+
+5	2
+Halomonadaceae
+402	Halomonas
+887	unclassified
+
+6	1
+Halomonas
+888	unclassified
+
+6	1
+Acidovorax
+805	unclassified
+
+6	1
+Cloacibacillus
+924	unclassified
+
+4	2
+Deltaproteobacteria_unclassified
+406	Deltaproteobacteria_unclassified
+834	unclassified
+
+5	2
+Deltaproteobacteria_unclassified
+407	Deltaproteobacteria_unclassified
+835	unclassified
+
+6	1
+Deltaproteobacteria_unclassified
+836	unclassified
+
+4	2
+Thermales
+409	Thermaceae
+718	unclassified
+
+5	2
+Thermaceae
+410	Thermus
+719	unclassified
+
+6	1
+Thermus
+720	unclassified
+
+4	2
+Desulfuromonadales
+412	Desulfuromonadaceae
+845	unclassified
+
+5	2
+Desulfuromonadaceae
+413	Pelobacter
+846	unclassified
+
+6	1
+Pelobacter
+847	unclassified
+
+5	2
+Cytophagaceae
+415	Hymenobacter
+687	unclassified
+
+6	1
+Hymenobacter
+688	unclassified
+
+6	1
+Rhodobacter
+769	unclassified
+
+5	2
+Cryomorphaceae
+418	Cryomorphaceae_unclassified
+693	unclassified
+
+6	1
+Cryomorphaceae_unclassified
+694	unclassified
+
+5	2
+Methylobacteriaceae
+420	Methylobacterium
+758	unclassified
+
+6	1
+Methylobacterium
+759	unclassified
+
+6	1
+Butyricimonas
+662	unclassified
+
+5	2
+Leptospiraceae
+423	Turneriella
+916	unclassified
+
+6	1
+Turneriella
+917	unclassified
+
+6	1
+Ureaplasma
+934	unclassified
+
+6	1
+Wautersiella
+702	unclassified
+
+6	1
+Mannheimia
+894	unclassified
+
+5	2
+"Bacteroidales"_incertae_sedis
+428	Phocaeicola
+655	unclassified
+
+6	1
+Phocaeicola
+656	unclassified
+
+6	1
+Bradyrhizobiaceae_unclassified
+751	unclassified
+
+6	1
+Pseudoramibacter
+1034	unclassified
+
+5	2
+Bacillales_Incertae_Sedis_XII
+432	Exiguobacterium
+971	unclassified
+
+6	1
+Exiguobacterium
+972	unclassified
+
+6	1
+Gallibacterium
+892	unclassified
+
+6	1
+Chryseobacterium
+697	unclassified
+
+6	1
+Paracoccus
+768	unclassified
+
+6	1
+Alcaligenes
+792	unclassified
+
+6	1
+Rhodoplanes
+757	unclassified
+
+5	2
+Sphingobacteriaceae
+439	Sphingobacterium
+689	unclassified
+
+6	1
+Sphingobacterium
+690	unclassified
+
+4	2
+Actinobacteria_unclassified
+441	Actinobacteria_unclassified
+575	unclassified
+
+5	2
+Actinobacteria_unclassified
+442	Actinobacteria_unclassified
+576	unclassified
+
+6	1
+Actinobacteria_unclassified
+577	unclassified
+
+6	1
+Arthrobacter
+604	unclassified
+
+6	1
+Dickeya
+858	unclassified
+
+5	2
+Rhizobiaceae
+446	Rhizobium
+762	unclassified
+
+6	1
+Rhizobium
+763	unclassified
+
+4	2
+Methylophilales
+448	Methylophilaceae
+819	unclassified
+
+5	2
+Methylophilaceae
+449	Methylophilus
+820	unclassified
+
+6	1
+Methylophilus
+821	unclassified
+
+5	2
+Paenibacillaceae_2
+451	Aneurinibacillus
+979	unclassified
+
+6	1
+Aneurinibacillus
+980	unclassified
+
+2	2
+"Thermotogae"
+453	Thermotogae
+935	unclassified
+
+3	2
+Thermotogae
+454	Thermotogales
+936	unclassified
+
+4	2
+Thermotogales
+455	Thermotogaceae
+937	unclassified
+
+5	2
+Thermotogaceae
+456	Fervidobacterium
+938	unclassified
+
+6	1
+Fervidobacterium
+939	unclassified
+
+6	1
+Gardnerella
+623	unclassified
+
+4	2
+Rhodospirillales
+459	Acetobacteraceae
+771	unclassified
+
+5	3
+Acetobacteraceae
+503	Acetobacter
+460	Roseomonas
+772	unclassified
+
+6	1
+Roseomonas
+774	unclassified
+
+4	2
+Caulobacterales
+462	Caulobacteraceae
+746	unclassified
+
+5	2
+Caulobacteraceae
+463	Brevundimonas
+747	unclassified
+
+6	1
+Brevundimonas
+748	unclassified
+
+6	1
+Micrococcus
+607	unclassified
+
+6	1
+Planobacterium
+701	unclassified
+
+6	1
+Actinobaculum
+580	unclassified
+
+6	1
+Jeotgalibacillus
+982	unclassified
+
+4	2
+"Vibrionales"
+469	Vibrionaceae
+865	unclassified
+
+5	3
+Vibrionaceae
+470	Photobacterium
+552	Vibrio
+866	unclassified
+
+6	1
+Photobacterium
+867	unclassified
+
+6	1
+Wolinella
+854	unclassified
+
+6	1
+Bacillus
+967	unclassified
+
+6	1
+Salmonella
+863	unclassified
+
+6	1
+Weissella
+1011	unclassified
+
+4	3
+Alteromonadales
+476	Pseudoalteromonadaceae
+485	Shewanellaceae
+872	unclassified
+
+5	2
+Pseudoalteromonadaceae
+477	Pseudoalteromonas
+873	unclassified
+
+6	1
+Pseudoalteromonas
+874	unclassified
+
+6	1
+Singulisphaera
+736	unclassified
+
+5	2
+Cellulomonadaceae
+480	Cellulomonas
+589	unclassified
+
+6	1
+Cellulomonas
+590	unclassified
+
+4	2
+Thermoanaerobacterales
+482	Thermoanaerobacteraceae
+1071	unclassified
+
+5	2
+Thermoanaerobacteraceae
+483	Syntrophaceticus
+1072	unclassified
+
+6	1
+Syntrophaceticus
+1073	unclassified
+
+6	1
+Oxalobacteraceae_unclassified
+814	unclassified
+
+5	2
+Shewanellaceae
+486	Shewanella
+875	unclassified
+
+6	1
+Shewanella
+876	unclassified
+
+5	2
+Microbacteriaceae
+488	Microbacteriaceae_unclassified
+601	unclassified
+
+6	1
+Microbacteriaceae_unclassified
+602	unclassified
+
+2	2
+"Armatimonadetes"
+490	Armatimonadia
+643	unclassified
+
+3	2
+Armatimonadia
+491	Armatimonadales
+644	unclassified
+
+4	2
+Armatimonadales
+492	Armatimonadaceae
+645	unclassified
+
+5	2
+Armatimonadaceae
+493	Armatimonas_Armatimonadetes_gp1
+646	unclassified
+
+6	1
+Armatimonas_Armatimonadetes_gp1
+647	unclassified
+
+6	1
+Delftia
+809	unclassified
+
+6	1
+Sporosarcina
+984	unclassified
+
+5	2
+Alicyclobacillaceae
+497	Alicyclobacillaceae_unclassified
+962	unclassified
+
+6	1
+Alicyclobacillaceae_unclassified
+963	unclassified
+
+6	1
+Syntrophococcus
+1052	unclassified
+
+6	1
+Metascardovia
+624	unclassified
+
+6	1
+Kocuria
+605	unclassified
+
+6	1
+Carnobacterium
+996	unclassified
+
+6	1
+Parascardovia
+625	unclassified
+
+6	1
+Acetobacter
+773	unclassified
+
+5	2
+Brucellaceae
+505	Brucella
+753	unclassified
+
+6	1
+Brucella
+754	unclassified
+
+6	1
+Planctomycetaceae_unclassified
+735	unclassified
+
+6	1
+Moryella
+1048	unclassified
+
+3	2
+Spartobacteria
+509	Spartobacteria_order_incertae_sedis
+945	unclassified
+
+4	2
+Spartobacteria_order_incertae_sedis
+510	Spartobacteria_family_incertae_sedis
+946	unclassified
+
+5	3
+Spartobacteria_family_incertae_sedis
+535	Spartobacteria_family_incertae_sedis_unclassified
+511	Spartobacteria_genera_incertae_sedis
+947	unclassified
+
+6	1
+Spartobacteria_genera_incertae_sedis
+949	unclassified
+
+6	1
+Janthinobacterium
+813	unclassified
+
+5	2
+Listeriaceae
+514	Listeria
+975	unclassified
+
+6	1
+Listeria
+976	unclassified
+
+5	2
+Intrasporangiaceae
+516	Intrasporangiaceae_unclassified
+599	unclassified
+
+6	1
+Intrasporangiaceae_unclassified
+600	unclassified
+
+3	2
+"Verrucomicrobia"_unclassified
+518	"Verrucomicrobia"_unclassified
+941	unclassified
+
+4	2
+"Verrucomicrobia"_unclassified
+519	"Verrucomicrobia"_unclassified
+942	unclassified
+
+5	2
+"Verrucomicrobia"_unclassified
+520	"Verrucomicrobia"_unclassified
+943	unclassified
+
+6	1
+"Verrucomicrobia"_unclassified
+944	unclassified
+
+4	2
+Rubrobacterales
+522	Rubrobacteraceae
+637	unclassified
+
+5	2
+Rubrobacteraceae
+523	Rubrobacter
+638	unclassified
+
+6	1
+Rubrobacter
+639	unclassified
+
+6	1
+Sporomusa
+1105	unclassified
+
+5	2
+Dietziaceae
+526	Dietzia
+597	unclassified
+
+6	1
+Dietzia
+598	unclassified
+
+6	1
+Saccharofermentans
+1068	unclassified
+
+3	2
+Acidobacteria_Gp4
+529	Acidobacteria_Gp4_order_incertae_sedis
+565	unclassified
+
+4	2
+Acidobacteria_Gp4_order_incertae_sedis
+530	Acidobacteria_Gp4_family_incertae_sedis
+566	unclassified
+
+5	2
+Acidobacteria_Gp4_family_incertae_sedis
+531	Gp4
+567	unclassified
+
+6	1
+Gp4
+568	unclassified
+
+6	1
+Sphingopyxis
+781	unclassified
+
+6	1
+Chitinophagaceae_unclassified
+684	unclassified
+
+6	1
+Terrimonas
+686	unclassified
+
+6	1
+Spartobacteria_family_incertae_sedis_unclassified
+948	unclassified
+
+5	2
+"Saprospiraceae"
+537	"Saprospiraceae"_unclassified
+681	unclassified
+
+6	1
+"Saprospiraceae"_unclassified
+682	unclassified
+
+6	1
+Xanthomonas
+912	unclassified
+
+6	1
+Cupriavidus
+797	unclassified
+
+6	1
+Hallella
+669	unclassified
+
+4	2
+Legionellales
+542	Legionellaceae
+883	unclassified
+
+5	2
+Legionellaceae
+543	Legionella
+884	unclassified
+
+6	1
+Legionella
+885	unclassified
+
+6	1
+Dyella
+907	unclassified
+
+6	1
+Turicella
+594	unclassified
+
+6	1
+Enterorhabdus
+634	unclassified
+
+2	2
+"Chlamydiae"
+548	Chlamydiae
+703	unclassified
+
+3	2
+Chlamydiae
+549	Chlamydiales
+704	unclassified
+
+4	2
+Chlamydiales
+550	Chlamydiaceae
+705	unclassified
+
+5	2
+Chlamydiaceae
+551	Chlamydia
+706	unclassified
+
+6	1
+Chlamydia
+707	unclassified
+
+6	1
+Vibrio
+868	unclassified
+
+5	2
+Phyllobacteriaceae
+554	Phyllobacterium
+760	unclassified
+
+6	1
+Phyllobacterium
+761	unclassified
+
+6	1
+Brachymonas
+806	unclassified
+
+1	2
+unknown
+1118	unclassified
+557	unknown_unclassfied
+
+2	2
+unknown_unclassfied
+1119	unclassified
+558	unknown_unclassfied
+
+3	2
+unknown_unclassfied
+1120	unclassified
+559	unknown_unclassfied
+
+4	2
+unknown_unclassfied
+1121	unclassified
+560	unknown_unclassfied
+
+5	2
+unknown_unclassfied
+1122	unclassified
+561	unknown_unclassfied
+
+6	1
+unknown_unclassfied
+1123	unclassified
+
+1	1
+unclassified
+1124	unclassified
+
+2	1
+unclassified
+1129	unclassified
+
+3	1
+unclassified
+1133	unclassified
+
+4	1
+unclassified
+1136	unclassified
+
+5	1
+unclassified
+1138	unclassified
+
+6	0
+unclassified
+
+7	0
+unclassified
+
+4	1
+unclassified
+1139	unclassified
+
+5	1
+unclassified
+1141	unclassified
+
+6	0
+unclassified
+
+7	0
+unclassified
+
+3	1
+unclassified
+1142	unclassified
+
+4	1
+unclassified
+1145	unclassified
+
+5	1
+unclassified
+1147	unclassified
+
+6	0
+unclassified
+
+7	0
+unclassified
+
+5	1
+unclassified
+1148	unclassified
+
+6	0
+unclassified
+
+7	0
+unclassified
+
+7	0
+unclassified
+
+7	0
+unclassified
+
+7	0
+unclassified
+
+7	0
+unclassified
+
+6	0
+unclassified
+
+7	0
+unclassified
+
+6	0
+unclassified
+
+7	0
+unclassified
+
+6	0
+unclassified
+
+7	0
+unclassified
+
+6	0
+unclassified
+
+7	0
+unclassified
+
+7	0
+unclassified
+
+7	0
+unclassified
+
+6	0
+unclassified
+
+7	0
+unclassified
+
+6	0
+unclassified
+
+7	0
+unclassified
+
+6	0
+unclassified
+
+7	0
+unclassified
+
+6	0
+unclassified
+
+7	0
+unclassified
+
+6	0
+unclassified
+
+7	0
+unclassified
+
+7	0
+unclassified
+
+7	0
+unclassified
+
+7	0
+unclassified
+
+7	0
+unclassified
+
+6	0
+unclassified
+
+7	0
+unclassified
+
+6	0
+unclassified
+
+7	0
+unclassified
+
+6	0
+unclassified
+
+7	0
+unclassified
+
+6	0
+unclassified
+
+7	0
+unclassified
+
+7	0
+unclassified
+
+5	1
+unclassified
+1149	unclassified
+
+6	0
+unclassified
+
+7	0
+unclassified
+
+7	0
+unclassified
+
+7	0
+unclassified
+
+7	0
+unclassified
+
+7	0
+unclassified
+
+7	0
+unclassified
+
+7	0
+unclassified
+
+5	1
+unclassified
+1150	unclassified
+
+6	0
+unclassified
+
+7	0
+unclassified
+
+7	0
+unclassified
+
+7	0
+unclassified
+
+7	0
+unclassified
+
+7	0
+unclassified
+
+7	0
+unclassified
+
+7	0
+unclassified
+
+7	0
+unclassified
+
+5	1
+unclassified
+1151	unclassified
+
+6	0
+unclassified
+
+7	0
+unclassified
+
+5	1
+unclassified
+1152	unclassified
+
+6	0
+unclassified
+
+7	0
+unclassified
+
+3	1
+unclassified
+1153	unclassified
+
+4	1
+unclassified
+1156	unclassified
+
+5	1
+unclassified
+1158	unclassified
+
+6	0
+unclassified
+
+7	0
+unclassified
+
+3	1
+unclassified
+1159	unclassified
+
+4	1
+unclassified
+1162	unclassified
+
+5	1
+unclassified
+1164	unclassified
+
+6	0
+unclassified
+
+7	0
+unclassified
+
+4	1
+unclassified
+1165	unclassified
+
+5	1
+unclassified
+1167	unclassified
+
+6	0
+unclassified
+
+7	0
+unclassified
+
+6	0
+unclassified
+
+7	0
+unclassified
+
+6	0
+unclassified
+
+7	0
+unclassified
+
+7	0
+unclassified
+
+7	0
+unclassified
+
+7	0
+unclassified
+
+7	0
+unclassified
+
+7	0
+unclassified
+
+7	0
+unclassified
+
+6	0
+unclassified
+
+7	0
+unclassified
+
+7	0
+unclassified
+
+7	0
+unclassified
+
+7	0
+unclassified
+
+6	0
+unclassified
+
+7	0
+unclassified
+
+6	0
+unclassified
+
+7	0
+unclassified
+
+4	1
+unclassified
+1168	unclassified
+
+5	1
+unclassified
+1170	unclassified
+
+6	0
+unclassified
+
+7	0
+unclassified
+
+7	0
+unclassified
+
+6	0
+unclassified
+
+7	0
+unclassified
+
+6	0
+unclassified
+
+7	0
+unclassified
+
+7	0
+unclassified
+
+7	0
+unclassified
+
+6	0
+unclassified
+
+7	0
+unclassified
+
+6	0
+unclassified
+
+7	0
+unclassified
+
+4	1
+unclassified
+1171	unclassified
+
+5	1
+unclassified
+1173	unclassified
+
+6	0
+unclassified
+
+7	0
+unclassified
+
+6	0
+unclassified
+
+7	0
+unclassified
+
+7	0
+unclassified
+
+7	0
+unclassified
+
+7	0
+unclassified
+
+7	0
+unclassified
+
+7	0
+unclassified
+
+7	0
+unclassified
+
+3	1
+unclassified
+1174	unclassified
+
+4	1
+unclassified
+1177	unclassified
+
+5	1
+unclassified
+1179	unclassified
+
+6	0
+unclassified
+
+7	0
+unclassified
+
+3	1
+unclassified
+1180	unclassified
+
+4	1
+unclassified
+1183	unclassified
+
+5	1
+unclassified
+1185	unclassified
+
+6	0
+unclassified
+
+7	0
+unclassified
+
+3	1
+unclassified
+1186	unclassified
+
+4	1
+unclassified
+1189	unclassified
+
+5	1
+unclassified
+1191	unclassified
+
+6	0
+unclassified
+
+7	0
+unclassified
+
+5	1
+unclassified
+1192	unclassified
+
+6	0
+unclassified
+
+7	0
+unclassified
+
+3	1
+unclassified
+1193	unclassified
+
+4	1
+unclassified
+1196	unclassified
+
+5	1
+unclassified
+1198	unclassified
+
+6	0
+unclassified
+
+7	0
+unclassified
+
+6	0
+unclassified
+
+7	0
+unclassified
+
+7	0
+unclassified
+
+7	0
+unclassified
+
+3	1
+unclassified
+1199	unclassified
+
+4	1
+unclassified
+1202	unclassified
+
+5	1
+unclassified
+1204	unclassified
+
+6	0
+unclassified
+
+7	0
+unclassified
+
+7	0
+unclassified
+
+7	0
+unclassified
+
+3	1
+unclassified
+1205	unclassified
+
+4	1
+unclassified
+1208	unclassified
+
+5	1
+unclassified
+1210	unclassified
+
+6	0
+unclassified
+
+7	0
+unclassified
+
+4	1
+unclassified
+1211	unclassified
+
+5	1
+unclassified
+1213	unclassified
+
+6	0
+unclassified
+
+7	0
+unclassified
+
+5	1
+unclassified
+1214	unclassified
+
+6	0
+unclassified
+
+7	0
+unclassified
+
+5	1
+unclassified
+1215	unclassified
+
+6	0
+unclassified
+
+7	0
+unclassified
+
+7	0
+unclassified
+
+6	0
+unclassified
+
+7	0
+unclassified
+
+6	0
+unclassified
+
+7	0
+unclassified
+
+7	0
+unclassified
+
+6	0
+unclassified
+
+7	0
+unclassified
+
+6	0
+unclassified
+
+7	0
+unclassified
+
+6	0
+unclassified
+
+7	0
+unclassified
+
+6	0
+unclassified
+
+7	0
+unclassified
+
+5	1
+unclassified
+1216	unclassified
+
+6	0
+unclassified
+
+7	0
+unclassified
+
+7	0
+unclassified
+
+7	0
+unclassified
+
+5	1
+unclassified
+1217	unclassified
+
+6	0
+unclassified
+
+7	0
+unclassified
+
+7	0
+unclassified
+
+5	1
+unclassified
+1218	unclassified
+
+6	0
+unclassified
+
+7	0
+unclassified
+
+7	0
+unclassified
+
+7	0
+unclassified
+
+7	0
+unclassified
+
+7	0
+unclassified
+
+6	0
+unclassified
+
+7	0
+unclassified
+
+4	1
+unclassified
+1219	unclassified
+
+5	1
+unclassified
+1221	unclassified
+
+6	0
+unclassified
+
+7	0
+unclassified
+
+5	1
+unclassified
+1222	unclassified
+
+6	0
+unclassified
+
+7	0
+unclassified
+
+7	0
+unclassified
+
+7	0
+unclassified
+
+7	0
+unclassified
+
+6	0
+unclassified
+
+7	0
+unclassified
+
+7	0
+unclassified
+
+7	0
+unclassified
+
+7	0
+unclassified
+
+7	0
+unclassified
+
+6	0
+unclassified
+
+7	0
+unclassified
+
+6	0
+unclassified
+
+7	0
+unclassified
+
+6	0
+unclassified
+
+7	0
+unclassified
+
+7	0
+unclassified
+
+7	0
+unclassified
+
+7	0
+unclassified
+
+7	0
+unclassified
+
+7	0
+unclassified
+
+6	0
+unclassified
+
+7	0
+unclassified
+
+7	0
+unclassified
+
+7	0
+unclassified
+
+7	0
+unclassified
+
+6	0
+unclassified
+
+7	0
+unclassified
+
+7	0
+unclassified
+
+5	1
+unclassified
+1223	unclassified
+
+6	0
+unclassified
+
+7	0
+unclassified
+
+5	1
+unclassified
+1224	unclassified
+
+6	0
+unclassified
+
+7	0
+unclassified
+
+7	0
+unclassified
+
+7	0
+unclassified
+
+5	1
+unclassified
+1225	unclassified
+
+6	0
+unclassified
+
+7	0
+unclassified
+
+4	1
+unclassified
+1226	unclassified
+
+5	1
+unclassified
+1228	unclassified
+
+6	0
+unclassified
+
+7	0
+unclassified
+
+5	1
+unclassified
+1229	unclassified
+
+6	0
+unclassified
+
+7	0
+unclassified
+
+5	1
+unclassified
+1230	unclassified
+
+6	0
+unclassified
+
+7	0
+unclassified
+
+7	0
+unclassified
+
+5	1
+unclassified
+1231	unclassified
+
+6	0
+unclassified
+
+7	0
+unclassified
+
+7	0
+unclassified
+
+5	1
+unclassified
+1232	unclassified
+
+6	0
+unclassified
+
+7	0
+unclassified
+
+4	1
+unclassified
+1233	unclassified
+
+5	1
+unclassified
+1235	unclassified
+
+6	0
+unclassified
+
+7	0
+unclassified
+
+6	0
+unclassified
+
+7	0
+unclassified
+
+7	0
+unclassified
+
+4	1
+unclassified
+1236	unclassified
+
+5	1
+unclassified
+1238	unclassified
+
+6	0
+unclassified
+
+7	0
+unclassified
+
+7	0
+unclassified
+
+7	0
+unclassified
+
+7	0
+unclassified
+
+7	0
+unclassified
+
+7	0
+unclassified
+
+7	0
+unclassified
+
+5	1
+unclassified
+1239	unclassified
+
+6	0
+unclassified
+
+7	0
+unclassified
+
+7	0
+unclassified
+
+5	1
+unclassified
+1240	unclassified
+
+6	0
+unclassified
+
+7	0
+unclassified
+
+5	1
+unclassified
+1241	unclassified
+
+6	0
+unclassified
+
+7	0
+unclassified
+
+6	0
+unclassified
+
+7	0
+unclassified
+
+5	1
+unclassified
+1242	unclassified
+
+6	0
+unclassified
+
+7	0
+unclassified
+
+5	1
+unclassified
+1243	unclassified
+
+6	0
+unclassified
+
+7	0
+unclassified
+
+5	1
+unclassified
+1244	unclassified
+
+6	0
+unclassified
+
+7	0
+unclassified
+
+5	1
+unclassified
+1245	unclassified
+
+6	0
+unclassified
+
+7	0
+unclassified
+
+5	1
+unclassified
+1246	unclassified
+
+6	0
+unclassified
+
+7	0
+unclassified
+
+7	0
+unclassified
+
+7	0
+unclassified
+
+7	0
+unclassified
+
+7	0
+unclassified
+
+7	0
+unclassified
+
+5	1
+unclassified
+1247	unclassified
+
+6	0
+unclassified
+
+7	0
+unclassified
+
+7	0
+unclassified
+
+7	0
+unclassified
+
+6	0
+unclassified
+
+7	0
+unclassified
+
+7	0
+unclassified
+
+5	1
+unclassified
+1248	unclassified
+
+6	0
+unclassified
+
+7	0
+unclassified
+
+7	0
+unclassified
+
+7	0
+unclassified
+
+7	0
+unclassified
+
+7	0
+unclassified
+
+7	0
+unclassified
+
+3	1
+unclassified
+1249	unclassified
+
+4	1
+unclassified
+1252	unclassified
+
+5	1
+unclassified
+1254	unclassified
+
+6	0
+unclassified
+
+7	0
+unclassified
+
+6	0
+unclassified
+
+7	0
+unclassified
+
+3	1
+unclassified
+1255	unclassified
+
+4	1
+unclassified
+1258	unclassified
+
+5	1
+unclassified
+1260	unclassified
+
+6	0
+unclassified
+
+7	0
+unclassified
+
+7	0
+unclassified
+
+3	1
+unclassified
+1261	unclassified
+
+4	1
+unclassified
+1264	unclassified
+
+5	1
+unclassified
+1266	unclassified
+
+6	0
+unclassified
+
+7	0
+unclassified
+
+5	1
+unclassified
+1267	unclassified
+
+6	0
+unclassified
+
+7	0
+unclassified
+
+7	0
+unclassified
+
+3	1
+unclassified
+1268	unclassified
+
+4	1
+unclassified
+1271	unclassified
+
+5	1
+unclassified
+1273	unclassified
+
+6	0
+unclassified
+
+7	0
+unclassified
+
+3	1
+unclassified
+1274	unclassified
+
+4	1
+unclassified
+1277	unclassified
+
+5	1
+unclassified
+1279	unclassified
+
+6	0
+unclassified
+
+7	0
+unclassified
+
+4	1
+unclassified
+1280	unclassified
+
+5	1
+unclassified
+1282	unclassified
+
+6	0
+unclassified
+
+7	0
+unclassified
+
+7	0
+unclassified
+
+4	1
+unclassified
+1283	unclassified
+
+5	1
+unclassified
+1285	unclassified
+
+6	0
+unclassified
+
+7	0
+unclassified
+
+3	1
+unclassified
+1286	unclassified
+
+4	1
+unclassified
+1289	unclassified
+
+5	1
+unclassified
+1291	unclassified
+
+6	0
+unclassified
+
+7	0
+unclassified
+
+3	1
+unclassified
+1292	unclassified
+
+4	1
+unclassified
+1295	unclassified
+
+5	1
+unclassified
+1297	unclassified
+
+6	0
+unclassified
+
+7	0
+unclassified
+
+6	0
+unclassified
+
+7	0
+unclassified
+
+7	0
+unclassified
+
+7	0
+unclassified
+
+7	0
+unclassified
+
+6	0
+unclassified
+
+7	0
+unclassified
+
+6	0
+unclassified
+
+7	0
+unclassified
+
+6	0
+unclassified
+
+7	0
+unclassified
+
+6	0
+unclassified
+
+7	0
+unclassified
+
+6	0
+unclassified
+
+7	0
+unclassified
+
+6	0
+unclassified
+
+7	0
+unclassified
+
+6	0
+unclassified
+
+7	0
+unclassified
+
+7	0
+unclassified
+
+7	0
+unclassified
+
+6	0
+unclassified
+
+7	0
+unclassified
+
+7	0
+unclassified
+
+5	1
+unclassified
+1298	unclassified
+
+6	0
+unclassified
+
+7	0
+unclassified
+
+5	1
+unclassified
+1299	unclassified
+
+6	0
+unclassified
+
+7	0
+unclassified
+
+6	0
+unclassified
+
+7	0
+unclassified
+
+7	0
+unclassified
+
+7	0
+unclassified
+
+7	0
+unclassified
+
+6	0
+unclassified
+
+7	0
+unclassified
+
+7	0
+unclassified
+
+7	0
+unclassified
+
+6	0
+unclassified
+
+7	0
+unclassified
+
+7	0
+unclassified
+
+7	0
+unclassified
+
+6	0
+unclassified
+
+7	0
+unclassified
+
+6	0
+unclassified
+
+7	0
+unclassified
+
+7	0
+unclassified
+
+6	0
+unclassified
+
+7	0
+unclassified
+
+7	0
+unclassified
+
+7	0
+unclassified
+
+4	1
+unclassified
+1300	unclassified
+
+5	1
+unclassified
+1302	unclassified
+
+6	0
+unclassified
+
+7	0
+unclassified
+
+5	1
+unclassified
+1303	unclassified
+
+6	0
+unclassified
+
+7	0
+unclassified
+
+6	0
+unclassified
+
+7	0
+unclassified
+
+7	0
+unclassified
+
+7	0
+unclassified
+
+7	0
+unclassified
+
+6	0
+unclassified
+
+7	0
+unclassified
+
+6	0
+unclassified
+
+7	0
+unclassified
+
+6	0
+unclassified
+
+7	0
+unclassified
+
+7	0
+unclassified
+
+6	0
+unclassified
+
+7	0
+unclassified
+
+7	0
+unclassified
+
+7	0
+unclassified
+
+7	0
+unclassified
+
+7	0
+unclassified
+
+7	0
+unclassified
+
+7	0
+unclassified
+
+7	0
+unclassified
+
+7	0
+unclassified
+
+7	0
+unclassified
+
+7	0
+unclassified
+
+7	0
+unclassified
+
+7	0
+unclassified
+
+7	0
+unclassified
+
+7	0
+unclassified
+
+7	0
+unclassified
+
+7	0
+unclassified
+
+6	0
+unclassified
+
+7	0
+unclassified
+
+6	0
+unclassified
+
+7	0
+unclassified
+
+7	0
+unclassified
+
+7	0
+unclassified
+
+7	0
+unclassified
+
+7	0
+unclassified
+
+6	0
+unclassified
+
+7	0
+unclassified
+
+7	0
+unclassified
+
+7	0
+unclassified
+
+7	0
+unclassified
+
+7	0
+unclassified
+
+7	0
+unclassified
+
+7	0
+unclassified
+
+7	0
+unclassified
+
+7	0
+unclassified
+
+5	1
+unclassified
+1304	unclassified
+
+6	0
+unclassified
+
+7	0
+unclassified
+
+4	1
+unclassified
+1305	unclassified
+
+5	1
+unclassified
+1307	unclassified
+
+6	0
+unclassified
+
+7	0
+unclassified
+
+7	0
+unclassified
+
+7	0
+unclassified
+
+7	0
+unclassified
+
+7	0
+unclassified
+
+7	0
+unclassified
+
+7	0
+unclassified
+
+7	0
+unclassified
+
+4	1
+unclassified
+1308	unclassified
+
+5	1
+unclassified
+1310	unclassified
+
+6	0
+unclassified
+
+7	0
+unclassified
+
+4	1
+unclassified
+1311	unclassified
+
+5	1
+unclassified
+1313	unclassified
+
+6	0
+unclassified
+
+7	0
+unclassified
+
+7	0
+unclassified
+
+7	0
+unclassified
+
+7	0
+unclassified
+
+6	0
+unclassified
+
+7	0
+unclassified
+
+7	0
+unclassified
+
+7	0
+unclassified
+
+7	0
+unclassified
+
+7	0
+unclassified
+
+7	0
+unclassified
+
+7	0
+unclassified
+
+7	0
+unclassified
+
+7	0
+unclassified
+
+7	0
+unclassified
+
+7	0
+unclassified
+
+3	1
+unclassified
+1314	unclassified
+
+4	1
+unclassified
+1317	unclassified
+
+5	1
+unclassified
+1319	unclassified
+
+6	0
+unclassified
+
+7	0
+unclassified
+
+3	1
+unclassified
+1320	unclassified
+
+4	1
+unclassified
+1323	unclassified
+
+5	1
+unclassified
+1325	unclassified
+
+6	0
+unclassified
+
+7	0
+unclassified
+
+2	1
+unclassified
+1326	unclassified
+
+3	1
+unclassified
+1330	unclassified
+
+4	1
+unclassified
+1333	unclassified
+
+5	1
+unclassified
+1335	unclassified
+
+6	0
+unclassified
+
+7	0
+unclassified
+
+2	1
+unclassified
+1125	unclassified
+
+3	1
+unclassified
+1126	unclassified
+
+4	1
+unclassified
+1127	unclassified
+
+5	1
+unclassified
+1128	unclassified
+
+6	0
+unclassified
+
+3	1
+unclassified
+1130	unclassified
+
+4	1
+unclassified
+1131	unclassified
+
+5	1
+unclassified
+1132	unclassified
+
+6	0
+unclassified
+
+4	1
+unclassified
+1134	unclassified
+
+5	1
+unclassified
+1135	unclassified
+
+6	0
+unclassified
+
+5	1
+unclassified
+1137	unclassified
+
+6	0
+unclassified
+
+6	0
+unclassified
+
+5	1
+unclassified
+1140	unclassified
+
+6	0
+unclassified
+
+6	0
+unclassified
+
+4	1
+unclassified
+1143	unclassified
+
+5	1
+unclassified
+1144	unclassified
+
+6	0
+unclassified
+
+5	1
+unclassified
+1146	unclassified
+
+6	0
+unclassified
+
+6	0
+unclassified
+
+6	0
+unclassified
+
+6	0
+unclassified
+
+6	0
+unclassified
+
+6	0
+unclassified
+
+6	0
+unclassified
+
+4	1
+unclassified
+1154	unclassified
+
+5	1
+unclassified
+1155	unclassified
+
+6	0
+unclassified
+
+5	1
+unclassified
+1157	unclassified
+
+6	0
+unclassified
+
+6	0
+unclassified
+
+4	1
+unclassified
+1160	unclassified
+
+5	1
+unclassified
+1161	unclassified
+
+6	0
+unclassified
+
+5	1
+unclassified
+1163	unclassified
+
+6	0
+unclassified
+
+6	0
+unclassified
+
+5	1
+unclassified
+1166	unclassified
+
+6	0
+unclassified
+
+6	0
+unclassified
+
+5	1
+unclassified
+1169	unclassified
+
+6	0
+unclassified
+
+6	0
+unclassified
+
+5	1
+unclassified
+1172	unclassified
+
+6	0
+unclassified
+
+6	0
+unclassified
+
+4	1
+unclassified
+1175	unclassified
+
+5	1
+unclassified
+1176	unclassified
+
+6	0
+unclassified
+
+5	1
+unclassified
+1178	unclassified
+
+6	0
+unclassified
+
+6	0
+unclassified
+
+4	1
+unclassified
+1181	unclassified
+
+5	1
+unclassified
+1182	unclassified
+
+6	0
+unclassified
+
+5	1
+unclassified
+1184	unclassified
+
+6	0
+unclassified
+
+6	0
+unclassified
+
+4	1
+unclassified
+1187	unclassified
+
+5	1
+unclassified
+1188	unclassified
+
+6	0
+unclassified
+
+5	1
+unclassified
+1190	unclassified
+
+6	0
+unclassified
+
+6	0
+unclassified
+
+6	0
+unclassified
+
+4	1
+unclassified
+1194	unclassified
+
+5	1
+unclassified
+1195	unclassified
+
+6	0
+unclassified
+
+5	1
+unclassified
+1197	unclassified
+
+6	0
+unclassified
+
+6	0
+unclassified
+
+4	1
+unclassified
+1200	unclassified
+
+5	1
+unclassified
+1201	unclassified
+
+6	0
+unclassified
+
+5	1
+unclassified
+1203	unclassified
+
+6	0
+unclassified
+
+6	0
+unclassified
+
+4	1
+unclassified
+1206	unclassified
+
+5	1
+unclassified
+1207	unclassified
+
+6	0
+unclassified
+
+5	1
+unclassified
+1209	unclassified
+
+6	0
+unclassified
+
+6	0
+unclassified
+
+5	1
+unclassified
+1212	unclassified
+
+6	0
+unclassified
+
+6	0
+unclassified
+
+6	0
+unclassified
+
+6	0
+unclassified
+
+6	0
+unclassified
+
+6	0
+unclassified
+
+6	0
+unclassified
+
+5	1
+unclassified
+1220	unclassified
+
+6	0
+unclassified
+
+6	0
+unclassified
+
+6	0
+unclassified
+
+6	0
+unclassified
+
+6	0
+unclassified
+
+6	0
+unclassified
+
+5	1
+unclassified
+1227	unclassified
+
+6	0
+unclassified
+
+6	0
+unclassified
+
+6	0
+unclassified
+
+6	0
+unclassified
+
+6	0
+unclassified
+
+6	0
+unclassified
+
+5	1
+unclassified
+1234	unclassified
+
+6	0
+unclassified
+
+6	0
+unclassified
+
+5	1
+unclassified
+1237	unclassified
+
+6	0
+unclassified
+
+6	0
+unclassified
+
+6	0
+unclassified
+
+6	0
+unclassified
+
+6	0
+unclassified
+
+6	0
+unclassified
+
+6	0
+unclassified
+
+6	0
+unclassified
+
+6	0
+unclassified
+
+6	0
+unclassified
+
+6	0
+unclassified
+
+6	0
+unclassified
+
+4	1
+unclassified
+1250	unclassified
+
+5	1
+unclassified
+1251	unclassified
+
+6	0
+unclassified
+
+5	1
+unclassified
+1253	unclassified
+
+6	0
+unclassified
+
+6	0
+unclassified
+
+4	1
+unclassified
+1256	unclassified
+
+5	1
+unclassified
+1257	unclassified
+
+6	0
+unclassified
+
+5	1
+unclassified
+1259	unclassified
+
+6	0
+unclassified
+
+6	0
+unclassified
+
+4	1
+unclassified
+1262	unclassified
+
+5	1
+unclassified
+1263	unclassified
+
+6	0
+unclassified
+
+5	1
+unclassified
+1265	unclassified
+
+6	0
+unclassified
+
+6	0
+unclassified
+
+6	0
+unclassified
+
+4	1
+unclassified
+1269	unclassified
+
+5	1
+unclassified
+1270	unclassified
+
+6	0
+unclassified
+
+5	1
+unclassified
+1272	unclassified
+
+6	0
+unclassified
+
+6	0
+unclassified
+
+4	1
+unclassified
+1275	unclassified
+
+5	1
+unclassified
+1276	unclassified
+
+6	0
+unclassified
+
+5	1
+unclassified
+1278	unclassified
+
+6	0
+unclassified
+
+6	0
+unclassified
+
+5	1
+unclassified
+1281	unclassified
+
+6	0
+unclassified
+
+6	0
+unclassified
+
+5	1
+unclassified
+1284	unclassified
+
+6	0
+unclassified
+
+6	0
+unclassified
+
+4	1
+unclassified
+1287	unclassified
+
+5	1
+unclassified
+1288	unclassified
+
+6	0
+unclassified
+
+5	1
+unclassified
+1290	unclassified
+
+6	0
+unclassified
+
+6	0
+unclassified
+
+4	1
+unclassified
+1293	unclassified
+
+5	1
+unclassified
+1294	unclassified
+
+6	0
+unclassified
+
+5	1
+unclassified
+1296	unclassified
+
+6	0
+unclassified
+
+6	0
+unclassified
+
+6	0
+unclassified
+
+6	0
+unclassified
+
+5	1
+unclassified
+1301	unclassified
+
+6	0
+unclassified
+
+6	0
+unclassified
+
+6	0
+unclassified
+
+6	0
+unclassified
+
+5	1
+unclassified
+1306	unclassified
+
+6	0
+unclassified
+
+6	0
+unclassified
+
+5	1
+unclassified
+1309	unclassified
+
+6	0
+unclassified
+
+6	0
+unclassified
+
+5	1
+unclassified
+1312	unclassified
+
+6	0
+unclassified
+
+6	0
+unclassified
+
+4	1
+unclassified
+1315	unclassified
+
+5	1
+unclassified
+1316	unclassified
+
+6	0
+unclassified
+
+5	1
+unclassified
+1318	unclassified
+
+6	0
+unclassified
+
+6	0
+unclassified
+
+4	1
+unclassified
+1321	unclassified
+
+5	1
+unclassified
+1322	unclassified
+
+6	0
+unclassified
+
+5	1
+unclassified
+1324	unclassified
+
+6	0
+unclassified
+
+6	0
+unclassified
+
+3	1
+unclassified
+1327	unclassified
+
+4	1
+unclassified
+1328	unclassified
+
+5	1
+unclassified
+1329	unclassified
+
+6	0
+unclassified
+
+4	1
+unclassified
+1331	unclassified
+
+5	1
+unclassified
+1332	unclassified
+
+6	0
+unclassified
+
+5	1
+unclassified
+1334	unclassified
+
+6	0
+unclassified
+
+6	0
+unclassified
+

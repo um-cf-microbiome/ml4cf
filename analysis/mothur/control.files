@@ -1,0 +1,15 @@
+TDmockD /home/meek/data/fastq_files/TDmockD-060216_S383_L001_R1_001.fastq /home/meek/data/fastq_files/TDmockD-060216_S383_L001_R2_001.fastq
+TDwaterD /home/meek/data/fastq_files/TDwaterD-060216_S384_L001_R1_001.fastq /home/meek/data/fastq_files/TDwaterD-060216_S384_L001_R2_001.fastq
+PCRwaterA /home/meek/data/fastq_files/PCRwaterA_S96_L001_R1_001.fastq /home/meek/data/fastq_files/PCRwaterA_S96_L001_R2_001.fastq
+waterA /home/meek/data/fastq_files/waterA-02172016_S192_L001_R1_001.fastq /home/meek/data/fastq_files/waterA-02172016_S192_L001_R2_001.fastq
+waterATD15 /home/meek/data/fastq_files/water-A-TD-101515_S95_L001_R1_001.fastq /home/meek/data/fastq_files/water-A-TD-101515_S95_L001_R2_001.fastq
+PCRwaterB /home/meek/data/fastq_files/PCRwaterB_S192_L001_R1_001.fastq /home/meek/data/fastq_files/PCRwaterB_S192_L001_R2_001.fastq
+waterB16 /home/meek/data/fastq_files/waterB-02172016_S288_L001_R1_001.fastq /home/meek/data/fastq_files/waterB-02172016_S288_L001_R2_001.fastq
+waterBTD15 /home/meek/data/fastq_files/water-B-TD-101515_S191_L001_R1_001.fastq /home/meek/data/fastq_files/water-B-TD-101515_S191_L001_R2_001.fastq
+PCRwaterC /home/meek/data/fastq_files/PCRwaterC_S288_L001_R1_001.fastq /home/meek/data/fastq_files/PCRwaterC_S288_L001_R2_001.fastq
+waterC16 /home/meek/data/fastq_files/waterC081616_S288_L001_R1_001.fastq /home/meek/data/fastq_files/waterC081616_S288_L001_R2_001.fastq
+zymomockA /home/meek/data/fastq_files/zymomockA_S95_L001_R1_001.fastq /home/meek/data/fastq_files/zymomockA_S95_L001_R2_001.fastq
+zymomockB /home/meek/data/fastq_files/zymomockB_S191_L001_R1_001.fastq /home/meek/data/fastq_files/zymomockB_S191_L001_R2_001.fastq
+zymomockC /home/meek/data/fastq_files/zymomockC_S287_L001_R1_001.fastq /home/meek/data/fastq_files/zymomockC_S287_L001_R2_001.fastq
+ZymomockC2 /home/meek/data/fastq_files/Zymomock-C_S287_L001_R1_001.fastq /home/meek/data/fastq_files/Zymomock-C_S287_L001_R2_001.fastq
+ZymomockD2 /home/meek/data/fastq_files/Zymomock-D_S383_L001_R1_001.fastq /home/meek/data/fastq_files/Zymomock-D_S383_L001_R2_001.fastq
