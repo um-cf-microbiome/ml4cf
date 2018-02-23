@@ -1,63 +1,181 @@
-# This script contains the protocol
-# for support vector machine (SVM) analysis of
-# the first positive NTM dataset of Dr. Lindsay Caverly.
-# University of Michigan, Dept. of Pediatric Pulmonology
-# January, 2018.
+# This script contains support vector machine (SVM) 
+# analyses for the first positive NTM dataset of 
+# Dr. Lindsay Caverly, University of Michigan
+# Dept. of Pediatric Pulmonology
+# Analyses completed in January-February, 2018.
 #
-# Authors: Lindsay Caverly, Garrett Meek
+# Script written by Garrett A. Meek
 # 
 # This file is organized as follows:
 # 
 # (1) Load software
-#     (1-A) Load Python packages
-#     (1-B) Load/point to non-Python software
-#     (1-C) Load local subroutines
+#     (1-A) Import Python packages
+#     (1-B) Point to non-Python software
+#     (1-C) Import local Python source
 # (2) Microbiome analysis with Mothur
-# (2) Build dataframes
-#     (2-A) Read data and build dataframes for ML
-#           (2-A-i) Build microbial datasets:
+# (3) Build dataframes
+#     (3-A) Read data and build dataframes
 #                   'microbial_full': Contains all default microbial
 #                   data from Mothur MiSeq-SOP, where the data was subsequently
 #                   used to calculate individual OTU relative abundances
-#	            'microbial_avium': Contains microbial data for samples that
-#		    tested positive for M. avium
-#	            'microbial_abscessus': Contains microbial data for samples that
-#		    tested positive for M. abscessus
-#           (2-A-ii) Build clinical datasets:
-#	            'clinical_full': Contains all clinical features (described in:
-#	            'data/features_description.txt')
-#	            'clinical_numeric': Contains only the clinical features
-#		    whose values are numeric
+#	                  'microbial_avium': Contains microbial data for samples that
+#		                tested positive for M. avium
+#	                  'microbial_abscessus': Contains microbial data for samples that
+#		                tested positive for M. abscessus
+#	                  'clinical_full': Contains all clinical features (described in:
+#	                  'data/features_description.txt')
+#	                  'clinical_numeric': Contains only the clinical features
+#		                whose values are numeric
 #                   'clinical_no_fev1': Contains all clinical features except 'fev1'
-# (3) Add derived features
-#     (2-B) Add subject-specific regression results as features
-# (4) Train SVM model to classify NTM disease
-#     (A) 
-# (5) Prepare analysis results for plotting
+#     (3-B) Append subject-specific regression results as features in dataframe
+# (4) Train SVM model
+#     (4-A) Format dataset for 'libsvm'
+#     (4-B) Train SVM models with the following variations:
+#            i) Vary classifiers (Disease yes/no, transient/persistent, MAC/Mab.)
+#            ii) Vary F-score threshold
+#            iii) Vary SVM-included features (above F-score threshold)
 # (6) Plot results
 
 ##
 #
-# (1) Load Python packages and read datasets
+#  BEGIN ANALYSIS
 #
 ##
-# (1) Load software
-#     (1-A) Load Python packages
-import pandas as pd
-import sys, os, csv, platform
-from collections import defaultdict
-from subprocess import call
-#     (1-B) Load/point to non-Python software
 
-#     (1-C) Load local subroutines
-sys.path.insert(0, str(os.getcwd()+'/src'))
-import data, model
+
+# (1) Load software
+
+#     (1-A) Import Python packages
+
+import pandas as pd
+import random, subprocess, shutil, collections
+import sys, os, csv, platform, fnmatch
+import datetime
+from os import system, unlink
+from collections import defaultdict
+from subprocess import *
+from shutil import copyfile
+
+#     (1-B) Point to non-Python software
+
+#           'mothur' for sequencing
+
+#if platform.system() == 'Windows':
+mothur_path = str("F:\\software\\mothur\\mothur.exe")
+sample_list_file=open('F:\\NTM\\analysis\\sample_list.csv','r')
+control_list_file = open('F:\\NTM\\analysis\\control_sample_list.csv','r')
+fastq_dir=str("F:\\data\\fastq_files")
+mothur_ref_dir=str("F:\\analysis\\mothur\\ref\\")
+stability_files=open('F:\\NTM\\analysis\\mothur\\stability.files','w')
+batch_file=open('F:\\NTM\\analysis\\mothur\\stability.batch','w')
+mothur_output_file=str("F:\\NTM\\analysis\\mothur\\mothur.out")
+#if platform.system() == 'Linux':
+# sample_list_file=str(os.getcwd()+"sample_list.csv")
+# stability_files=str(os.getcwd()+"stability.files")
+# fastq_search_dir=str('F:/data/NTM/fastq_files/')
+# fastq_folder=str(os.getcwd()+"fastq_files")
+
+#     (1-C) Import local Python source
+
+#           'libsvm' for SVM analysis
+
+#           (https://github.com/cjlin1/libsvm)
+sys.path.insert(0, str('F:\\software\\libsvm-3.22\\tools'))
+#           grid.py finds best combo. of C/gamma for SVM training
+import grid
+
+sys.path.insert(0, str('F:\\NTM\\src'))
+import data, model, reverse_read, mothur
 from data import edit, get, select
 from model import regression
+#           'csv2libsvm.py' to convert csv file to libsvm format
+#           (https://github.com/zygmuntz/phraug/blob/master/csv2libsvm.py)
+#           'fselect.py' calculates F-scores and CV% accuracy
+#           (https://www.csie.ntu.edu.tw/~cjlin/libsvmtools/#feature_selection_tool)
+from data import csv2libsvm
+from model import fselect
+
 # (2) Microbiome analysis with Mothur
 
-#     (1-B) Read data and build dataframes for ML
+# Use samples in 'Sputum Number' column to make .files
+sample_list = pandas.read_csv(sample_list_file)['Sputum Number']
+# Add samples included in 'Control' column of control_list_file
+control_list = pandas.read_csv(control_list_file)['Control']
+# Make stability.files
+mothur.make_stability_files(sample_list,control_list,stability_files,fastq_dir)
+# Make mothur batch file:
+mothur.make_batch(stability_files,batch_file,mothur_ref_dir,control_list)
+# Run mothur SOP:
+mothur_command = str(mothur_path+' '+batch_file+' > 'mothur_output_file)
+mothur.run(mothur_command)
 
+
+# (3) Build dataframes
+#     (3-A) Read data and build dataframes
+#                   'microbial_full': Contains all default microbial
+#                   data from Mothur MiSeq-SOP, where the data was subsequently
+#                   used to calculate individual OTU relative abundances
+#	                  'microbial_avium': Contains microbial data for samples that
+#		                tested positive for M. avium
+#	                  'microbial_abscessus': Contains microbial data for samples that
+#		                tested positive for M. abscessus
+#	                  'clinical_full': Contains all clinical features (described in:
+#	                  'data/features_description.txt')
+#	                  'clinical_numeric': Contains only the clinical features
+#		                whose values are numeric
+#                   'clinical_no_fev1': Contains all clinical features except 'fev1'
+#     (3-B) Append subject-specific regression results as features in dataframe
+# (4) Train SVM model
+#     (4-A) Format dataset for 'libsvm'
+#     (4-B) Train SVM models with the following variations:
+#            i) Each classifier (Disease yes/no, transient/persistent, MAC/Mab.)
+min_C,max_C,step_C = -2,9,2
+C_range = str(min_C+','+max_C+','+step_C)
+min_gamma,max_gamma,step_gamma = 1,-11,-2
+gamma_range = str(min_gamma+','+max_gamma+','+step_gamma)
+grid_exe_input = str('-log2c '+C_range+' -log2g '+gamma_range)
+#            iii) Vary F-score threshold
+#            iv) Vary SVM-included features (above F-score threshold)
+# (6) Plot results
+#
+
+#     (2-A) Build Mothur input files
+if platform.system() == 'Windows':
+ sample_list_file=open('F:\\NTM\\analysis\\sample_list.csv','r')
+ control_list_file = open('F:\\NTM\\analysis\\control_sample_list.csv','r')
+ stability_files=open('F:\\NTM\\analysis\\mothur\\stability.files','w')
+ fastq_dir=str("F:\\data\\fastq_files")
+ mothur_output_file=str("F:\\NTM\\analysis\\mothur\\mothur.out")
+ mothur_path = str("F:\\software\\mothur\\mothur.exe")
+
+
+#          Make stability.files
+sample_list = pd.read_csv(sample_list_file).Sputum_Number             
+control_list = pd.read_csv(control_list_file).Sputum_Number
+# Get fastq files with matching sputum IDs
+for top,sub_dirs,files in os.walk(fastq_dir):
+ continue
+# Search 'fastq_dir' for fastq files
+for sample in sample_list:
+ for file in files:
+  if str(sample+"_") in file and str("_"+sample) not in file:
+   if str("R1") in file: forward_read_file = os.path.join(fastq_dir,file)
+   if str("R2") in file: reverse_read_file = os.path.join(fastq_dir,file)
+ stability_files.write(sample+" "+os.path.join(fastq_dir,forward_read_file)+" "+os.path.join(fastq_dir,reverse_read_file)+"\n")
+# Read in control list (Forward read controls only)
+for control in control_list:
+ sample = control.split('_L001',1)[0]
+ forward_read_file = os.path.join(fastq_dir,control)
+ reverse_read_file = reverse_read.find(sample,files) 
+ stability_files.write(sample+" "+os.path.join(fastq_dir,forward_read_file)+" "+os.path.join(fastq_dir,reverse_read_file)+"\n")
+quit()
+
+#        Run mothur
+#call_syntax = str(mothur_path+" "+stability_files+" > "+mothur_output_file)
+#subprocess.call(call_syntax,shell=True)
+
+# (3) Build dataframes
+#     (3-A) Read data and build dataframes for ML
 # Detect OS
 if platform.system() == 'Linux':
     #           Linux-formatted path to data files (CSV-format)
