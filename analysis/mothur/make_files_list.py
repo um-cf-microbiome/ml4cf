@@ -15,7 +15,6 @@ def compare_file_size(file_1,file_2):
  else: result = False
  return(result)
     
-<<<<<<< HEAD
 sample_list_file=str("/home/meek/NTM/analysis/sample_list.csv")
 control_list_file=str("/home/meek/NTM/analysis/mothur/control_list.csv")
 stability_files=open(str("/home/meek/NTM/analysis/mothur/stability.files"),'w')
@@ -23,14 +22,6 @@ fastq_dir=str("/home/meek/data/fastq_files/")
 # Read sputum ID numbers
 sample_list = pandas.read_csv(sample_list_file)['Sputum Number']
 control_list = pandas.read_csv(control_list_file)['Control']
-=======
-if platform.system() == 'Windows':
- sample_list_file=str("F:\\NTM\\analysis\\sample_list.csv")
- stability_files=open(str("F:\\NTM\\analysis\\mothur\\stability.files"),'w')
- fastq_dir=str("F:\\data\\fastq_files\\")
-# Read sputum ID numbers
-sample_list = pandas.read_csv(sample_list_file).Sputum_Number             
->>>>>>> 8991d77d42f9a02b0f6b3392fdff7c994793b1bc
 forward_read_flag = str("L001_R1_001")
 reverse_read_flag = str("L001_R2_001")
 written_list = list()
@@ -59,7 +50,6 @@ for sample in sample_list:
      if reverse and forward:
       stability_files.write(sample+" "+forward_file+" "+reverse_file+"\n")
       written_list.append(sample)
-<<<<<<< HEAD
     
 for sample in control_list:
  if not sample in written_list:
@@ -82,6 +72,3 @@ for sample in control_list:
       stability_files.write(sample+" "+forward_file+" "+reverse_file+"\n")
       written_list.append(sample)
     
-=======
-    
->>>>>>> 8991d77d42f9a02b0f6b3392fdff7c994793b1bc
