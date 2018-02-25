@@ -64,13 +64,13 @@ from shutil import copyfile
 mothur_path = str("F:\\software\\mothur\\mothur.exe")
 sample_list_file=open('F:\\NTM\\analysis\\sample_list.csv','r')
 control_list_file = open('F:\\NTM\\analysis\\control_sample_list.csv','r')
-fastq_dir=str("F:\\data\\fastq_files\\")
-mothur_ref_dir=str("F:\\analysis\\mothur\\ref\\")
+fastq_dir=str("F:\\data\\fastq_files\\lab\\")
+mothur_ref_dir=str("F:\\data\\fastq_files\\ref\\")
 stability_files=open('F:\\NTM\\analysis\\mothur\\stability.files','w')
 stability_files_name = 'F:\\NTM\\analysis\\mothur\\stability.files'
 batch_file=open('F:\\NTM\\analysis\\mothur\\stability.batch','w')
 batch_file_path= 'F:\\NTM\\analysis\\mothur\\stability.batch'
-mothur_output_file=str("F:\\NTM\\analysis\\mothur\\mothur.out")
+mothur_output_path=str("F:\\NTM\\analysis\\mothur\\")
 #if platform.system() == 'Linux':
 # sample_list_file=str(os.getcwd()+"sample_list.csv")
 # stability_files=str(os.getcwd()+"stability.files")
@@ -88,7 +88,8 @@ import grid
 
 sys.path.insert(0, str('F:\\NTM\\src'))
 import data, model, reverse_read
-from data import edit, get, select, mothur
+from data import edit, get, select
+from eco import mothur#, entropart
 from model import regression
 #           'csv2libsvm.py' to convert csv file to libsvm format
 #           (https://github.com/zygmuntz/phraug/blob/master/csv2libsvm.py)
@@ -106,11 +107,14 @@ control_list = pd.read_csv(control_list_file)['Sputum_Number']
 # Make stability.files
 mothur.make_stability_files(sample_list,control_list,stability_files,fastq_dir)
 # Make mothur batch file:
-mothur.make_batch(stability_files_name,batch_file,mothur_ref_dir,control_list)
+mothur.make_batch(stability_files_name,batch_file,mothur_ref_dir,control_list,mothur_output_path)
 # Run mothur SOP:
-mothur.run(mothur.cmd_line(mothur_path,batch_file_path,mothur_output_file))
+mothur.run(mothur.cmd_line(mothur_path,batch_file_path,mothur_output_path))
 
-
+# Unfinished steps to calculate Shannon Beta using 'entropart' (R)
+# https://github.com/EricMarcon/entropart
+R_path=str('C:\\Program Files\\R\\R-3.4.3\\bin\\Rscript.exe')
+entropart.run()
 # (3) Build dataframes
 #     (3-A) Read data and build dataframes
 
