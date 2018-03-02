@@ -109,7 +109,7 @@ mothur.make_stability_files(sample_list,control_list,stability_files,fastq_dir)
 # Make mothur batch file:
 mothur.make_batch(stability_files_name,batch_file,mothur_ref_dir,control_list,mothur_output_path)
 # Run mothur SOP:
-mothur.run(mothur.cmd_line(mothur_path,batch_file_path,mothur_output_path))
+#mothur.run(mothur.cmd_line(mothur_path,batch_file_path,mothur_output_path))
 
 # Unfinished steps to calculate Shannon Beta using 'entropart' (R)
 # https://github.com/EricMarcon/entropart
