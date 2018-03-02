@@ -61,16 +61,16 @@ from shutil import copyfile
 #           'mothur' for sequencing
 
 #if platform.system() == 'Windows':
-mothur_path = str("F:\\software\\mothur\\mothur.exe")
-sample_list_file=open('F:\\NTM\\analysis\\sample_list.csv','r')
-control_list_file = open('F:\\NTM\\analysis\\control_sample_list.csv','r')
-fastq_dir=str("F:\\data\\fastq_files\\lab\\")
-mothur_ref_dir=str("F:\\data\\fastq_files\\ref\\")
-stability_files=open('F:\\NTM\\analysis\\mothur\\stability.files','w')
-stability_files_name = 'F:\\NTM\\analysis\\mothur\\stability.files'
-batch_file=open('F:\\NTM\\analysis\\mothur\\stability.batch','w')
-batch_file_path= 'F:\\NTM\\analysis\\mothur\\stability.batch'
-mothur_output_path=str("F:\\NTM\\analysis\\mothur\\")
+mothur_path = str("F:/software/mothur/mothur.exe")
+sample_list_file=open('F:/NTM/analysis/sample_list.csv','r')
+control_list_file = open('F:/NTM/analysis/control_sample_list.csv','r')
+fastq_dir=str("F:/data/fastq_files/lab/")
+mothur_ref_dir=str("F:/data/fastq_files/ref/")
+stability_files=open('F:/NTM/analysis/mothur/stability.files','w')
+stability_files_name = 'F:/NTM/analysis/mothur/stability.files'
+batch_file=open('F:/NTM/analysis/mothur/stability.batch','w')
+batch_file_path= 'F:/NTM/analysis/mothur/stability.batch'
+mothur_output_path=str("F:/NTM/analysis/mothur/")
 #if platform.system() == 'Linux':
 # sample_list_file=str(os.getcwd()+"sample_list.csv")
 # stability_files=str(os.getcwd()+"stability.files")
@@ -82,11 +82,11 @@ mothur_output_path=str("F:\\NTM\\analysis\\mothur\\")
 #           'libsvm' for SVM analysis
 
 #           (https://github.com/cjlin1/libsvm)
-sys.path.insert(0, str('F:\\software\\libsvm\\tools'))
+sys.path.insert(0, str('F:/software/libsvm/tools'))
 #           grid.py finds best combo. of C/gamma for SVM training
 import grid
 
-sys.path.insert(0, str('F:\\NTM\\src'))
+sys.path.insert(0, str('F:/NTM/src'))
 import data, model, reverse_read
 from data import edit, get, select
 from eco import mothur#, entropart
@@ -113,15 +113,15 @@ mothur.run(mothur.cmd_line(mothur_path,batch_file_path,mothur_output_path))
 
 # Unfinished steps to calculate Shannon Beta using 'entropart' (R)
 # https://github.com/EricMarcon/entropart
-R_path=str('C:\\Program Files\\R\\R-3.4.3\\bin\\Rscript.exe')
-entropart.run()
+R_path=str('C:/Program Files/R/R-3.4.3/bin/Rscript.exe')
+#entropart.run()
 # (3) Build dataframes
 #     (3-A) Read data and build dataframes
 
-#data_file = open(str(os.getcwd()+'NTM\\data\\ntm-first-positive-incomplete.csv'),'r')
-#clinical_feat_file = open(str(os.getcwd()+'NTM\\analysis\\clinical_features.csv'),'r')
-#reg_feat_file = open(str(os.getcwd()+'NTM\\analysis\\regression_features.csv'),'r')
-#classifiers_file = open(str(os.getcwd()+'NTM\\analysis\\classifiers.csv'),'r')    
+#data_file = open(str(os.getcwd()+'NTM/data/ntm-first-positive-incomplete.csv'),'r')
+#clinical_feat_file = open(str(os.getcwd()+'NTM/analysis/clinical_features.csv'),'r')
+#reg_feat_file = open(str(os.getcwd()+'NTM/analysis/regression_features.csv'),'r')
+#classifiers_file = open(str(os.getcwd()+'NTM/analysis/classifiers.csv'),'r')    
 
 # Construct pandas dataframes
 #                   'microbial_full': Contains all default microbial
