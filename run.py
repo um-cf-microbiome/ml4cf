@@ -60,33 +60,39 @@ from shutil import copyfile
 
 #           'mothur' for sequencing
 
-#if platform.system() == 'Windows':
-mothur_path = str("F:/software/mothur/mothur.exe")
-sample_list_file=open('F:/NTM/analysis/sample_list.csv','r')
-control_list_file = open('F:/NTM/analysis/control_sample_list.csv','r')
-fastq_dir=str("F:/data/fastq_files/lab/")
-mothur_ref_dir=str("F:/data/fastq_files/ref/")
-stability_files=open('F:/NTM/analysis/mothur/stability.files','w')
-stability_files_name = 'F:/NTM/analysis/mothur/stability.files'
-batch_file=open('F:/NTM/analysis/mothur/stability.batch','w')
-batch_file_path= 'F:/NTM/analysis/mothur/stability.batch'
-mothur_output_path=str("F:/NTM/analysis/mothur/")
-#if platform.system() == 'Linux':
-# sample_list_file=str(os.getcwd()+"sample_list.csv")
-# stability_files=str(os.getcwd()+"stability.files")
-# fastq_search_dir=str('F:/data/NTM/fastq_files/')
-# fastq_folder=str(os.getcwd()+"fastq_files")
+if platform.system() == 'Windows':
+ mothur_path = str("F:/software/mothur/mothur.exe")
+ sample_list_file=open('F:/NTM/analysis/sample_list.csv','r')
+ control_list_file = open('F:/NTM/analysis/control_sample_list.csv','r')
+ fastq_dir=str("F:/data/fastq_files/lab/")
+ mothur_ref_dir=str("F:/data/fastq_files/ref/")
+ stability_files=open('F:/NTM/analysis/mothur/stability.files','w')
+ stability_files_name = 'F:/NTM/analysis/mothur/stability.files'
+ batch_file=open('F:/NTM/analysis/mothur/stability.batch','w')
+ batch_file_path= 'F:/NTM/analysis/mothur/stability.batch'
+ mothur_output_path=str("F:/NTM/analysis/mothur/")
+if platform.system() == 'Linux':
+ mothur_path = str("/home/gameek/software/mothur/mothur.exe")
+ sample_list_file=open('/home/gameek/NTM/analysis/sample_list.csv','r')
+ control_list_file = open('/home/gameek/NTM/analysis/control_sample_list.csv','r')
+ fastq_dir=str("/home/gameek/data/fastq_files/lab/")
+ mothur_ref_dir=str("/home/gameek/data/fastq_files/ref/")
+ stability_files=open('/home/gameek/NTM/analysis/mothur/stability.files','w')
+ stability_files_name = '/home/gameek/NTM/analysis/mothur/stability.files'
+ batch_file=open('/home/gameek/NTM/analysis/mothur/stability.batch','w')
+ batch_file_path= '/home/gameek/NTM/analysis/mothur/stability.batch'
+ mothur_output_path=str("/home/gameek/NTM/analysis/mothur/")
 
 #     (1-C) Import local Python source
 
 #           'libsvm' for SVM analysis
 
 #           (https://github.com/cjlin1/libsvm)
-sys.path.insert(0, str('F:/software/libsvm/tools'))
+sys.path.insert(0, str('/home/gameek/software/libsvm/tools'))
 #           grid.py finds best combo. of C/gamma for SVM training
 import grid
 
-sys.path.insert(0, str('F:/NTM/src'))
+sys.path.insert(0, str('/home/gameek/NTM/src'))
 import data, model, reverse_read
 from data import edit, get, select
 from eco import mothur#, entropart
@@ -109,7 +115,7 @@ mothur.make_stability_files(sample_list,control_list,stability_files,fastq_dir)
 # Make mothur batch file:
 mothur.make_batch(stability_files_name,batch_file,mothur_ref_dir,control_list,mothur_output_path)
 # Run mothur SOP:
-#mothur.run(mothur.cmd_line(mothur_path,batch_file_path,mothur_output_path))
+mothur.run(mothur.cmd_line(mothur_path,batch_file_path,mothur_output_path))
 
 # Unfinished steps to calculate Shannon Beta using 'entropart' (R)
 # https://github.com/EricMarcon/entropart
