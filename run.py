@@ -65,7 +65,7 @@ if platform.system() == 'Windows':
  sample_list_file=open('F:/NTM/analysis/sample_list.csv','r')
  control_list_file = open('F:/NTM/analysis/control_sample_list.csv','r')
  fastq_dir=str("F:/data/fastq_files/lab/")
- mothur_ref_dir=str("F:/data/fastq_files/ref/")
+ mothur_ref_dir=str("F:/data/fastq_files/")
  stability_files=open('F:/NTM/analysis/mothur/stability.files','w')
  stability_files_name = 'F:/NTM/analysis/mothur/stability.files'
  batch_file=open('F:/NTM/analysis/mothur/stability.batch','w')
@@ -76,7 +76,7 @@ if platform.system() == 'Linux':
  sample_list_file=open('/home/gameek/NTM/analysis/sample_list.csv','r')
  control_list_file = open('/home/gameek/NTM/analysis/control_sample_list.csv','r')
  fastq_dir=str("/home/gameek/data/fastq_files/")
- mothur_ref_dir=str("/home/gameek/data/fastq_files/ref/")
+ mothur_ref_dir=str("/home/gameek/data/fastq_files/")
  stability_files=open('/home/gameek/NTM/analysis/mothur/stability.files','w')
  stability_files_name = '/home/gameek/NTM/analysis/mothur/stability.files'
  batch_file=open('/home/gameek/NTM/analysis/mothur/stability.batch','w')
