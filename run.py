@@ -72,10 +72,10 @@ if platform.system() == 'Windows':
  batch_file_path= 'F:/NTM/analysis/mothur/stability.batch'
  mothur_output_path=str("F:/NTM/analysis/mothur/")
 if platform.system() == 'Linux':
- mothur_path = str("/home/gameek/software/mothur/mothur.exe")
+ mothur_path = str("/home/gameek/software/mothur/mothur")
  sample_list_file=open('/home/gameek/NTM/analysis/sample_list.csv','r')
  control_list_file = open('/home/gameek/NTM/analysis/control_sample_list.csv','r')
- fastq_dir=str("/home/gameek/data/fastq_files/lab/")
+ fastq_dir=str("/home/gameek/data/fastq_files/")
  mothur_ref_dir=str("/home/gameek/data/fastq_files/ref/")
  stability_files=open('/home/gameek/NTM/analysis/mothur/stability.files','w')
  stability_files_name = '/home/gameek/NTM/analysis/mothur/stability.files'
