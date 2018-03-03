@@ -50,7 +50,7 @@
 import pandas as pd
 import random, subprocess, shutil, collections
 import sys, os, csv, platform, fnmatch
-import datetime
+import datetime, socket
 from os import system, unlink
 from collections import defaultdict
 from subprocess import *
@@ -60,48 +60,45 @@ from shutil import copyfile
 
 #           'mothur' for sequencing
 
-if platform.system() == 'Windows':
- mothur_path = str("F:/software/mothur/mothur.exe")
- sample_list_file=open('F:/NTM/analysis/sample_list.csv','r')
- control_list_file = open('F:/NTM/analysis/control_sample_list.csv','r')
- fastq_dir=str("F:/data/fastq_files/lab/")
- mothur_ref_dir=str("F:/data/fastq_files/")
- stability_files=open('F:/NTM/analysis/mothur/stability.files','w')
- stability_files_name = 'F:/NTM/analysis/mothur/stability.files'
- batch_file=open('F:/NTM/analysis/mothur/stability.batch','w')
- batch_file_path= 'F:/NTM/analysis/mothur/stability.batch'
- mothur_output_path=str("F:/NTM/analysis/mothur/")
-if platform.system() == 'Linux':
- mothur_path = str("/home/gameek/software/mothur/mothur")
- sample_list_file=open('/home/gameek/NTM/analysis/sample_list.csv','r')
- control_list_file = open('/home/gameek/NTM/analysis/control_sample_list.csv','r')
- fastq_dir=str("/home/gameek/data/fastq_files/")
- mothur_ref_dir=str("/home/gameek/data/fastq_files/")
- stability_files=open('/home/gameek/NTM/analysis/mothur/stability.files','w')
- stability_files_name = '/home/gameek/NTM/analysis/mothur/stability.files'
- batch_file=open('/home/gameek/NTM/analysis/mothur/stability.batch','w')
- batch_file_path= '/home/gameek/NTM/analysis/mothur/stability.batch'
- mothur_output_path=str("/home/gameek/NTM/analysis/mothur/")
+# machine-specific paths
+if socket.gethostname() == 'WSPDR062': 
+ host_base = str("F:/")
+ mothur_path = str(host_base+"software/mothur/mothur.exe")
+if socket.gethostname() == 'DESKTOP-8OVG652': 
+ host_base = str("D:/")
+ mothur_path = str(host_base+"software/mothur_win/mothur/mothur.exe")
+if socket.gethostname() == 'elbel': 
+ host_base = str("/home/"+os.environ.get('USER')+"/")
+ mothur_path = str(host_base+"software/mothur/")
 
+sample_list_file=open(str(host_base+'NTM/analysis/sample_list.csv'),'r')
+control_list_file_name = str(host_base+'NTM/analysis/control_sample_list.csv')
+control_list_file = open(control_list_file_name,'r')
+fastq_dir=str(host_base+"data/fastq_files/")
+mothur_ref_dir=str(host_base+"data/fastq_files/")
+stability_files_name = str(host_base+'NTM/analysis/mothur/stability.files')
+stability_files=open(stability_files_name,'w')
+batch_file_name = str(host_base+'NTM/analysis/mothur/stability.batch')
+batch_file=open(batch_file_name,'w')
+mothur_output_path=str(host_base+"NTM/analysis/mothur/")
+sys.path.insert(0,str(host_base+'software/libsvm/tools'))
+sys.path.insert(0,str(host_base+"NTM/src"))
 #     (1-C) Import local Python source
 
 #           'libsvm' for SVM analysis
-
 #           (https://github.com/cjlin1/libsvm)
-sys.path.insert(0, str('/home/gameek/software/libsvm/tools'))
 #           grid.py finds best combo. of C/gamma for SVM training
 import grid
 
-sys.path.insert(0, str('/home/gameek/NTM/src'))
 import data, model, reverse_read
 from data import edit, get, select
 from eco import mothur#, entropart
 from model import regression
 #           'csv2libsvm.py' to convert csv file to libsvm format
 #           (https://github.com/zygmuntz/phraug/blob/master/csv2libsvm.py)
+from data import csv2libsvm
 #           'fselect.py' calculates F-scores and CV% accuracy
 #           (https://www.csie.ntu.edu.tw/~cjlin/libsvmtools/#feature_selection_tool)
-from data import csv2libsvm
 from model import fselect
 
 # (2) Microbiome analysis with Mothur
@@ -110,13 +107,12 @@ from model import fselect
 sample_list = pd.read_csv(sample_list_file)['Sputum_Number']
 # Add samples included in 'Control' column of control_list_file
 control_list = pd.read_csv(control_list_file)['Sputum_Number']
-# Make stability.files
+# Make mothur stability.files from sample and control lists
 mothur.make_stability_files(sample_list,control_list,stability_files,fastq_dir)
 # Make mothur batch file:
 mothur.make_batch(stability_files_name,batch_file,mothur_ref_dir,control_list,mothur_output_path)
 # Run mothur SOP:
-mothur.run(mothur.cmd_line(mothur_path,batch_file_path,mothur_output_path))
-
+mothur.run(mothur.cmd_line(mothur_path,batch_file_name,mothur_output_path))
 # Unfinished steps to calculate Shannon Beta using 'entropart' (R)
 # https://github.com/EricMarcon/entropart
 R_path=str('C:/Program Files/R/R-3.4.3/bin/Rscript.exe')

@@ -100,35 +100,33 @@ def make_stability_files(sample_list,control_list,stability_files,fastq_dir):
  written_list = list()
 
 # Search sub-directories for fastq files with matching sputum ID
- for files in os.walk(fastq_dir):
+ for root,dirs,files in os.walk(fastq_dir):
   continue
-# Loop over samples in sample_list
+# Loop over samples in sample_list 
  for sample in itertools.chain(sample_list,control_list):
 # Skip files that we already processed
   if not check_sample_list(written_list,sample):
    group,forward_file,reverse_file = '','',''
    group = get_group(sample)
-#   for file in files:
-#    if check_sample_str(file,sample) and ('.fastq' in file):
-#     print(file)
-#     if forward_file == '' and forward_read_flag in file: 
-#      forward_file = str(fastq_dir+file)
-#     if reverse_file == '' and reverse_read_flag in file: 
-#      reverse_file = str(fastq_dir+file)
+   for file in files:
+    if check_sample_str(file,sample) and ('.fastq' in file):
+     if forward_file == '' and forward_read_flag in file: 
+      forward_file = str(fastq_dir+file)
+     if reverse_file == '' and reverse_read_flag in file: 
+      reverse_file = str(fastq_dir+file)
 
-#     if forward_file != '' and reverse_file != '': 
-#      stability_files.write(group+" "+forward_file+" "+reverse_file+"\n")
-#      written_list.append(sample)
-#      break
+     if forward_file != '' and reverse_file != '': 
+      stability_files.write(group+" "+forward_file+" "+reverse_file+"\n")
+      written_list.append(sample)
+      break
  stability_files.close()
- return()
+ return
  
 def cmd_line(mothur_path,batch_file_path,mothur_output_path):
  mothur_command = str(mothur_path+' '+batch_file_path+' > '+mothur_output_path+'mothur.out')
  return(mothur_command)
  
 def run(mothur_command):
- print(mothur_command)
  subprocess.call(mothur_command,shell=True)
- return()
+ return
  
