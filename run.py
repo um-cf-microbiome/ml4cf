@@ -71,6 +71,7 @@ if socket.gethostname() == 'elbel':
  host_base = str("/home/"+os.environ.get('USER')+"/")
  mothur_path = str(host_base+"software/mothur/")
 
+classifier_list_file=open(str(host_base+'NTM/analysis/classifier_list.csv'),'r')
 sample_list_file=open(str(host_base+'NTM/analysis/sample_list.csv'),'r')
 control_list_file_name = str(host_base+'NTM/analysis/control_sample_list.csv')
 control_list_file = open(control_list_file_name,'r')
