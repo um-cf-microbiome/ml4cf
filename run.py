@@ -64,14 +64,19 @@ from shutil import copyfile
 if socket.gethostname() == 'WSPDR062': 
  host_base = str("F:/")
  mothur_path = str(host_base+"software/mothur/mothur.exe")
+ R_path=str('C:/Program Files/R/R-3.4.3/bin/Rscript.exe')
 if socket.gethostname() == 'DESKTOP-8OVG652': 
  host_base = str("D:/")
  mothur_path = str(host_base+"software/mothur_win/mothur/mothur.exe")
 if socket.gethostname() == 'elbel': 
  host_base = str("/home/"+os.environ.get('USER')+"/")
  mothur_path = str(host_base+"software/mothur/")
+if socket.gethostname() == 'flux-login1.arc-ts.umich.edu': 
+ host_base = str("/home/"+os.environ.get('USER')+"/")
+ mothur_path = str(host_base+"software/mothur/")
 
-classifier_list_file=open(str(host_base+'NTM/analysis/classifier_list.csv'),'r')
+run_base=str(host_base+"NTM/")
+classifiers_file=open(str(host_base+'NTM/analysis/classifiers.csv'),'r')
 sample_list_file=open(str(host_base+'NTM/analysis/sample_list.csv'),'r')
 control_list_file_name = str(host_base+'NTM/analysis/control_sample_list.csv')
 control_list_file = open(control_list_file_name,'r')
@@ -116,7 +121,7 @@ mothur.make_batch(stability_files_name,batch_file,mothur_ref_dir,control_list,mo
 mothur.run(mothur.cmd_line(mothur_path,batch_file_name,mothur_output_path))
 # Unfinished steps to calculate Shannon Beta using 'entropart' (R)
 # https://github.com/EricMarcon/entropart
-R_path=str('C:/Program Files/R/R-3.4.3/bin/Rscript.exe')
+
 #entropart.run()
 # (3) Build dataframes
 #     (3-A) Read data and build dataframes
