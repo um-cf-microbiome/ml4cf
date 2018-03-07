@@ -96,7 +96,7 @@ sys.path.insert(0,str(host_base+"NTM/src"))
 #           grid.py finds best combo. of C/gamma for SVM training
 import grid
 
-import data, model, reverse_read
+import data, model
 from data import edit, get, select
 from eco import mothur#, entropart
 from model import regression

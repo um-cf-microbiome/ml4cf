@@ -6,6 +6,7 @@
 
 import pandas, os, glob, subprocess
 import os.path, platform, csv, itertools
+global mothur_output_files
 
 def get_group(sample_name):
  sample_group = sample_name.split('_')[0]
@@ -40,42 +41,60 @@ def blast_beta():
  command = str('summary.shared(calc='+calc_list+')\n')
  return(command)
 
-def make_batch(stability_files_name,batch_file,mothur_ref_dir,control_list,mothur_output_path):
+def mothur_command_list(level_list,processors):
+ input_command_list = list()
+ output_file_list = pd.DataFrame(data=None,index=None,columns=None)
+ output_file_list.append(["silva.bacteria.pcr.fasta"])
+ input_command_list.extend([str('pcr.seqs(fasta='+mothur_ref_dir+'silva.bacteria.fasta, start=11894, end=25319, keepdots=F)\n')])
+ print(output_file_list)
+ output_file_list.append(["stability.trim.contigs.fasta","stability.trim.contigs.qual","stability.contigs.report","stability.scrap.contigs.fasta","stability.scrap.contigs.qual","stability.contigs.groups"],ignore_index=True)
+ input_command_list.extend([str('make.contigs(file='+mothur_ref_dir+'stability.files, processors='+processors+')\n')])
+ output_file_list.append(["stability.trim.contigs.good.fasta","stability.trim.contigs.bad.accnos","stability.contigs.good.groups"],ignore_index=True)
+ input_command_list.extend([str('screen.seqs(fasta='+mothur_ref_dir+'stability.trim.contigs.good.fasta, group='+mothur_ref_dir+'stability.contigs.good.groups, maxambig=0, maxlength=275)\n')])
+ output_file_list.append(["stability.trim.contigs.good.names","stability.trim.contigs.good.unique.fasta"],ignore_index=True)
+ input_command_list.extend([str('unique.seqs(fasta='+mothur_ref_dir+'stability.trim.contigs.good.fasta)\n')])
+ output_file_list.append(["stability.trim.contigs.good.count_table"],ignore_index=True)
+ input_command_list.extend([str('count.seqs(name='+mothur_ref_dir+'stability.trim.contigs.good.names, group='+mothur_ref_dir+'stability.contigs.good.groups)\n')])
+ output_file_list.append(["stability.trim.contigs.good.unique.align","stability.trim.contigs.good.unique.align.report","stability.trim.contigs.good.unique.flip.accnos"],ignore_index=True)
+ input_command_list.extend([str('align.seqs(fasta='+mothur_ref_dir+'stability.trim.contigs.good.fasta, reference='+mothur_ref_dir+'silva.v4.fasta,processors='+processors+')\n')])
+ output_file_list.append(["stability.trim.contigs.good.unique.good.align","stability.trim.contigs.good.unique.bad.accnos","stability.trim.contigs.good.good.count_table"],ignore_index=True)
+ input_command_list.extend([str('screen.seqs(fasta='+mothur_ref_dir+'stability.trim.contigs.fasta, count='++', start=1968, end=11550, maxhomop=8)\n')])
+ output_file_list.append(["stability.filter","stability.trim.contigs.good.unique.good.filter.fasta"],ignore_index=True)
+ input_command_list.extend([str('filter.seqs(fasta='+mothur_ref_dir+', vertical=T, trump=.)\n')])
+ output_file_list.append(["stability.trim.contigs.good.good.count_table","stability.trim.contigs.good.unique.good.filter.fasta"],ignore_index=True)
+ input_command_list.extend([str('unique.seqs(fasta='+mothur_ref_dir+', count=current)\n')])
+ output_file_list.append(["stability.trim.contigs.good.unique.good.filter.count_table","stability.trim.contigs.good.unique.good.filter.unique.fasta"],ignore_index=True)
+ input_command_list.extend([str('pre.cluster(fasta=current, count=current, diffs=2)\n')])
+ output_file_list.append(["stability.trim.contigs.good.unique.good.filter.unique.precluster.fasta"],ignore_index=True)
+ input_command_list.extend([str('chimera.uchime(fasta=current, count=current, dereplicate=t)\n')])
+ output_file_list.append(["stability.trim.contigs.good.unique.good.filter.unique.precluster.fasta"],ignore_index=True)
+ input_command_list.extend([str('classify.seqs(fasta=current, count=current, reference='+mothur_ref_dir+'trainset9_032012.pds.fasta, taxonomy='+mothur_ref_dir+'trainset9_032012.pds.tax, cutoff=80)\n')])
+ input_command_list.extend([str('remove.lineage(fasta=current, count=current, taxonomy=current, taxon=Chloroplast-Mitochondria-unknown-Archaea-Eukaryota)\n')])
+ input_command_list.extend([str('remove.groups(count=current, fasta=current, taxonomy=current, groups='+control_groups+')\n')])
+ input_command_list.extend([str('classify.seqs(fasta=current, count=current, reference='+mothur_ref_dir+'trainset9_032012.pds.fasta, taxonomy='+mothur_ref_dir+'trainset9_032012.pds.tax, cutoff=80)\n')])
+ input_command_list.extend([str('cluster.split(fasta=current, count=current, taxonomy=current, splitmethod=classify, taxlevel=4, cutoff=0.15,processors=4)\n')])
+ input_command_list.extend([str('make.shared(list=current, count=current, label=0.03)\n')])
+ input_command_list.extend([str('classify.otu(list=current, count=current, taxonomy=current, label=0.03)\n')])
+ input_command_list.extend([str('phylotype(taxonomy=current)\n')])
+ input_command_list.extend([str('make.contigs(file='+stability_files_name+', processors=8)\n')])
+ input_command_list.extend([blast_alpha()])
+ input_command_list.extend([blast_beta()])
+ for level in level_list:
+  input_command_list.extend([str('make.shared(list=current, count=current, label='+level+')\n')])
+  input_command_list.extend([str('classify.otu(list=current, count=current, taxonomy=current, label='+level+')\n')])
+  input_command_list.extend([str('phylotype(taxonomy=current)\n')])
+  input_command_list.extend([blast_alpha()])
+  input_command_list.extend([blast_beta()])
+ return(input_command_list,output_file_list)
+
+def make_batch(stability_files_name,batch_file,mothur_ref_dir,control_list,mothur_output_path,processors):
  level_list = list(['1','2','3'])
- write_list = list()
- write_list.extend([str('pcr.seqs(fasta='+mothur_ref_dir+'silva.bacteria.fasta, start=11894, end=25319, keepdots=F)\n')])
- write_list.extend([str('make.contigs(file='+stability_files_name+', processors=8)\n')])
- write_list.extend([str('get.current()\n')])
- write_list.extend([str('screen.seqs(fasta=current, group=current, maxambig=0, maxlength=275)\n')])
- write_list.extend([str('screen.seqs(fasta=current, group=current, maxambig=0, maxlength=275)\n')])
- write_list.extend([str('unique.seqs()\n')])
- write_list.extend([str('count.seqs(name=current, group=current)\n')])
- write_list.extend([str('align.seqs(fasta=current, reference='+mothur_ref_dir+'silva.v4.fasta,processors=8)\n')])
- write_list.extend([str('screen.seqs(fasta=current, count=current, start=1968, end=11550, maxhomop=8)\n')])
- write_list.extend([str('filter.seqs(fasta=current, vertical=T, trump=.)\n')])
- write_list.extend([str('unique.seqs(fasta=current, count=current)\n')])
- write_list.extend([str('pre.cluster(fasta=current, count=current, diffs=2)\n')])
- write_list.extend([str('chimera.uchime(fasta=current, count=current, dereplicate=t)\n')])
- write_list.extend([str('classify.seqs(fasta=current, count=current, reference='+mothur_ref_dir+'trainset9_032012.pds.fasta, taxonomy='+mothur_ref_dir+'trainset9_032012.pds.tax, cutoff=80)\n')])
- write_list.extend([str('remove.lineage(fasta=current, count=current, taxonomy=current, taxon=Chloroplast-Mitochondria-unknown-Archaea-Eukaryota)\n')])
 # remove control groups
  control_groups = format_control_list(control_list)
- write_list.extend([str('remove.groups(count=current, fasta=current, taxonomy=current, groups='+control_groups+')\n')])
- write_list.extend([str('classify.seqs(fasta=current, count=current, reference='+mothur_ref_dir+'trainset9_032012.pds.fasta, taxonomy='+mothur_ref_dir+'trainset9_032012.pds.tax, cutoff=80)\n')])
- write_list.extend([str('cluster.split(fasta=current, count=current, taxonomy=current, splitmethod=classify, taxlevel=4, cutoff=0.15,processors=4)\n')])
- write_list.extend([str('make.shared(list=current, count=current, label=0.03)\n')])
- write_list.extend([str('classify.otu(list=current, count=current, taxonomy=current, label=0.03)\n')])
- write_list.extend([str('phylotype(taxonomy=current)\n')])
- write_list.extend([blast_alpha()])
- write_list.extend([blast_beta()])
- for level in level_list:
-  write_list.extend([str('make.shared(list=current, count=current, label='+level+')\n')])
-  write_list.extend([str('classify.otu(list=current, count=current, taxonomy=current, label='+level+')\n')])
-  write_list.extend([str('phylotype(taxonomy=current)\n')])
-  write_list.extend([blast_alpha()])
-  write_list.extend([blast_beta()])
+ full_write_list = mothur_command_list(level_list,processors)
+ output_list = mothur_output_list
  for line in write_list:
-  batch_file.write(line)
+  run_if_missing(batch_file,line)
  batch_file.close()
  return()
   
@@ -123,10 +142,19 @@ def make_stability_files(sample_list,control_list,stability_files,fastq_dir):
  return
  
 def cmd_line(mothur_path,batch_file_path,mothur_output_path):
+# 
  mothur_command = str(mothur_path+' '+batch_file_path+' > '+mothur_output_path+'mothur.out')
  return(mothur_command)
  
 def run(mothur_command):
+# System call of mothur executable with "mothur_command"
  subprocess.call(mothur_command,shell=True)
  return
- 
+
+def run_if_missing(command):
+# This subroutine runs a mothur command if the
+# anticipated output files are missing.
+ mothur_output
+ batch_file.write(command)
+ return
+  
