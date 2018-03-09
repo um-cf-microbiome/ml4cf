@@ -2,7 +2,7 @@
 # analyses for the first positive NTM dataset of 
 # Dr. Lindsay Caverly, University of Michigan
 # Dept. of Pediatric Pulmonology
-# Analyses completed in January-February, 2018.
+# Analyses completed in January-March, 2018.
 #
 # Script written by Garrett A. Meek
 # 
@@ -12,28 +12,23 @@
 #     (1-A) Import Python packages
 #     (1-B) Point to non-Python software
 #     (1-C) Import local Python source
-# (2) Microbiome analysis with Mothur
-# (3) Build dataframes
-#     (3-A) Read data and build dataframes
+# (2) Microbiome analysis with mothur
+# (3) Microbiome analysis with entropart
+# (4) Build dataframes
+#     (4-A) Make datasets
 #                   'microbial_full': Contains all default microbial
 #                   data from Mothur MiSeq-SOP, where the data was subsequently
 #                   used to calculate individual OTU relative abundances
-#	                  'microbial_avium': Contains microbial data for samples that
-#		                tested positive for M. avium
-#	                  'microbial_abscessus': Contains microbial data for samples that
-#		                tested positive for M. abscessus
-#	                  'clinical_full': Contains all clinical features (described in:
-#	                  'data/features_description.txt')
-#	                  'clinical_numeric': Contains only the clinical features
-#		                whose values are numeric
-#                   'clinical_no_fev1': Contains all clinical features except 'fev1'
-#     (3-B) Append subject-specific regression results as features in dataframe
-# (4) Train SVM model
-#     (4-A) Format dataset for 'libsvm'
-#     (4-B) Train SVM models with the following variations:
-#            i) Vary classifiers (Disease yes/no, transient/persistent, MAC/Mab.)
-#            ii) Vary F-score threshold
-#            iii) Vary SVM-included features (above F-score threshold)
+#	                  'microbial_main_ntm_only': Contains microbial data for samples that
+#		                tested positive for M. avium or M. abscessus only
+#	                  'index_and_prior_sample_only': Contains microbial data for the sample
+#                   closest to the NTM index date, as well as the most recent prior sample
+#     (4-B) Augment dataset with entropart biodiversity measures
+#     (4-C) Regression with RAs and biodiversity features
+# (5) Train SVM models
+#     (5-A) Feature selection and F-scores with 'libsvm' 
+#          Format dataset for 'libsvm'
+
 # (6) Plot results
 
 ##
@@ -55,7 +50,10 @@ from os import system, unlink
 from collections import defaultdict
 from subprocess import *
 from shutil import copyfile
-
+import numpy as np
+import pylab as pl
+import sklearn
+from sklearn import svm
 #     (1-B) Point to non-Python software
 
 #           'mothur' for sequencing
@@ -75,6 +73,7 @@ if socket.gethostname() == 'flux-login1.arc-ts.umich.edu':
  host_base = str("/home/"+os.environ.get('USER')+"/")
  mothur_path = str(host_base+"software/mothur/")
 
+processors=8
 run_base=str(host_base+"NTM/")
 classifiers_file=open(str(host_base+'NTM/analysis/classifiers.csv'),'r')
 sample_list_file=open(str(host_base+'NTM/analysis/sample_list.csv'),'r')
@@ -116,7 +115,7 @@ control_list = pd.read_csv(control_list_file)['Sputum_Number']
 # Make mothur stability.files from sample and control lists
 mothur.make_stability_files(sample_list,control_list,stability_files,fastq_dir)
 # Make mothur batch file:
-mothur.make_batch(stability_files_name,batch_file,mothur_ref_dir,control_list,mothur_output_path)
+mothur.make_batch(stability_files_name,batch_file,mothur_ref_dir,control_list,mothur_output_path,processors)
 # Run mothur SOP:
 mothur.run(mothur.cmd_line(mothur_path,batch_file_name,mothur_output_path))
 # Unfinished steps to calculate Shannon Beta using 'entropart' (R)
