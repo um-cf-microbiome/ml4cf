@@ -73,7 +73,7 @@ if socket.gethostname() == 'flux-login1.arc-ts.umich.edu':
  host_base = str("/home/"+os.environ.get('USER')+"/")
  mothur_path = str(host_base+"software/mothur/")
 
-processors=8
+processors=4
 run_base=str(host_base+"NTM/")
 classifiers_file=open(str(host_base+'NTM/analysis/classifiers.csv'),'r')
 sample_list_file=open(str(host_base+'NTM/analysis/sample_list.csv'),'r')
