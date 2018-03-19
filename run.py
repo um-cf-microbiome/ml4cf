@@ -81,7 +81,7 @@ if socket.gethostname() == 'flux-login1.arc-ts.umich.edu':
 import grid
 
 import data, model, classes
-from data import edit, get, select
+from data import edit, get, select, clean
 from eco import mothur#, entropart
 from classes import job
 from model import regression
@@ -94,6 +94,9 @@ job_info.sample_list = pd.read_csv(job_info.sample_list_file)['Sputum_Number']
 # Add samples included in 'Control' column of control_list_file
 job_info.control_list = pd.read_csv(job_info.control_list_file)['Sputum_Number']
 
+# Remove output files from previous run
+data.clean.old_files(job_info)
+
 #           'csv2libsvm.py' to convert csv file to libsvm format
 #           (https://github.com/zygmuntz/phraug/blob/master/csv2libsvm.py)
 #from data import csv2libsvm
@@ -105,10 +108,8 @@ job_info.control_list = pd.read_csv(job_info.control_list_file)['Sputum_Number']
 
 # Make mothur stability.files from sample and control lists
 mothur.make_stability_files(job_info)
-# Make mothur batch file:
+# Make and run mothur SOP batch file:
 mothur.batch(job_info)
-# Run mothur SOP:
-mothur.run(mothur.cmd_line(job_info))
 
 # Calculate Shannon Beta using 'entropart' (R)
 # https://github.com/EricMarcon/entropart

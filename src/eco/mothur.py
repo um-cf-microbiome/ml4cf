@@ -103,7 +103,7 @@ def batch(job_info):
  level_list = list(['1','2','3'])
  input_command_list,output_file_list = mothur_command_list(level_list,job_info.mothur_ref_dir,job_info.mothur_output_path,job_info.processors,job_info.control_list)
  index=0
- for line in input_command_list:
+ for command in input_command_list:
 #  output_files = list([str(mothur_output_path+output_file_list[index][i]) for i in output_file_list[index]])
   for output_filename in output_file_list[index]:
    output = job_info.mothur_output_file
@@ -168,13 +168,13 @@ def run(mothur_command):
 def append_batch_run(job_info,command):
 # This subroutine runs a mothur command if the
 # anticipated output files are missing.
- batch_path = str(job_info.mothur_output_path+batch_file)
- if os.path.isfile(job_info.batch_file): batch = open(job_info.batch_path,'a')
- if not os.path.isfile(job_info.batch_file): batch = open(job_info.batch_path,'w')
+ batch_path = str(job_info.batch_file_name)
+ if os.path.isfile(batch_path): batch = open(batch_path,'a')
+ if not os.path.isfile(batch_path): batch = open(batch_path,'w')
  cmd = str(command+'\n')
  batch.write(cmd)
  batch.close()
- if not os.path.isfile(job_info.mothur_output_file): command = str(job_info.mothur_exe+' "#'+command+'" > '+job_info.mothur_output_file)
+ if not os.path.isfile(job_info.mothur_output_file): command = str(job_info.mothur_path+' "#'+command+'" > '+job_info.mothur_output_file)
  if os.path.isfile(job_info.mothur_output_file): command = str(job_info.mothur_path+' "#'+command+'" >> '+job_info.mothur_output_file)
  run(command)
  return
