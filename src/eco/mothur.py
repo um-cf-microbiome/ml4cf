@@ -175,8 +175,11 @@ def run(mothur_command):
 def append_batch_run(mothur_exe,command,mothur_output_path,batch_file):
 # This subroutine runs a mothur command if the
 # anticipated output files are missing.
- if os.path.isfile(batch_file): batch = open(batch_file,'a')
- if not os.path.isfile(batch_file): batch = open(batch_file,'w')
+ print(mothur_output_path)
+ print(batch_file)
+ batch_path = str(mothur_output_path+batch_file)
+ if os.path.isfile(batch_file): batch = open(batch_path,'a')
+ if not os.path.isfile(batch_file): batch = open(batch_path,'w')
  cmd = str(command+'\n')
  batch.write(cmd)
  batch.close()

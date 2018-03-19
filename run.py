@@ -1,10 +1,12 @@
-# This script contains support vector machine (SVM) 
-# analyses for the first positive NTM dataset of 
+# This script contains machine learning analyses 
+# for the first positive culture NTM dataset of 
 # Dr. Lindsay Caverly, University of Michigan
 # Dept. of Pediatric Pulmonology
+#
 # Analyses completed in January-March, 2018.
 #
-# Script written by Garrett A. Meek
+# Script written by Garrett A. Meek with help from
+# Kris Opron (python source) and Madsen Zimbric (data manipulation)
 # 
 # This file is organized as follows:
 # 
@@ -63,6 +65,7 @@ if socket.gethostname() == 'WSPDR062':
  host_base = str("F:/")
  mothur_path = str(host_base+"software/mothur/mothur.exe")
  R_path=str('C:/Program Files/R/R-3.4.3/bin/Rscript.exe')
+ processors=4
 if socket.gethostname() == 'DESKTOP-8OVG652': 
  if sys.platform == 'Windows': host_base = str("D:/")
  if sys.platform == 'linux': host_base = str("/mnt/d/")
@@ -73,21 +76,6 @@ if socket.gethostname() == 'elbel':
 if socket.gethostname() == 'flux-login1.arc-ts.umich.edu': 
  host_base = str("/home/"+os.environ.get('USER')+"/")
  mothur_path = str(host_base+"software/mothur/")
-
-processors=4
-classifiers=list(['NTM_disease','Persistent_infection'])
-classes=list([['TRUE','FALSE'],['TRUE','FALSE']])
-run_base=str(host_base+"NTM/")
-sample_list_file=open(str(host_base+'NTM/analysis/sample_list.csv'),'r')
-control_list_file_name = str(host_base+'NTM/analysis/control_sample_list.csv')
-control_list_file = open(control_list_file_name,'r')
-fastq_dir=str(host_base+"data/fastq_files/")
-mothur_ref_dir=str(host_base+"data/fastq_files/")
-stability_files_name = str(host_base+'NTM/analysis/mothur/stability.files')
-stability_files=open(stability_files_name,'w')
-batch_file_name = str(host_base+'NTM/analysis/mothur/stability.batch')
-batch_file=open(batch_file_name,'w')
-mothur_output_path=str(host_base+"NTM/analysis/mothur/")
 sys.path.insert(0,str(host_base+'software/libsvm/tools'))
 sys.path.insert(0,str(host_base+"NTM/src"))
 #     (1-C) Import local Python source
@@ -97,16 +85,22 @@ sys.path.insert(0,str(host_base+"NTM/src"))
 #           grid.py finds best combo. of C/gamma for SVM training
 import grid
 
-import data, model
+import data, model, classes
 from data import edit, get, select
 from eco import mothur#, entropart
+from classes import job
 from model import regression
+
+# Instantiate the 'job' class
+# which defines global variables for this analysis
+#job_info = job(host_base=str(host_base),mothur_path=str(mothur_path),R_path=str(R_path),processors=int(processors))
+job_info = job(host_base,mothur_path,R_path,processors)
 #           'csv2libsvm.py' to convert csv file to libsvm format
 #           (https://github.com/zygmuntz/phraug/blob/master/csv2libsvm.py)
-from data import csv2libsvm
+#from data import csv2libsvm
 #           'fselect.py' calculates F-scores and CV% accuracy
 #           (https://www.csie.ntu.edu.tw/~cjlin/libsvmtools/#feature_selection_tool)
-from model import fselect
+#from model import fselect
 
 # (2) Microbiome analysis with Mothur
 
@@ -117,7 +111,7 @@ control_list = pd.read_csv(control_list_file)['Sputum_Number']
 # Make mothur stability.files from sample and control lists
 mothur.make_stability_files(sample_list,control_list,stability_files,fastq_dir)
 # Make mothur batch file:
-mothur.make_batch(stability_files_name,batch_file,mothur_ref_dir,control_list,mothur_output_path,processors)
+mothur.batch(stability_files_name,batch_file,mothur_ref_dir,control_list,mothur_output_path,mothur_path,processors)
 # Run mothur SOP:
 mothur.run(mothur.cmd_line(mothur_path,batch_file_name,mothur_output_path))
 # Unfinished steps to calculate Shannon Beta using 'entropart' (R)
