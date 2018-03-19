@@ -27,29 +27,32 @@ def construct_line( label, line ):
 
 # ---
 
-def convert(input_file,output_file):
+input_file = sys.argv[1]
+output_file = sys.argv[2]
 
-# try:
-#	label_index = int( sys.argv[3] )
-# except IndexError:
-#	label_index = 0
+try:
+	label_index = int( sys.argv[3] )
+except IndexError:
+	label_index = 0
 
-# try:
-#	skip_headers = sys.argv[4]
-# except IndexError:
- skip_headers = 0
+try:
+	skip_headers = sys.argv[4]
+except IndexError:
+	skip_headers = 0
 
- i = open( input_file, 'rb' )
- o = open( output_file, 'wb' )
+i = open( input_file, 'rb' )
+o = open( output_file, 'wb' )
 
- reader = csv.reader( i )
+reader = csv.reader( i )
 
- if skip_headers: headers = reader.next()
+if skip_headers:
+	headers = reader.next()
 
- for line in reader:
-  if label_index == '-1':
-   label_index = '1'
-  label = line.pop( label_index )
-  new_line = construct_line( label, line )
-  o.write( new_line )
- return()
+for line in reader:
+	if label_index == -1:
+		label = '1'
+	else:
+		label = line.pop( label_index )
+
+	new_line = construct_line( label, line )
+	o.write( new_line )

@@ -12,33 +12,29 @@ from os import system
 from os import unlink
 from subprocess import *
 
-def run(libsvm_dir,grid,train_file,test_file):
 ##### Path Setting #####
- gridpy_exe = str(libsvm_dir+"tools\grid.py "+grid)
- svmtrain_exe= str(libsvm_dir+"\windows\svmtrain.exe")
- svmpredict_exe= str(libsvm_dir+"..\windows\svmpredict.exe")
-###### PROGRAM ENTRY POINT ######
+
+is_win32 = (sys.platform == 'win32')
+if not is_win32:
+	gridpy_exe = "./grid.py -log2c -2,9,2 -log2g 1,-11,-2"
+	svmtrain_exe="../svm-train"
+	svmpredict_exe="../svm-predict"
+else:
+	gridpy_exe = r".\grid.py -log2c -2,9,2 -log2g 1,-11,-2"
+	svmtrain_exe=r"..\windows\svmtrain.exe"
+	svmpredict_exe=r"..\windows\svmpredict.exe"
 
 ##### Global Variables #####
 
-# train_file=""
-# test_pathfile=""
-# test_file=""
-# if_predict_all=0
-# whole_fsc_dict={}
-# whole_imp_v=[]
- arg_process()
+train_pathfile=""
+train_file=""
+test_pathfile=""
+test_file=""
+if_predict_all=0
 
-#initlog("%s.select"%train_file)
-#writelog("start: %s\n\n"%datetime.now())
-#main()
+whole_fsc_dict={}
+whole_imp_v=[]
 
-# do testing on all possible feature sets
-#if if_predict_all :
-#	predict_all()
-
-#writelog("\nend: \n%s\n"%datetime.now())
- return()
 
 def arg_process():
 	global train_pathfile, test_pathfile
@@ -552,3 +548,19 @@ def writedata(samples,labels,filename):
 
 	fp.flush()
 	fp.close()
+
+
+###### PROGRAM ENTRY POINT ######
+
+arg_process()
+
+initlog("%s.select"%train_file)
+writelog("start: %s\n\n"%datetime.now())
+main()
+
+# do testing on all possible feature sets
+if if_predict_all :
+	predict_all()
+
+writelog("\nend: \n%s\n"%datetime.now())
+
