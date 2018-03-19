@@ -1,0 +1,71 @@
+OTU,Size,Taxonomy,Metabolism
+Otu004,1142526,Bacteria(100);Firmicutes(100);Bacilli(100);Bacillales(100);Staphylococcaceae(100);Staphylococcus(100);,Facultative
+Otu001,913037,Bacteria(100);Firmicutes(100);Bacilli(100);Lactobacillales(100);Streptococcaceae(100);Streptococcus(100);,Facultative
+Otu020,828590,"Bacteria(100);""Proteobacteria""(100);Gammaproteobacteria(100);Pseudomonadales(100);Pseudomonadaceae(100);Pseudomonas(100);",Aerobic
+Otu002,530808,"Bacteria(100);""Bacteroidetes""(100);""Bacteroidia""(100);""Bacteroidales""(100);""Prevotellaceae""(100);Prevotella(100);",Anaerobic
+Otu003,385345,Bacteria(100);Firmicutes(100);Negativicutes(100);Selenomonadales(100);Veillonellaceae(100);Veillonella(100);,Anaerobic
+Otu005,228283,"Bacteria(100);""Actinobacteria""(100);Actinobacteria(100);Actinomycetales(100);Micrococcaceae(100);Rothia(100);",Facultative
+Otu019,146772,"Bacteria(100);""Proteobacteria""(100);Betaproteobacteria(100);Burkholderiales(100);Alcaligenaceae(100);Alcaligenaceae_unclassified(100);",Aerobic
+Otu016,103603,"Bacteria(100);""Proteobacteria""(100);Gammaproteobacteria(100);Pasteurellales(100);Pasteurellaceae(100);Haemophilus(100);",Facultative
+Otu007,99258,"Bacteria(100);""Actinobacteria""(100);Actinobacteria(100);Actinomycetales(100);Actinomycetaceae(100);Actinomyces(100);",Facultative
+Otu009,71374,"Bacteria(100);""Proteobacteria""(100);Betaproteobacteria(100);Neisseriales(100);Neisseriaceae(100);Neisseria(100);",Aerobic
+Otu008,68886,Bacteria(100);Firmicutes(100);Bacilli(100);Lactobacillales(100);Lactobacillales_unclassified(100);Lactobacillales_unclassified(100);,Facultative
+Otu012,67576,"Bacteria(100);""Proteobacteria""(100);Gammaproteobacteria(100);Xanthomonadales(100);Xanthomonadaceae(100);Stenotrophomonas(100);",Aerobic
+Otu015,62515,Bacteria(100);Firmicutes(100);Bacilli(100);Bacillales(100);Bacillales_Incertae_Sedis_XI(100);Gemella(100);,Facultative
+Otu011,42993,"Bacteria(100);""Fusobacteria""(100);""Fusobacteria""(100);""Fusobacteriales""(100);""Fusobacteriaceae""(100);Fusobacterium(100);",Anaerobic
+Otu014,34350,"Bacteria(100);""Proteobacteria""(100);Gammaproteobacteria(100);Pasteurellales(100);Pasteurellaceae(100);Pasteurellaceae_unclassified(100);",Aerobic
+Otu024,32546,"Bacteria(100);""Bacteroidetes""(100);""Bacteroidia""(100);""Bacteroidales""(100);""Porphyromonadaceae""(100);Porphyromonas(100);",Anaerobic
+Otu021,29151,"Bacteria(100);""Actinobacteria""(100);Actinobacteria(100);Coriobacteriales(100);Coriobacteriaceae(100);Atopobium(100);",Facultative
+Otu022,25029,Bacteria(100);Firmicutes(100);Clostridia(100);Clostridiales(100);Lachnospiraceae(100);Oribacterium(100);,Anaerobic
+Otu017,24658,"Bacteria(100);""Bacteroidetes""(100);Flavobacteria(100);""Flavobacteriales""(100);Flavobacteriaceae(100);Capnocytophaga(100);",Facultative
+Otu010,23201,"Bacteria(100);""Fusobacteria""(100);""Fusobacteria""(100);""Fusobacteriales""(100);""Leptotrichiaceae""(100);Leptotrichia(100);",Anaerobic
+Otu049,18560,"Bacteria(100);""Tenericutes""(100);Mollicutes(100);Mycoplasmatales(100);Mycoplasmataceae(100);Mycoplasma(100);",Facultative
+Otu027,13167,"Bacteria(100);""Actinobacteria""(100);Actinobacteria(100);Bifidobacteriales(100);Bifidobacteriaceae(100);Scardovia(100);",Anaerobic
+Otu018,12313,Bacteria(100);Firmicutes(100);Clostridia(100);Clostridiales(100);Lachnospiraceae(100);Lachnospiraceae_unclassified(100);,Anaerobic
+Otu035,11473,Bacteria(100);Firmicutes(100);Clostridia(100);Clostridiales(100);Clostridiales_Incertae_Sedis_XI(100);Parvimonas(100);,Anaerobic
+Otu043,10128,Bacteria(100);Firmicutes(100);Negativicutes(100);Selenomonadales(100);Veillonellaceae(100);Megasphaera(100);,Anaerobic
+Otu046,8754,"Bacteria(100);""Proteobacteria""(100);Betaproteobacteria(100);Burkholderiales(100);Burkholderiales_unclassified(100);Burkholderiales_unclassified(100);",Diverse
+Otu041,8260,Bacteria(100);Firmicutes(100);Clostridia(100);Clostridiales(100);Eubacteriaceae(100);Eubacterium(100);,Anaerobic
+Otu047,7915,Bacteria(100);Firmicutes(100);Clostridia(100);Clostridiales(100);Peptostreptococcaceae(100);Peptostreptococcus(100);,Anaerobic
+Otu028,7751,Bacteria(100);Firmicutes(100);Bacilli(100);Lactobacillales(100);Lactobacillaceae(100);Lactobacillus(100);,Facultative
+Otu034,6762,"Bacteria(100);""Proteobacteria""(100);Epsilonproteobacteria(100);Campylobacterales(100);Campylobacteraceae(100);Campylobacter(100);",Microaerophilic
+Otu045,6181,Bacteria(100);Firmicutes(100);Bacilli(100);Lactobacillales(100);Aerococcaceae(100);Abiotrophia(100);,Facultative
+Otu040,6043,Bacteria(100);Firmicutes(100);Clostridia(100);Clostridiales(100);Clostridiales_Incertae_Sedis_XIII(100);Mogibacterium(100);,Anaerobic
+Otu031,5522,Bacteria(100);Firmicutes(100);Clostridia(100);Clostridiales(100);Clostridiales_unclassified(100);Clostridiales_unclassified(100);,No classification
+Otu057,5176,"Bacteria(100);""Bacteroidetes""(100);""Bacteroidia""(100);""Bacteroidales""(100);""Porphyromonadaceae""(100);Tannerella(100);",Anaerobic
+Otu006,4559,"Bacteria(100);""Proteobacteria""(100);Gammaproteobacteria(100);Pseudomonadales(100);Pseudomonadaceae(100);Pseudomonadaceae_unclassified(100);",Aerobic
+Otu063,4488,"Bacteria(100);""Actinobacteria""(100);Actinobacteria(100);Bifidobacteriales(100);Bifidobacteriaceae(100);Alloscardovia(100);",Anaerobic
+Otu042,4221,"Bacteria(100);""Actinobacteria""(100);Actinobacteria(100);Bifidobacteriales(100);Bifidobacteriaceae(100);Bifidobacterium(100);",Anaerobic
+Otu037,4086,Bacteria(100);Firmicutes(100);Negativicutes(100);Selenomonadales(100);Veillonellaceae(100);Selenomonas(100);,Anaerobic
+Otu039,3845,"Bacteria(100);""Bacteroidetes""(100);Flavobacteria(100);""Flavobacteriales""(100);Flavobacteriaceae(100);Flavobacteriaceae_unclassified(100);",Usually aerobic
+Otu050,3843,"Bacteria(100);""Fusobacteria""(100);""Fusobacteria""(100);""Fusobacteriales""(100);""Leptotrichiaceae""(100);""Leptotrichiaceae""_unclassified(100);",Facultative
+Otu025,3653,Bacteria(100);Firmicutes(100);Negativicutes(100);Selenomonadales(100);Veillonellaceae(100);Veillonellaceae_unclassified(100);,Anaerobic
+Otu064,3542,Bacteria(100);Firmicutes(100);Erysipelotrichia(100);Erysipelotrichales(100);Erysipelotrichaceae(100);Solobacterium(100);,Anaerobic
+Otu044,3323,"Bacteria(100);""Spirochaetes""(100);Spirochaetes(100);Spirochaetales(100);Spirochaetaceae(100);Treponema(100);",Anaerobic
+Otu061,2982,"Bacteria(100);""Bacteroidetes""(100);""Bacteroidia""(100);""Bacteroidales""(100);""Prevotellaceae""(100);""Prevotellaceae""_unclassified(100);",Anaerobic
+Otu106,2905,"Bacteria(100);""Proteobacteria""(100);Gammaproteobacteria(100);Pasteurellales(100);Pasteurellaceae(100);Actinobacillus(100);",Diverse
+Otu053,2640,"Bacteria(100);""Bacteroidetes""(100);""Bacteroidetes""_unclassified(100);""Bacteroidetes""_unclassified(100);""Bacteroidetes""_unclassified(100);""Bacteroidetes""_unclassified(100);",Facultative
+Otu087,2273,"Bacteria(100);""Bacteroidetes""(100);""Bacteroidia""(100);""Bacteroidales""(100);""Bacteroidales""_incertae_sedis(100);Phocaeicola(100);",Anaerobic
+Otu052,2261,Bacteria(100);Firmicutes(100);Negativicutes(100);Selenomonadales(100);Veillonellaceae(100);Dialister(100);,Anaerobic
+Otu033,2232,Bacteria(100);Bacteria_unclassified(100);Bacteria_unclassified(100);Bacteria_unclassified(100);Bacteria_unclassified(100);Bacteria_unclassified(100);,No classification
+Otu030,2021,"Bacteria(100);""Bacteroidetes""(100);""Bacteroidia""(100);""Bacteroidales""(100);""Porphyromonadaceae""(100);""Porphyromonadaceae""_unclassified(100);",Anaerobic
+Otu056,1966,"Bacteria(100);""Actinobacteria""(100);Actinobacteria(100);Actinomycetales(100);Corynebacteriaceae(100);Corynebacterium(100);",Facultative
+Otu038,1913,Bacteria(100);Firmicutes(100);Clostridia(100);Clostridiales(100);Lachnospiraceae(100);Catonella(100);,Anaerobic
+Otu126,1794,"Bacteria(100);""Proteobacteria""(100);Gammaproteobacteria(100);Pasteurellales(100);Pasteurellaceae(100);Pasteurella(100);",Facultative
+Otu101,1776,"Bacteria(100);""Proteobacteria""(100);Betaproteobacteria(100);Burkholderiales(100);Burkholderiaceae(100);Pandoraea(100);",No classification
+Otu060,1683,Bacteria(100);Firmicutes(100);Clostridia(100);Clostridiales(100);Lachnospiraceae(100);Shuttleworthia(100);,Anaerobic
+Otu066,1645,"Bacteria(100);""Proteobacteria""(100);Betaproteobacteria(100);Neisseriales(100);Neisseriaceae(100);Kingella(100);",Facultative
+Otu048,1605,"Bacteria(100);""Bacteroidetes""(100);""Bacteroidia""(100);""Bacteroidales""(100);Bacteroidaceae(100);Bacteroides(100);",Anaerobic
+Otu029,1564,Bacteria(100);Firmicutes(100);Bacilli(100);Lactobacillales(100);Carnobacteriaceae(100);Granulicatella(100);,Facultative
+Otu054,1441,Bacteria(100);TM7(100);TM7_class_incertae_sedis(100);TM7_order_incertae_sedis(100);TM7_family_incertae_sedis(100);TM7_genus_incertae_sedis(100);,No classification
+Otu062,1305,"Bacteria(100);""Bacteroidetes""(100);""Bacteroidia""(100);""Bacteroidales""(100);""Bacteroidales""_unclassified(100);""Bacteroidales""_unclassified(100);",Facultative
+Otu073,1294,Bacteria(100);Firmicutes(100);Erysipelotrichia(100);Erysipelotrichales(100);Erysipelotrichaceae(100);Bulleidia(100);,Anaerobic
+Otu065,1175,"Bacteria(100);""Proteobacteria""(100);Betaproteobacteria(100);Burkholderiales(100);Burkholderiaceae(100);Ralstonia(100);",Aerobic
+Otu013,1168,Bacteria(100);Firmicutes(100);Bacilli(100);Bacilli_unclassified(100);Bacilli_unclassified(100);Bacilli_unclassified(100);,Diverse
+Otu071,1004,"Bacteria(100);""Proteobacteria""(100);Gammaproteobacteria(100);Pseudomonadales(100);Moraxellaceae(100);Acinetobacter(100);",Aerobic
+Otu079,969,Bacteria(100);Firmicutes(100);Clostridia(100);Clostridiales(100);Clostridiales_Incertae_Sedis_XI(100);Peptoniphilus(100);,Anaerobic
+Otu023,770,"Bacteria(100);""Actinobacteria""(100);Actinobacteria(100);Actinomycetales(100);Actinomycetales_unclassified(100);Actinomycetales_unclassified(100);",Facultative
+Otu085,720,Bacteria(100);Firmicutes(100);Erysipelotrichia(100);Erysipelotrichales(100);Erysipelotrichaceae(100);Erysipelotrichaceae_incertae_sedis(100);,Facultative
+Otu115,648,"Bacteria(100);""Proteobacteria""(100);Gammaproteobacteria(100);Pseudomonadales(100);Moraxellaceae(100);Moraxella(100);",Facultative
+Otu076,638,"Bacteria(100);""Proteobacteria""(100);Alphaproteobacteria(100);Rhizobiales(100);Bradyrhizobiaceae(100);Bradyrhizobiaceae_unclassified(100);",Diverse
+Otu149,589,Bacteria(100);Firmicutes(100);Clostridia(100);Clostridia_unclassified(100);Clostridia_unclassified(100);Clostridia_unclassified(100);,No classification

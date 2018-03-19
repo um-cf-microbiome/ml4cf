@@ -64,7 +64,8 @@ if socket.gethostname() == 'WSPDR062':
  mothur_path = str(host_base+"software/mothur/mothur.exe")
  R_path=str('C:/Program Files/R/R-3.4.3/bin/Rscript.exe')
 if socket.gethostname() == 'DESKTOP-8OVG652': 
- host_base = str("D:/")
+ if sys.platform == 'Windows': host_base = str("D:/")
+ if sys.platform == 'linux': host_base = str("/mnt/d/")
  mothur_path = str(host_base+"software/mothur_win/mothur/mothur.exe")
 if socket.gethostname() == 'elbel': 
  host_base = str("/home/"+os.environ.get('USER')+"/")
@@ -73,9 +74,10 @@ if socket.gethostname() == 'flux-login1.arc-ts.umich.edu':
  host_base = str("/home/"+os.environ.get('USER')+"/")
  mothur_path = str(host_base+"software/mothur/")
 
-processors=8
+processors=4
+classifiers=list(['NTM_disease','Persistent_infection'])
+classes=list([['TRUE','FALSE'],['TRUE','FALSE']])
 run_base=str(host_base+"NTM/")
-classifiers_file=open(str(host_base+'NTM/analysis/classifiers.csv'),'r')
 sample_list_file=open(str(host_base+'NTM/analysis/sample_list.csv'),'r')
 control_list_file_name = str(host_base+'NTM/analysis/control_sample_list.csv')
 control_list_file = open(control_list_file_name,'r')
