@@ -99,26 +99,18 @@ def mothur_command_list(level_list,mothur_ref_dir,mothur_output_path,processors,
 #  input_command_list.extend([blast_beta()])
  return(input_command_list,output_file_list)
 
-def batch(stability_files_name,batch_file_name,mothur_ref_dir,control_list,mothur_output_path,mothur_exe,processors):
+def batch(job_info):
  level_list = list(['1','2','3'])
- input_command_list,output_file_list = mothur_command_list(level_list,mothur_ref_dir,mothur_output_path,processors,control_list)
+ input_command_list,output_file_list = mothur_command_list(level_list,job_info.mothur_ref_dir,job_info.mothur_output_path,job_info.processors,job_info.control_list)
  index=0
  for line in input_command_list:
 #  output_files = list([str(mothur_output_path+output_file_list[index][i]) for i in output_file_list[index]])
   for output_filename in output_file_list[index]:
-   output_file_path = str(mothur_output_path+output_filename)
-   if not os.path.isfile(output_file_path) or (os.path.isfile(output_file_path) and os.stat(mothur_output_path+output_filename).st_size == 0):
-    old_output_file_path = str('D:/NTM_temp_3-10-18/analysis/mothur/'+output_filename)
-    if os.path.isfile(old_output_file_path):
-     run('cp '+old_output_file_path+' '+output_file_path)
-    if not os.path.isfile(old_output_file_path):
-      print(output_filename)
-      zip_filename = str(output_filename+'.zip')
-      if os.path.isfile(zip_filename):
-       continue
-#     zipfile.ZiFile()
-      if not os.path.isfile(zip_filename):
-       append_batch_run(mothur_exe,line,mothur_output_path,batch_file_name)
+   output = job_info.mothur_output_file
+   if not os.path.isfile(output) or (os.path.isfile(output) and os.stat(output).st_size == 0):
+     zip_filename = str(output+".zip")
+     if not os.path.isfile(zip_filename):
+      append_batch_run(job_info,command)
   index = index + 1
  return
   
@@ -135,7 +127,7 @@ def check_sample_str(filename,sample):
   if string in filename: present = True
  return(present)
  
-def make_stability_files(sample_list,control_list,stability_files,fastq_dir):
+def make_stability_files(job_info):
 # Read sputum ID numbers
 # sample_list = pandas.read_csv(sample_list_file).Sputum_Number
  forward_read_flag = str("L001_R1_001")
@@ -143,10 +135,11 @@ def make_stability_files(sample_list,control_list,stability_files,fastq_dir):
  written_list = list()
 
 # Search sub-directories for fastq files with matching sputum ID
- for root,dirs,files in os.walk(fastq_dir):
+ print(job_info.mothur_ref_dir)
+ for root,dirs,files in os.walk(job_info.mothur_ref_dir):
   continue
 # Loop over samples in sample_list 
- for sample in itertools.chain(sample_list,control_list):
+ for sample in itertools.chain(job_info.sample_list,job_info.control_list):
 # Skip files that we already processed
   if not check_sample_list(written_list,sample):
    group,forward_file,reverse_file = '','',''
@@ -159,10 +152,10 @@ def make_stability_files(sample_list,control_list,stability_files,fastq_dir):
       reverse_file = str(fastq_dir+file)
 
      if forward_file != '' and reverse_file != '': 
-      stability_files.write(group+" "+forward_file+" "+reverse_file+"\n")
+      job_info.stability_files.write(group+" "+forward_file+" "+reverse_file+"\n")
       written_list.append(sample)
       break
- stability_files.close()
+ job_info.stability_files.close()
  return
  
 def run(mothur_command):
@@ -172,20 +165,17 @@ def run(mothur_command):
  subprocess.call(mothur_command,shell=True)
  return
 
-def append_batch_run(mothur_exe,command,mothur_output_path,batch_file):
+def append_batch_run(job_info,command):
 # This subroutine runs a mothur command if the
 # anticipated output files are missing.
- print(mothur_output_path)
- print(batch_file)
- batch_path = str(mothur_output_path+batch_file)
- if os.path.isfile(batch_file): batch = open(batch_path,'a')
- if not os.path.isfile(batch_file): batch = open(batch_path,'w')
+ batch_path = str(job_info.mothur_output_path+batch_file)
+ if os.path.isfile(job_info.batch_file): batch = open(job_info.batch_path,'a')
+ if not os.path.isfile(job_info.batch_file): batch = open(job_info.batch_path,'w')
  cmd = str(command+'\n')
  batch.write(cmd)
  batch.close()
- mothur_out_file = str(mothur_output_path+'mothur.out')
- if not os.path.isfile(mothur_out_file): command = str(mothur_exe+' "#'+command+'" > '+mothur_out_file)
- if os.path.isfile(mothur_out_file): command = str(mothur_exe+' "#'+command+'" >> '+mothur_out_file)
+ if not os.path.isfile(job_info.mothur_output_file): command = str(job_info.mothur_exe+' "#'+command+'" > '+job_info.mothur_output_file)
+ if os.path.isfile(job_info.mothur_output_file): command = str(job_info.mothur_path+' "#'+command+'" >> '+job_info.mothur_output_file)
  run(command)
  return
   

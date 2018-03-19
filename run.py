@@ -10,10 +10,9 @@
 # 
 # This file is organized as follows:
 # 
-# (1) Load software
+# (1) Setup the calculation
 #     (1-A) Import Python packages
-#     (1-B) Point to non-Python software
-#     (1-C) Import local Python source
+#     (1-B) Point to external software
 # (2) Microbiome analysis with mothur
 # (3) Microbiome analysis with entropart
 # (4) Build dataframes
@@ -56,15 +55,14 @@ import numpy as np
 import pylab as pl
 import sklearn
 from sklearn import svm
-#     (1-B) Point to non-Python software
-
-#           'mothur' for sequencing
 
 # machine-specific paths
 if socket.gethostname() == 'WSPDR062': 
  host_base = str("F:/")
  mothur_path = str(host_base+"software/mothur/mothur.exe")
  R_path=str('C:/Program Files/R/R-3.4.3/bin/Rscript.exe')
+ sys.path.insert(0,str(host_base+'software/libsvm/tools'))
+ sys.path.insert(0,str(host_base+"NTM/src"))
  processors=4
 if socket.gethostname() == 'DESKTOP-8OVG652': 
  if sys.platform == 'Windows': host_base = str("D:/")
@@ -76,9 +74,6 @@ if socket.gethostname() == 'elbel':
 if socket.gethostname() == 'flux-login1.arc-ts.umich.edu': 
  host_base = str("/home/"+os.environ.get('USER')+"/")
  mothur_path = str(host_base+"software/mothur/")
-sys.path.insert(0,str(host_base+'software/libsvm/tools'))
-sys.path.insert(0,str(host_base+"NTM/src"))
-#     (1-C) Import local Python source
 
 #           'libsvm' for SVM analysis
 #           (https://github.com/cjlin1/libsvm)
@@ -91,10 +86,14 @@ from eco import mothur#, entropart
 from classes import job
 from model import regression
 
-# Instantiate the 'job' class
+# Instantiate the 'job.info' class
 # which defines global variables for this analysis
-#job_info = job(host_base=str(host_base),mothur_path=str(mothur_path),R_path=str(R_path),processors=int(processors))
-job_info = job(host_base,mothur_path,R_path,processors)
+job_info = job.info(host_base=str(host_base),mothur_path=str(mothur_path),R_path=str(R_path),processors=str(processors))
+# Use samples in 'Sputum Number' column to make .files
+job_info.sample_list = pd.read_csv(job_info.sample_list_file)['Sputum_Number']
+# Add samples included in 'Control' column of control_list_file
+job_info.control_list = pd.read_csv(job_info.control_list_file)['Sputum_Number']
+
 #           'csv2libsvm.py' to convert csv file to libsvm format
 #           (https://github.com/zygmuntz/phraug/blob/master/csv2libsvm.py)
 #from data import csv2libsvm
@@ -104,20 +103,17 @@ job_info = job(host_base,mothur_path,R_path,processors)
 
 # (2) Microbiome analysis with Mothur
 
-# Use samples in 'Sputum Number' column to make .files
-sample_list = pd.read_csv(sample_list_file)['Sputum_Number']
-# Add samples included in 'Control' column of control_list_file
-control_list = pd.read_csv(control_list_file)['Sputum_Number']
 # Make mothur stability.files from sample and control lists
-mothur.make_stability_files(sample_list,control_list,stability_files,fastq_dir)
+mothur.make_stability_files(job_info)
 # Make mothur batch file:
-mothur.batch(stability_files_name,batch_file,mothur_ref_dir,control_list,mothur_output_path,mothur_path,processors)
+mothur.batch(job_info)
 # Run mothur SOP:
-mothur.run(mothur.cmd_line(mothur_path,batch_file_name,mothur_output_path))
-# Unfinished steps to calculate Shannon Beta using 'entropart' (R)
-# https://github.com/EricMarcon/entropart
+mothur.run(mothur.cmd_line(job_info))
 
-#entropart.run()
+# Calculate Shannon Beta using 'entropart' (R)
+# https://github.com/EricMarcon/entropart
+entropart.run()
+
 # (3) Build dataframes
 #     (3-A) Read data and build dataframes
 
