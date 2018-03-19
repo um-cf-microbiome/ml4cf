@@ -1,8 +1,4 @@
-# This file contains subroutines that act as a wrapper for mothur
-
-# This script creates 'stability.files' for a mothur calculation.
-# Requires a '.csv' file with the sample 
-# IDs in the first column as input, and the column name 'Sputum_Number'
+# This file contains wrapper subroutines for 'mothur'
 
 import os, glob, subprocess
 import os.path, platform, csv, itertools
@@ -43,7 +39,6 @@ def blast_beta():
  return(command)
 
 def mothur_command_list(level_list,mothur_ref_dir,mothur_output_path,processors,control_list):
- print(mothur_output_path)
  input_command_list = list()
  output_file_list = list()
  if not os.path.isfile(mothur_output_path+'silva.v4.fasta'):
@@ -104,13 +99,15 @@ def batch(job_info):
  input_command_list,output_file_list = mothur_command_list(level_list,job_info.mothur_ref_dir,job_info.mothur_output_path,job_info.processors,job_info.control_list)
  index=0
  for command in input_command_list:
-#  output_files = list([str(mothur_output_path+output_file_list[index][i]) for i in output_file_list[index]])
-  for output_filename in output_file_list[index]:
-   output = job_info.mothur_output_file
-   if not os.path.isfile(output) or (os.path.isfile(output) and os.stat(output).st_size == 0):
-     zip_filename = str(output+".zip")
-     if not os.path.isfile(zip_filename):
-      append_batch_run(job_info,command)
+  output_files = list([str(mothur_output_path+output_file_list[index][i]) for i in output_file_list[index]])
+  print(output_files)
+  for output in output_file_list[index]:
+   print(output)
+   if not os.path.isfile(output):
+    zip_filename = str(output+".zip")
+    if not os.path.isfile(zip_filename):
+     print("Missing "+output+". Running"+command)
+     append_batch_run(job_info,command)
   index = index + 1
  return
   
@@ -135,7 +132,7 @@ def make_stability_files(job_info):
  written_list = list()
 
 # Search sub-directories for fastq files with matching sputum ID
- print(job_info.mothur_ref_dir)
+
  for root,dirs,files in os.walk(job_info.mothur_ref_dir):
   continue
 # Loop over samples in sample_list 
