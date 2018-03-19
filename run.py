@@ -56,6 +56,7 @@ import pylab as pl
 import sklearn
 from sklearn import svm
 
+job_name = 'ntm'
 # machine-specific paths
 if socket.gethostname() == 'WSPDR062': 
  host_base = str("F:/")
@@ -88,7 +89,7 @@ from model import regression
 
 # Instantiate the 'job.info' class
 # which defines global variables for this analysis
-job_info = job.info(host_base=str(host_base),mothur_path=str(mothur_path),R_path=str(R_path),processors=str(processors))
+job_info = job.info(job_name=str(job_name),host_base=str(host_base),mothur_path=str(mothur_path),R_path=str(R_path),processors=str(processors))
 # Use samples in 'Sputum Number' column to make .files
 job_info.sample_list = pd.read_csv(job_info.sample_list_file)['Sputum_Number']
 # Add samples included in 'Control' column of control_list_file

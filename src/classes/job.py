@@ -1,5 +1,6 @@
 class info(object):
-     def __init__(self,host_base,mothur_path,R_path,processors):
+     def __init__(self,job_name,host_base,mothur_path,R_path,processors):
+      self.job_name = job_name
       self.host_base = host_base
       self.mothur_path = mothur_path
       self.R_path = R_path
@@ -10,7 +11,8 @@ class info(object):
       self.sample_list_file = open(str(host_base+'NTM/analysis/sample_list.csv'),'r')
       self.control_list_file_name = str(host_base+'NTM/analysis/control_sample_list.csv')
       self.control_list_file = open(self.control_list_file_name,'r')
-      self.mothur_ref_dir=str(host_base+"data/fastq_files/")
+      self.mothur_ref_dir=str(host_base+"data/fastq_files/ref/")
+      self.job_fastq_dir=str(host_base+"data/fastq_files/lab/")
       self.stability_files_name = str(host_base+'NTM/analysis/mothur/stability.files')
       self.stability_files=open(self.stability_files_name,'w')
       self.batch_file_name = str(host_base+'NTM/analysis/mothur/stability.batch')
