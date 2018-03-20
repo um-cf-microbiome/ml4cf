@@ -134,7 +134,7 @@ def make_stability_files(job_info):
 
 # Search sub-directories for fastq files with matching sputum ID
 
- for root,dirs,files in os.walk(job_info.mothur_ref_dir):
+ for root,dirs,files in os.walk(job_info.job_fastq_dir):
   continue
 # Loop over samples in sample_list 
  for sample in itertools.chain(job_info.sample_list,job_info.control_list):

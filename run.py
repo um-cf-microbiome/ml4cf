@@ -65,10 +65,15 @@ if socket.gethostname() == 'WSPDR062':
  sys.path.insert(0,str(host_base+'software/libsvm/tools'))
  sys.path.insert(0,str(host_base+"NTM/src"))
  processors=4
-if socket.gethostname() == 'DESKTOP-8OVG652': 
- if sys.platform == 'Windows': host_base = str("D:/")
+if socket.gethostname() == 'Louie': 
+ if sys.platform == 'win32': host_base = str("D:/")
  if sys.platform == 'linux': host_base = str("/mnt/d/")
  mothur_path = str(host_base+"software/mothur_win/mothur/mothur.exe")
+ R_path=str('D:/software/R-3.4.4/bin/Rscript.exe')
+ sys.path.insert(0,str(host_base+'software/libsvm/tools'))
+ sys.path.insert(0,str(host_base+"NTM/src"))
+ processors=4
+
 if socket.gethostname() == 'elbel': 
  host_base = str("/home/"+os.environ.get('USER')+"/")
  mothur_path = str(host_base+"software/mothur/")
