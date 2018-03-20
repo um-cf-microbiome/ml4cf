@@ -1,12 +1,12 @@
 # This script contains machine learning analyses 
-# for the first positive culture NTM dataset of 
+# for the first positive culture NTM cohort of 
 # Dr. Lindsay Caverly, University of Michigan
 # Dept. of Pediatric Pulmonology
 #
 # Analyses completed in January-March, 2018.
 #
 # Script written by Garrett A. Meek with help from
-# Kris Opron (python source) and Madsen Zimbric (data manipulation)
+# Kris Opron (python source) and Madsen Zimbric (data)
 # 
 # This file is organized as follows:
 # 
@@ -24,7 +24,6 @@
 #		                tested positive for M. avium or M. abscessus only
 #	                  'index_and_prior_sample_only': Contains microbial data for the sample
 #                   closest to the NTM index date, as well as the most recent prior sample
-#     (4-B) Augment dataset with entropart biodiversity measures
 #     (4-C) Regression with RAs and biodiversity features
 # (5) Train SVM models
 #     (5-A) Feature selection and F-scores with 'libsvm' 
