@@ -47,12 +47,12 @@ def mothur_command_list(job_info):
  output_file_list = list()
  if not os.path.isfile(job_path+'silva.v4.fasta'):
   if os.path.isfile(ref_path+'silva.v4.fasta'):
-   shutil.move(ref_path+'silva.v4.fasta',job_path+'silva.v4.fasta')
+   shutil.copyfile(ref_path+'silva.v4.fasta',job_path+'silva.v4.fasta')
   else:
    output_file_list.append(["silva.bacteria.pcr.fasta"])
    input_command_list.extend([str('pcr.seqs(fasta='+ref_path+'silva.bacteria.fasta, start=11894, end=25319, keepdots=F)')])
    output_file_list.append(["silva.v4.fasta"])
-   input_command_list.extend([str('system(mv '+job_path+'silva.bacteria.pcr.fasta '+job_path+'silva.v4.fasta)')])
+   input_command_list.extend([str('system(cp '+job_path+'silva.bacteria.pcr.fasta '+ref_path+'silva.v4.fasta)')])
  output_file_list.append(["stability.trim.contigs.fasta","stability.trim.contigs.qual","stability.contigs.report","stability.scrap.contigs.fasta","stability.scrap.contigs.qual","stability.contigs.groups"])
  input_command_list.extend([str('make.contigs(file='+job_path+'stability.files, processors='+processors+')')])
  output_file_list.append(["stability.trim.contigs.good.fasta","stability.trim.contigs.bad.accnos","stability.contigs.good.groups"])
@@ -63,7 +63,7 @@ def mothur_command_list(job_info):
  input_command_list.extend([str('count.seqs(name='+job_path+'stability.trim.contigs.good.names, group='+job_path+'stability.contigs.good.groups)')])
  output_file_list.append(["stability.trim.contigs.good.unique.align","stability.trim.contigs.good.unique.align.report","stability.trim.contigs.good.unique.flip.accnos"])
  input_command_list.extend([str('align.seqs(fasta='+job_path+'stability.trim.contigs.good.unique.fasta, reference='+ref_path+'silva.v4.fasta,processors='+str(processors)+')')])
- output_file_list.append(["stability.trim.contigs.good.unique.good.align","stability.trim.contigs.good.unique.bad.accnos","stability.trim.contigs.good.good.count_table"])
+ output_file_list.append(["stability.trim.contigs.good.unique.good.fasta","stability.trim.contigs.good.unique.bad.accnos","stability.trim.contigs.good.good.count_table"])
  input_command_list.extend([str('screen.seqs(fasta='+job_path+'stability.trim.contigs.good.unique.fasta, count='+job_path+'stability.trim.contigs.good.count_table, start=1968, end=11550, maxhomop=8)')])
  output_file_list.append(["stability.filter","stability.trim.contigs.good.unique.good.filter.fasta"])
  input_command_list.extend([str('filter.seqs(fasta='+job_path+'stability.trim.contigs.good.unique.good.align, vertical=T, trump=.)')])
@@ -109,6 +109,7 @@ def batch(job_info):
     if not os.path.isfile(zip_filename):
      print('Missing '+output+'. Running '+command)
      append_batch_run(job_info,command)
+     break
   index = index + 1
  return
   

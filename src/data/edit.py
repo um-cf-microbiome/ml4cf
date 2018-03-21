@@ -58,3 +58,9 @@ def remove(data,features_to_remove):
    final_data = pd.concat([old_data,data[feature]],axis=1)
    old_data = final_data
  return(final_data)
+ 
+def zip_file(job_info):
+ for files in os.walk(job_info.run_base()):
+  continue
+ print(files)
+ return 
