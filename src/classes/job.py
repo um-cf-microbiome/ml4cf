@@ -1,10 +1,9 @@
 class info(object):
-     def __init__(self,job_name,host_base,mothur_path,R_path,processors):
+     def __init__(self,job_name,host_info):
       self.job_name = job_name
-      self.host_base = host_base
-      self.mothur_path = mothur_path
-      self.R_path = R_path
-      self.processors = processors
+      self.host_base = host_info.host_base
+      self.mothur_path = host_info.mothur_path
+      self.processors = host_info.processors
       self.classifiers = list(['NTM_disease','Persistent_infection'])
       self.class_options = list([['TRUE','FALSE'],['TRUE','FALSE']])
       self.run_base = str(host_base+"NTM/")
