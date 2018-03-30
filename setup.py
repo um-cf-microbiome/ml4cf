@@ -1,4 +1,2 @@
-# This file configures the local host to use
-# the 'ml4cf' software package.
-
-
+from distutils.core import setup
+setup(name='ml4cf',version='1.0',description='Enables application of select statistical and machine-learning protocols to bacterial sequencing data, with the aim of improving our understanding of microbiome fluctuations in the lungs of patients with cystic fibrosis.',url='https://github.com/um-cf-microbiome/ml4cf',author='The Caverly and LiPuma research groups (University of Michigan)',author_email='garrett.a.meek@gmail.com',packages=['/mnt/d/software/ml4cf'])
