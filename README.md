@@ -4,4 +4,5 @@ the study of lung microbiome dynamics in cystic fibrosis, but can be leveraged f
 a variety of other applications.
 
 
+This site was initally established by Garrett Meek, who's contributions to the site concluded on May 25, 2018. 
 
